@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
 
-const Logo = styled.h1`
+const Logo = styled.p`
   font-family: 'Fugaz One';
   font-size: 50px;
   color: #eb5757;

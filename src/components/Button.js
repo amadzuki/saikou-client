@@ -5,6 +5,7 @@ const ButtonTemplate = styled.a`
   font-family: 'Fugaz One';
   font-size: 30px;
   padding: 10 20;
+  margin: 20;
   background-color: ${(props) =>
     props.variant === 'primary' ? '#27AE60' : '#F2994A'};
   border: 5px solid #333333;

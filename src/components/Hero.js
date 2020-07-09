@@ -15,12 +15,40 @@ const Background = styled.div`
   background-size: cover;
 `
 
+const Title = styled.p`
+  font-family: 'Fugaz One';
+  font-size: 70;
+  text-align: center;
+`
+
+const HeroContent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+const HeroAction = styled.div`
+  width: 800;
+  display: flex;
+  flex-direction: column;
+`
+const Buttons = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
 const Hero = () => {
   return (
     <Background>
       <Navigation></Navigation>
-      <Button variant="primary">See Anime List</Button>
-      <Button variant="secondary">See Manga List</Button>
+      <HeroContent>
+        <HeroAction>
+          <Title>Where people discuss anime and manga</Title>
+          <Buttons>
+            <Button variant="primary">See Anime List</Button>
+            <Button variant="secondary">See Manga List</Button>
+          </Buttons>
+        </HeroAction>
+      </HeroContent>
     </Background>
   )
 }
