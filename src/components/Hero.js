@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@xstyled/styled-components'
 
 import Navigation from './Navigation'
+import Button from './Button'
 
 const Background = styled.div`
   height: 100vh;
@@ -18,6 +19,8 @@ const Hero = () => {
   return (
     <Background>
       <Navigation></Navigation>
+      <Button variant="primary">See Anime List</Button>
+      <Button variant="secondary">See Manga List</Button>
     </Background>
   )
 }
