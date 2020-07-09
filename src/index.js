@@ -8,12 +8,12 @@ import { ThemeProvider } from '@xstyled/styled-components'
 
 const theme = {
   colors: {
-    primaryRed: '#EB5757',
-    primaryGreen: '#27AE60',
-    primaryMango: '#F2994A',
-    darkRed: '#A71313',
-    light: '#ffffff',
-    dark: '#000000',
+    primary: '#EB5757',
+    anime: '#27AE60',
+    manga: '#F2994A',
+    secondary: '#A71313',
+    lightFont: '#ffffff',
+    darkFont: '#000000',
   },
 }
 
