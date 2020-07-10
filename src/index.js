@@ -10,10 +10,15 @@ const theme = {
   colors: {
     primary: '#EB5757',
     anime: '#27AE60',
-    manga: '#F2994A',
+    manga: '#EE8826',
     secondary: '#A71313',
     lightFont: '#ffffff',
     darkFont: '#000000',
+  },
+  fonts: {
+    title: 'Fugaz One',
+    paragraph: 'Open Sans',
+    annotation: 'Dosis',
   },
 }
 

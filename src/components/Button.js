@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@xstyled/styled-components'
 
 const ButtonTemplate = styled.a`
-  font-family: 'Fugaz One';
+  font-family: title;
   font-size: 30px;
   padding: 10 20;
   margin: 20;

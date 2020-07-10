@@ -16,7 +16,7 @@ const Background = styled.div`
 `
 
 const Title = styled.p`
-  font-family: 'Fugaz One';
+  font-family: title;
   font-size: 70;
   text-align: center;
 `
