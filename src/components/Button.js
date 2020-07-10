@@ -1,21 +1,26 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
+import { color, backgroundColor } from '@xstyled/system'
 
 const ButtonTemplate = styled.a`
   font-family: title;
   font-size: 30px;
   padding: 10 20;
   margin: 20;
-  background-color: ${(props) =>
-    props.variant === 'primary' ? '#27AE60' : '#F2994A'};
-  border: 5px solid #333333;
+  border: 5px solid #000;
   box-sizing: border-box;
   border-radius: 10px;
-  color: #ffffff;
+  color: lightFont;
+  ${backgroundColor}
+  ${color}
 `
 
-const Button = ({ variant, children }) => {
-  return <ButtonTemplate variant={variant}>{children}</ButtonTemplate>
+const Button = ({ backgroundColor, color, children }) => {
+  return (
+    <ButtonTemplate color={color} backgroundColor={backgroundColor}>
+      {children}
+    </ButtonTemplate>
+  )
 }
 
 export default Button

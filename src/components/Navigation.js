@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@xstyled/styled-components'
 
 const Logo = styled.p`
-  font-family: primary;
+  font-family: title;
   font-size: 50;
   color: primary;
   margin: 0;
@@ -11,7 +11,7 @@ const Logo = styled.p`
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  padding: 20;
+  padding: 30;
 `
 
 const SubNav = styled.div`
@@ -19,7 +19,7 @@ const SubNav = styled.div`
   align-items: center;
 `
 const Link = styled.a`
-  font-family: primary;
+  font-family: title;
   font-size: 30;
   margin: 0 15;
 `

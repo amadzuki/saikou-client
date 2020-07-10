@@ -44,8 +44,8 @@ const Hero = () => {
         <HeroAction>
           <Title>Where people discuss anime and manga</Title>
           <Buttons>
-            <Button variant="primary">See Anime List</Button>
-            <Button variant="secondary">See Manga List</Button>
+            <Button backgroundColor="anime">See Anime List</Button>
+            <Button backgroundColor="manga">See Manga List</Button>
           </Buttons>
         </HeroAction>
       </HeroContent>
