@@ -4,6 +4,7 @@ import styled from '@xstyled/styled-components'
 const CardStyled = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 0 20px;
 `
 const CardCover = styled.img`
   max-width: 200px;
@@ -12,6 +13,8 @@ const CardCover = styled.img`
 `
 const CardName = styled.p`
   font-family: annotation;
+  font-size: 20px;
+  max-width: 200px;
 `
 
 const Card = ({ imagesrc, imagealt, name }) => {
