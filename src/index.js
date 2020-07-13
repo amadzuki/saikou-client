@@ -14,6 +14,7 @@ const theme = {
     secondary: '#A71313',
     lightFont: '#ffffff',
     darkFont: '#000000',
+    whiteShade: 'rgba(255,255,255, 0.7)',
   },
   fonts: {
     title: 'Fugaz One',

@@ -2,9 +2,10 @@ import React from 'react'
 import styled from '@xstyled/styled-components'
 import { Link } from 'react-router-dom'
 
-const Logo = styled.p`
+const Logo = styled.h1`
   font-family: title;
   font-size: 50;
+  font-weight: 400;
   color: primary;
   margin: 0;
 `

@@ -11,28 +11,26 @@ import Login from './pages/login'
 const App = () => {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/anime">
-            <Anime />
-          </Route>
-          <Route path="/manga">
-            <Manga />
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/anime">
+          <Anime />
+        </Route>
+        <Route path="/manga">
+          <Manga />
+        </Route>
+        <Route path="/register">
+          <Register />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+      </Switch>
     </Router>
   )
 }
