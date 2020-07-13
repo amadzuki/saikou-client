@@ -1,17 +1,16 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
-import { height, backgroundImage } from '@xstyled/system'
+import { height, backgroundImage, backgroundColor } from '@xstyled/system'
 
 import Navigation from './Navigation'
 
 const BackgroundShade = styled.div`
-  background-color: ${(props) =>
-    props.shade === 'whiteShade' ? 'rgba(255,255,255, 0.7)' : 'transparent'};
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  ${backgroundColor}
 `
 
 const Background = styled.div`
@@ -37,7 +36,7 @@ const HeroAction = styled.div`
 const HeroWithContent = ({ height, children, shade }) => {
   return (
     <Background height={height}>
-      <BackgroundShade shade={shade}>
+      <BackgroundShade backgroundColor={shade}>
         <Navigation></Navigation>
         <HeroContent>
           <HeroAction>{children}</HeroAction>

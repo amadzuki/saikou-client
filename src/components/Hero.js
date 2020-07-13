@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
-import { backgroundImage } from '@xstyled/system'
+import { backgroundImage, backgroundColor } from '@xstyled/system'
 
 import Navigation from './Navigation'
 
 const BackgroundShade = styled.div`
-  background-color: whiteShade;
+  ${backgroundColor}
   position: absolute;
   top: 0;
   left: 0;
@@ -26,7 +26,7 @@ const Background = styled.div`
 const Hero = ({ backgroundImage }) => {
   return (
     <Background backgroundImage={backgroundImage}>
-      <BackgroundShade>
+      <BackgroundShade backgroundColor="whiteShade">
         <Navigation></Navigation>
       </BackgroundShade>
     </Background>
