@@ -1,8 +1,21 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
 
-import Layout from '../components/Layout'
+import HeroWithContent from '../components/HeroWithContent'
 import Card from '../components/Card'
+import Button from '../components/Button'
+import Footer from '../components/Footer'
+
+const HeroHeading = styled.h1`
+  font-family: title;
+  font-size: 70;
+  text-align: center;
+  font-weight: 400;
+`
+const Buttons = styled.div`
+  display: flex;
+  justify-content: center;
+`
 
 const HomeContents = styled.div`
   display: flex;
@@ -11,8 +24,8 @@ const HomeContents = styled.div`
 `
 const CardsTitle = styled.p`
   font-family: title;
-  font-size: 60px;
-  margin-top: 90px;
+  font-size: 60;
+  margin-top: 90;
 `
 const Cards = styled.div`
   display: flex;
@@ -22,11 +35,18 @@ const CollectionLink = styled.a`
   font-family: title;
   font-size: 30px;
   color: #bdbdbd;
-  margin: 20px 0 60px 0;
+  margin: 20 0 60 0;
 `
 const Home = () => {
   return (
-    <Layout>
+    <>
+      <HeroWithContent shade="whiteShade">
+        <HeroHeading>Where people discuss anime and manga</HeroHeading>
+        <Buttons>
+          <Button backgroundColor="anime">See Anime List</Button>
+          <Button backgroundColor="manga">See Manga List</Button>
+        </Buttons>
+      </HeroWithContent>
       <HomeContents>
         <CardsTitle>Top Anime</CardsTitle>
         <Cards>
@@ -87,7 +107,8 @@ const Home = () => {
         </Cards>
         <CollectionLink>See all manga</CollectionLink>
       </HomeContents>
-    </Layout>
+      <Footer></Footer>
+    </>
   )
 }
 

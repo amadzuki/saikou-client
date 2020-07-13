@@ -1,54 +1,34 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
+import { backgroundImage } from '@xstyled/system'
 
 import Navigation from './Navigation'
-import Button from './Button'
+
+const BackgroundShade = styled.div`
+  background-color: whiteShade;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`
 
 const Background = styled.div`
-  height: 100vh;
-  background-image: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.8)
-    ),
-    url('/backgrounds/home.jpg');
+  height: 35vh;
+  background-image: url('/backgrounds/home.jpg');
   background-size: cover;
+  position: relative;
+  ${backgroundImage}
+  background-size: cover;
+  background-position: center;
 `
 
-const Title = styled.p`
-  font-family: title;
-  font-size: 70;
-  text-align: center;
-`
-
-const HeroContent = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-const HeroAction = styled.div`
-  width: 800;
-  display: flex;
-  flex-direction: column;
-`
-const Buttons = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
-const Hero = () => {
+const Hero = ({ backgroundImage }) => {
   return (
-    <Background>
-      <Navigation></Navigation>
-      <HeroContent>
-        <HeroAction>
-          <Title>Where people discuss anime and manga</Title>
-          <Buttons>
-            <Button backgroundColor="anime">See Anime List</Button>
-            <Button backgroundColor="manga">See Manga List</Button>
-          </Buttons>
-        </HeroAction>
-      </HeroContent>
+    <Background backgroundImage={backgroundImage}>
+      <BackgroundShade>
+        <Navigation></Navigation>
+      </BackgroundShade>
     </Background>
   )
 }
