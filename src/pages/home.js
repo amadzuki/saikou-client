@@ -43,8 +43,12 @@ const Home = () => {
       <HeroWithContent shade="whiteShade">
         <HeroHeading>Where people discuss anime and manga</HeroHeading>
         <Buttons>
-          <Button backgroundColor="anime">See Anime List</Button>
-          <Button backgroundColor="manga">See Manga List</Button>
+          <Button to="/anime" backgroundColor="anime">
+            See Anime List
+          </Button>
+          <Button to="/manga" backgroundColor="manga">
+            See Manga List
+          </Button>
         </Buttons>
       </HeroWithContent>
       <HomeContents>
