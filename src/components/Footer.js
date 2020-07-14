@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
 import { width } from '@xstyled/system'
+import { Link } from 'react-router-dom'
 
 import Button from './Button'
 
@@ -16,9 +17,11 @@ const LinkContainer = styled.div`
   display: flex;
   justify-content: center;
 `
-const Link = styled.a`
+const SiteLink = styled(Link)`
   font-family: paragraph;
   margin: 20 40;
+  text-decoration: none;
+  color: lightFont;
 `
 const WhiteLine = styled.div`
   height: 1px;
@@ -39,11 +42,11 @@ const Footer = () => {
       </Button>
       <WhiteLine width="750px"></WhiteLine>
       <LinkContainer>
-        <Link>about</Link>
-        <Link>contact</Link>
-        <Link>github</Link>
-        <Link>facebook</Link>
-        <Link>discord</Link>
+        <SiteLink to="/about">about</SiteLink>
+        <SiteLink>contact</SiteLink>
+        <SiteLink>github</SiteLink>
+        <SiteLink>facebook</SiteLink>
+        <SiteLink>discord</SiteLink>
       </LinkContainer>
       <WhiteLine width="820px"></WhiteLine>
       <FooterText>Copyright © 2020 Saikou</FooterText>
