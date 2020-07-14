@@ -26,6 +26,9 @@ const SearchInput = styled.input`
   max-height: 80;
   border: 5px solid;
   border-radius: 10;
+  font-family: annotation;
+  font-size: 21;
+  padding-left: 20;
 `
 const SearchButton = styled.button`
   height: 80;

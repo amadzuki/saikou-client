@@ -8,6 +8,8 @@ import Manga from './pages/manga'
 import Register from './pages/register'
 import Login from './pages/login'
 
+// import ScrollToTop from './utils/ScrollToTop'
+
 const App = () => {
   return (
     <Router>

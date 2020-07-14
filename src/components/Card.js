@@ -4,10 +4,10 @@ import styled from '@xstyled/styled-components'
 const CardStyled = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 20px;
+  margin: 20px 20px;
 `
 const CardCover = styled.img`
-  max-width: 200px;
+  width: 200px;
   max-height: 280px;
   border-radius: 10px;
 `
