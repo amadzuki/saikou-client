@@ -55,27 +55,27 @@ const Home = () => {
         <CardsTitle>Top Anime</CardsTitle>
         <Cards>
           <Card
-            imagesrc="./covers/Hagane-no-Renkinjutsushi-Fullmetal-Alchemist.jpg"
+            imagesrc="./covers/anime_Hagane-no-Renkinjutsushi-Fullmetal-Alchemist.jpg"
             imagealt="Fullmetal Alchemist anime cover"
             name="Fullmetal Alchemist: Brotherhood"
           />
           <Card
-            imagesrc="./covers/Death-Note.jpg"
+            imagesrc="./covers/anime_Death-Note.jpg"
             imagealt="Death Note anime cover"
             name="Death Note"
           />
           <Card
-            imagesrc="./covers/Code-Geass-Hangyaku-no-Lelouch.jpg"
+            imagesrc="./covers/anime_Code-Geass-Hangyaku-no-Lelouch.jpg"
             imagealt="Code Geass anime cover"
             name="Code Geass"
           />
           <Card
-            imagesrc="./covers/Black-Clover.jpg"
+            imagesrc="./covers/anime_Black-Clover.jpg"
             imagealt="Black Clover anime cover"
             name="Black Clover"
           />
           <Card
-            imagesrc="./covers/Dr-STONE.jpg"
+            imagesrc="./covers/anime_Dr-STONE.jpg"
             imagealt="Dr STONE anime cover"
             name="Dr. STONE"
           />
@@ -84,7 +84,7 @@ const Home = () => {
         <CardsTitle>Top Manga</CardsTitle>
         <Cards>
           <Card
-            imagesrc="./covers/Death-Note-Manga.jpg"
+            imagesrc="./covers/manga_Death-Note.jpg"
             imagealt="Death Note manga cover"
             name="Death Note"
           />
@@ -94,17 +94,17 @@ const Home = () => {
             name="One Punch-Man"
           />
           <Card
-            imagesrc="./covers/Berserk.jpg"
+            imagesrc="./covers/manga_Berserk.jpg"
             imagealt="Berserk manga cover"
             name="Berserk"
           />
           <Card
-            imagesrc="./covers/Black-Clover.png"
+            imagesrc="./covers/manga_Black-Clover.png"
             imagealt="Black Clover manga cover"
             name="Black Clover"
           />
           <Card
-            imagesrc="./covers/Dr.-STONE.jpg"
+            imagesrc="./covers/manga_Dr.-STONE.jpg"
             imagealt="Dr STONE manga cover"
             name="Dr. STONE"
           />
