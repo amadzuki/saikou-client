@@ -8,11 +8,12 @@ import Manga from './pages/manga'
 import Register from './pages/register'
 import Login from './pages/login'
 
-// import ScrollToTop from './utils/ScrollToTop'
+import ScrollToTop from './utils/ScrollToTop'
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop></ScrollToTop>
       <Switch>
         <Route path="/" exact>
           <Home />
