@@ -10,6 +10,8 @@ const CardCover = styled.img`
   width: 200px;
   max-height: 280px;
   border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 1px 1px 5px grey, -1px -1px 5px grey;
 `
 const CardName = styled.p`
   font-family: annotation;
