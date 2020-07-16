@@ -38,6 +38,8 @@ const CollectionLink = styled.a`
   margin: 20 0 60 0;
 `
 const Home = () => {
+  const topAnime = [7, 3, 2, 1, 4]
+  const topManga = [30, 44, 27, 28, 32]
   return (
     <>
       <HeroWithContent shade="whiteShade">
@@ -54,60 +56,16 @@ const Home = () => {
       <HomeContents>
         <CardsTitle>Top Anime</CardsTitle>
         <Cards>
-          <Card
-            imagesrc="./covers/anime_Hagane-no-Renkinjutsushi-Fullmetal-Alchemist.jpg"
-            imagealt="Fullmetal Alchemist anime cover"
-            name="Fullmetal Alchemist: Brotherhood"
-          />
-          <Card
-            imagesrc="./covers/anime_Death-Note.jpg"
-            imagealt="Death Note anime cover"
-            name="Death Note"
-          />
-          <Card
-            imagesrc="./covers/anime_Code-Geass-Hangyaku-no-Lelouch.jpg"
-            imagealt="Code Geass anime cover"
-            name="Code Geass"
-          />
-          <Card
-            imagesrc="./covers/anime_Black-Clover.jpg"
-            imagealt="Black Clover anime cover"
-            name="Black Clover"
-          />
-          <Card
-            imagesrc="./covers/anime_Dr-STONE.jpg"
-            imagealt="Dr STONE anime cover"
-            name="Dr. STONE"
-          />
+          {topAnime.map((id) => (
+            <Card id={id} />
+          ))}
         </Cards>
         <CollectionLink>See all anime</CollectionLink>
         <CardsTitle>Top Manga</CardsTitle>
         <Cards>
-          <Card
-            imagesrc="./covers/manga_Death-Note.jpg"
-            imagealt="Death Note manga cover"
-            name="Death Note"
-          />
-          <Card
-            imagesrc="./covers/manga_One-Punch-Man.jpg"
-            imagealt="One Punch-Man manga cover"
-            name="One Punch-Man"
-          />
-          <Card
-            imagesrc="./covers/manga_Berserk.jpg"
-            imagealt="Berserk manga cover"
-            name="Berserk"
-          />
-          <Card
-            imagesrc="./covers/manga_Black-Clover.png"
-            imagealt="Black Clover manga cover"
-            name="Black Clover"
-          />
-          <Card
-            imagesrc="./covers/manga_Dr.-STONE.jpg"
-            imagealt="Dr STONE manga cover"
-            name="Dr. STONE"
-          />
+          {topManga.map((id) => (
+            <Card id={id} />
+          ))}
         </Cards>
         <CollectionLink>See all manga</CollectionLink>
       </HomeContents>

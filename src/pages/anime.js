@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import SearchBar from '../components/SearchBar'
 import Card from '../components/Card'
 
-import CardCovers from '../data/CardCovers.json'
+import products from '../data/products.json'
 
 const Cards = styled.div`
   display: flex;
@@ -15,18 +15,13 @@ const Cards = styled.div`
 `
 
 const AnimeCollection = () => {
-  const AnimeCovers = CardCovers.filter((cover) => cover.type === 'anime')
+  const AnimeCovers = products.filter((cover) => cover.type === 'anime')
   return (
     <Layout backgroundImage="url('/backgrounds/animeCollection.jpg')">
       <SearchBar></SearchBar>
       <Cards>
         {AnimeCovers.map((cover, index) => (
-          <Card
-            key={index}
-            imagesrc={cover.imageSrc}
-            imagealt={cover.imageAlt}
-            name={cover.name}
-          />
+          <Card key={index} id={cover.id} />
         ))}
       </Cards>
     </Layout>
