@@ -11,7 +11,7 @@ const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 70px 0;
+  padding: 70px 5vw;
 `
 
 const AnimeCollection = () => {

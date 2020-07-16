@@ -4,14 +4,14 @@ import styled from '@xstyled/styled-components'
 const CardStyled = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 20px 25px;
+  padding: 20px 20px;
 `
 const CardCover = styled.img`
-  width: 200px;
-  height: 317px;
+  width: 190px;
+  height: 300px;
   border-radius: 10px;
   object-fit: cover;
-  box-shadow: 1px 1px 5px grey, -1px -1px 5px grey;
+  box-shadow: 1px 1px 0 grey, -1px -1px 0 grey, 4px 4px 0 black;
 `
 const CardName = styled.p`
   font-family: annotation;
