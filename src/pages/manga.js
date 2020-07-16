@@ -17,7 +17,7 @@ const Cards = styled.div`
 const MangaCollection = () => {
   const MangaCovers = products.filter((cover) => cover.type === 'manga')
   return (
-    <Layout backgroundImage="url('/backgrounds/mangaCollection.jpg')">
+    <Layout backgroundImage="url('/backgrounds/one-piece.jpg')">
       <SearchBar></SearchBar>
       <Cards>
         {MangaCovers.map((cover, index) => (
