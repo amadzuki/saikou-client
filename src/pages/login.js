@@ -1,9 +1,15 @@
 import React from 'react'
 
-import Layout from '../components/Layout'
+import HeroWithContent from '../components/HeroWithContent'
+import Footer from '../components/Footer'
 
 const Login = () => {
-  return <Layout></Layout>
+  return (
+    <>
+      <HeroWithContent></HeroWithContent>
+      <Footer></Footer>
+    </>
+  )
 }
 
 export default Login

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
 import { Link } from 'react-router-dom'
+import { backgroundColor } from '@xstyled/system'
 
 const Logo = styled.h1`
   font-family: title;
@@ -13,7 +14,8 @@ const Logo = styled.h1`
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  padding: 30;
+  padding: 20 30;
+  ${backgroundColor}
 `
 
 const SubNav = styled.div`
@@ -28,9 +30,9 @@ const NavLink = styled(Link)`
   color: darkFont;
 `
 
-const Navigation = () => {
+const Navigation = ({ shade }) => {
   return (
-    <Nav>
+    <Nav backgroundColor={shade}>
       <SubNav>
         <NavLink to="/">
           <Logo>Saikou!</Logo>

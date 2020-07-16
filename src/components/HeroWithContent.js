@@ -34,10 +34,11 @@ const HeroAction = styled.div`
 `
 
 const HeroWithContent = ({ height, children, shade }) => {
+  const navBackground = shade === 'whiteShade' ? 'transparent' : 'whiteShade'
   return (
     <Background height={height}>
       <BackgroundShade backgroundColor={shade}>
-        <Navigation></Navigation>
+        <Navigation shade={navBackground}></Navigation>
         <HeroContent>
           <HeroAction>{children}</HeroAction>
         </HeroContent>
