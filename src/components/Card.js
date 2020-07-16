@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
-// import { useRouteMatch, Switch, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import products from '../data/products.json'
 
@@ -9,10 +9,10 @@ const CardStyled = styled.div`
   flex-direction: column;
   margin: 20px 20px;
 `
-// const CardLink = styled(Link)`
-//   text-decoration: none;
-//   color: darkFont;
-// `
+const CardLink = styled(Link)`
+  text-decoration: none;
+  color: darkFont;
+`
 
 const CardCover = styled.img`
   width: 190px;
@@ -35,15 +35,14 @@ const CardName = styled.p`
 `
 
 const Card = ({ id }) => {
-  // const { path } = useRouteMatch()
   const product = products.find((product) => +product.id === +id)
   return (
     <>
       <CardStyled>
-        {/* <CardLink to={`${product.type}/${product.id}`}> */}
-        <CardCover src={product.imageSrc} alt={product.imageAlt} />
-        <CardName>{product.name}</CardName>
-        {/* </CardLink> */}
+        <CardLink to={`${product.type}/${product.id}/${product.slug}`}>
+          <CardCover src={product.imageSrc} alt={product.imageAlt} />
+          <CardName>{product.name}</CardName>
+        </CardLink>
       </CardStyled>
     </>
   )

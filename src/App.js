@@ -2,9 +2,10 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Home from './pages/home'
-import Anime from './pages/anime'
+import AnimeCollection from './pages/anime'
+import ProductDetail from './pages/productDetail'
 import About from './pages/about'
-import Manga from './pages/manga'
+import MangaCollection from './pages/manga'
 import Register from './pages/register'
 import Login from './pages/login'
 
@@ -18,11 +19,14 @@ const App = () => {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/anime">
-          <Anime />
+        <Route path="/anime" exact>
+          <AnimeCollection />
         </Route>
-        <Route path="/manga">
-          <Manga />
+        <Route path={['/anime/:id', '/manga/:id']}>
+          <ProductDetail />
+        </Route>
+        <Route path="/manga" exact>
+          <MangaCollection />
         </Route>
         <Route path="/register">
           <Register />
