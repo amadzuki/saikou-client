@@ -1,296 +1,394 @@
 [
   {
+    "id": "1",
     "name": "Black Clover",
     "imageSrc": "/covers/anime_Black-Clover.jpg",
     "imageAlt": "Black Clover anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "black-clover"
   },
   {
+    "id": "2",
     "name": "Code Geass: Hangyaku no Lelouch",
     "imageSrc": "/covers/anime_Code-Geass-Hangyaku-no-Lelouch.jpg",
     "imageAlt": "Code Geass anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "code-geass-hangyaku-no-lelouch"
   },
   {
+    "id": "3",
     "name": "Death Note",
     "imageSrc": "/covers/anime_Death-Note.jpg",
     "imageAlt": "Death Note anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "death-note"
   },
   {
+    "id": "4",
     "name": "Dr. STONE",
     "imageSrc": "/covers/anime_Dr-STONE.jpg",
     "imageAlt": "Dr. STONE anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "dr-stone"
   },
   {
+    "id": "5",
     "name": "Dragon Ball Super",
     "imageSrc": "/covers/anime_Dragon-Ball-Super.jpg",
     "imageAlt": "Dragon Ball Super anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "dragon-ball-super"
   },
   {
+    "id": "6",
     "name": "Gintama",
     "imageSrc": "/covers/anime_Gintama.png",
     "imageAlt": "Gintama anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "gintama"
   },
   {
+    "id": "7",
     "name": "Fullmetal Alchemist: Brotherhood",
     "imageSrc": "/covers/anime_Hagane-no-Renkinjutsushi-Fullmetal-Alchemist.jpg",
     "imageAlt": "Fullmetal Alchemist: Brotherhood anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "fullmetal-alchemist-brotherhood"
   },
   {
+    "id": "8",
     "name": "Haikyuu!!",
     "imageSrc": "/covers/anime_Haikyuu!!.jpg",
     "imageAlt": "Haikyuu!! anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "haikyuu"
   },
   {
+    "id": "9",
     "name": "Hunter x Hunter 2011",
     "imageSrc": "/covers/anime_Hunter-x-Hunter-2011.jpg",
     "imageAlt": "Hunter x Hunter 2011 anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "hunter-x-hunter-2011"
   },
   {
+    "id": "10",
     "name": "K-ON!",
     "imageSrc": "/covers/anime_K-ON!.png",
     "imageAlt": "K-ON! anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "k-on"
   },
   {
+    "id": "11",
     "name": "Kami nomi zo Shiru Sekai",
     "imageSrc": "/covers/anime_Kami-nomi-zo-Shiru-Sekai.jpg",
     "imageAlt": "Kami nomi zo Shiru Sekai",
-    "type": "anime"
+    "type": "anime",
+    "slug": "kami-nomi-zo-shiru-sekai"
   },
   {
+    "id": "12",
     "name": "Kimetsu no Yaiba",
     "imageSrc": "/covers/anime_Kimetsu-no-Yaiba.jpg",
     "imageAlt": "Kimetsu no Yaiba anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "kimetsu-no-yaiba"
   },
   {
+    "id": "13",
     "name": "Kimi no Na Wa",
     "imageSrc": "/covers/anime_Kimi-no-Na-wa.png",
     "imageAlt": "Kimi no Na Wa anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "kimi-no-na-wa"
   },
   {
+    "id": "14",
     "name": "Kuroko no Basket",
     "imageSrc": "/covers/anime_Kuroko-no-Basket.jpg",
     "imageAlt": "Kuroko no Basket anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "kuroko-no-basket"
   },
   {
+    "id": "15",
     "name": "Nanatsu no Taizai",
     "imageSrc": "/covers/anime_Nanatsu-no-Taizai.jpg",
     "imageAlt": "Nanatsu no Taizai anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "nanatsu-no-taizai"
   },
   {
+    "id": "16",
     "name": "No Game No Life",
     "imageSrc": "/covers/anime_No-Game-No-Life.jpg",
     "imageAlt": "No Game No Life anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "no-game-no-life"
   },
   {
+    "id": "17",
     "name": "One Punch Man",
     "imageSrc": "/covers/anime_One-Punch-Man.jpg",
     "imageAlt": "One Punch Man anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "one-punch-man"
   },
   {
+    "id": "18",
     "name": "Re:Zero kara Hajimeru Isekai Seikatsu",
     "imageSrc": "/covers/anime_ReZero-kara-Hajimeru-Isekai-Seikatsu.png",
     "imageAlt": "Re:Zero kara Hajimeru Isekai Seikatsu anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "rezero-kara-hajimeru-isekai-seikatsu"
   },
   {
+    "id": "19",
     "name": "Saiki Kusuo no Ψ-nan",
     "imageSrc": "/covers/anime_Saiki-Kusuo-no-sainan.png",
     "imageAlt": "Saiki Kusuo no Ψ-nan anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "saiki-kusuo-no--nan"
   },
   {
+    "id": "20",
     "name": "Shingeki no Kyojin",
     "imageSrc": "/covers/anime_Shingeki-no-Kyojin.png",
     "imageAlt": "Shingeki no Kyojin anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "shingeki-no-kyojin"
   },
   {
+    "id": "21",
     "name": "Shokugeki no Souma",
     "imageSrc": "/covers/anime_Shokugeki-no-Souma.jpg",
     "imageAlt": "Shokugeki no Souma anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "shokugeki-no-souma"
   },
   {
+    "id": "22",
     "name": "Steins;Gate",
     "imageSrc": "/covers/anime_Steins;Gate.jpg",
     "imageAlt": "Steins;Gate anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "steinsgate"
   },
   {
+    "id": "23",
     "name": "Sword Art Online",
     "imageSrc": "/covers/anime_Sword-Art-Online.jpg",
     "imageAlt": "Sword Art Online anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "sword-art-online"
   },
   {
+    "id": "24",
     "name": "Tokyo Ghoul",
     "imageSrc": "/covers/anime_Tokyo-Ghoul.jpg",
     "imageAlt": "Tokyo Ghoul anime cover",
-    "type": "anime"
+    "type": "anime",
+    "slug": "tokyo-ghoul"
   },
   {
+    "id": "25",
     "name": "21st Century Boys",
     "imageSrc": "/covers/manga_21st-Century-Boys.jpg",
     "imageAlt": "21st Century Boys manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "21st-century-boys"
   },
   {
+    "id": "26",
     "name": "Beelzebub",
     "imageSrc": "/covers/manga_Beelzebub.png",
     "imageAlt": "Beelzebub manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "beelzebub"
   },
   {
+    "id": "27",
     "name": "Berserk",
     "imageSrc": "/covers/manga_Berserk.jpg",
     "imageAlt": "Berserk manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "berserk"
   },
   {
+    "id": "28",
     "name": "Black Clover",
     "imageSrc": "/covers/manga_Black-Clover.png",
     "imageAlt": "Black Clover manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "black-clover"
   },
   {
+    "id": "29",
     "name": "Bleach",
     "imageSrc": "/covers/manga_Bleach.png",
     "imageAlt": "Bleach manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "bleach"
   },
   {
+    "id": "30",
     "name": "Death Note",
     "imageSrc": "/covers/manga_Death-Note.jpg",
     "imageAlt": "Death Note manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "death-note"
   },
   {
+    "id": "31",
     "name": "Doraemon",
     "imageSrc": "/covers/manga_Doraemon.jpg",
     "imageAlt": "Doraemon manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "doraemon"
   },
   {
+    "id": "32",
     "name": "Dr. STONE",
     "imageSrc": "/covers/manga_Dr.-STONE.jpg",
     "imageAlt": "Dr. STONE manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "dr-stone"
   },
   {
+    "id": "33",
     "name": "Dragon Ball Super",
     "imageSrc": "/covers/manga_Dragon-Ball-Super.jpg",
     "imageAlt": "Dragon Ball Super manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "dragon-ball-super"
   },
   {
+    "id": "34",
     "name": "Eyeshield 21",
     "imageSrc": "/covers/manga_Eyeshield-21.png",
     "imageAlt": "Eyeshield 21 manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "eyeshield-21"
   },
   {
+    "id": "35",
     "name": "Horimiya",
     "imageSrc": "/covers/manga_Horimiya.png",
     "imageAlt": "Horimiya manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "horimiya"
   },
   {
+    "id": "36",
     "name": "Imawa no Kuni no Alice",
     "imageSrc": "/covers/manga_Imawa-no-Kuni-no-Alice.jpg",
     "imageAlt": "Imawa no Kuni no Alice manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "imawa-no-kuni-no-alice"
   },
   {
+    "id": "37",
     "name": "Konjiki no Gash",
     "imageSrc": "/covers/manga_Konjiki-no-Gash.jpg",
     "imageAlt": "Konjiki no Gash manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "konjiki-no-gash"
   },
   {
+    "id": "38",
     "name": "Machida-kun no Sekai",
     "imageSrc": "/covers/manga_Machidakun-no-Sekai.png",
     "imageAlt": "Machida-kun no Sekai manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "machida-kun-no-sekai"
   },
   {
+    "id": "39",
     "name": "Magi: The Labyrinth of Magic",
     "imageSrc": "/covers/manga_Magi-The-Labyrinth-of-Magic.png",
     "imageAlt": "Magi: The Labyrinth of Magic manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "magi-the-labyrinth-of-magic"
   },
   {
+    "id": "40",
     "name": "Nanatsu no Taizai",
     "imageSrc": "/covers/manga_Nanatsu-no-Taizai.jpg",
     "imageAlt": "Nanatsu no Taizai manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "nanatsu-no-taizai"
   },
   {
+    "id": "41",
     "name": "Naruto",
     "imageSrc": "/covers/manga_Naruto.jpg",
     "imageAlt": "Naruto manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "naruto"
   },
   {
+    "id": "42",
     "name": "Onanie Master Kurosawa",
     "imageSrc": "/covers/manga_Onanie-Master-Kurosawa.jpg",
     "imageAlt": "Onanie Master Kurosawa manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "onanie-master-kurosawa"
   },
   {
+    "id": "43",
     "name": "One Piece",
     "imageSrc": "/covers/manga_One-Piece.jpg",
     "imageAlt": "One Piece manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "one-piece"
   },
   {
+    "id": "44",
     "name": "One Punch-Man",
     "imageSrc": "/covers/manga_One-Punch-Man.jpg",
     "imageAlt": "One Punch-Man manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "one-punch-man"
   },
   {
+    "id": "45",
     "name": "Shin Angyo Onshi",
     "imageSrc": "/covers/manga_Shin-Angyo-Onshi.jpg",
     "imageAlt": "Shin Angyo Onshi manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "shin-angyo-onshi"
   },
   {
+    "id": "46",
     "name": "Suashi no Meteorite",
     "imageSrc": "/covers/manga_Suashi-no-Meteorite.jpg",
     "imageAlt": "Suashi no Meteorite manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "suashi-no-meteorite"
   },
   {
+    "id": "47",
     "name": "Tensei shitara Slime Datta Ken",
     "imageSrc": "/covers/manga_Tensei-Shitara-Slime-Datta-Ken.jpg",
     "imageAlt": "Tensei shitara Slime Datta Ken manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "tensei-shitara-slime-datta-ken"
   },
   {
+    "id": "48",
     "name": "Tokyo Ghoul",
     "imageSrc": "/covers/manga_Tokyo-Ghoul.jpg",
     "imageAlt": "Tokyo Ghoul manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "tokyo-ghoul"
   },
   {
+    "id": "49",
     "name": "Vinland Saga",
     "imageSrc": "/covers/manga_Vinland-Saga.png",
     "imageAlt": "Vinland Saga manga cover",
-    "type": "manga"
+    "type": "manga",
+    "slug": "vinland-saga"
   }
 ]
