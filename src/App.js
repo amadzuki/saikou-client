@@ -9,7 +9,7 @@ import MangaCollection from './pages/manga'
 import Register from './pages/register'
 import Login from './pages/login'
 
-import ScrollToTop from './utils/ScrollToTop'
+import ScrollToTop from './components/ScrollToTop'
 
 const App = () => {
   return (
