@@ -4,13 +4,13 @@ import { useParams } from 'react-router-dom'
 
 import Layout from '../components/Layout'
 
-import products from '../data/products.json'
+import items from '../data/items.json'
 
-const ProductBox = styled.div`
+const ItemBox = styled.div`
   display: flex;
 `
 
-const ProductIntro = styled.div`
+const ItemIntro = styled.div`
   display: flex;
   flex-direction: column;
 `
@@ -34,23 +34,23 @@ const Card = styled.img`
   border-radius: 10px;
 `
 
-const ProductDetail = () => {
+const ItemDetail = () => {
   const { id } = useParams()
-  const product = products.find((product) => +product.id === +id)
+  const item = items.find((item) => +item.id === +id)
   return (
     <Layout>
-      <ProductBox>
-        <Card src={product.imageSrc} />
-        <ProductIntro>
-          <Title>{product.name}</Title>
+      <ItemBox>
+        <Card src={item.imageSrc} />
+        <ItemIntro>
+          <Title>{item.name}</Title>
           <SubTitle>
             "In order for something to be obtained, something of equal value
             must be lost. Just like this placeholder :)"
           </SubTitle>
-        </ProductIntro>
-      </ProductBox>
+        </ItemIntro>
+      </ItemBox>
     </Layout>
   )
 }
 
-export default ProductDetail
+export default ItemDetail

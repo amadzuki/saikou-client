@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Home from './pages/home'
 import AnimeCollection from './pages/anime'
-import ProductDetail from './pages/productDetail'
+import ItemDetail from './pages/itemDetail'
 import About from './pages/about'
 import MangaCollection from './pages/manga'
 import Register from './pages/register'
@@ -23,7 +23,7 @@ const App = () => {
           <AnimeCollection />
         </Route>
         <Route path={['/anime/:id', '/manga/:id']}>
-          <ProductDetail />
+          <ItemDetail />
         </Route>
         <Route path="/manga" exact>
           <MangaCollection />

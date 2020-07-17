@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import SearchBar from '../components/SearchBar'
 import Card from '../components/Card'
 
-import products from '../data/products.json'
+import items from '../data/items.json'
 
 const Cards = styled.div`
   display: flex;
@@ -15,7 +15,7 @@ const Cards = styled.div`
 `
 
 const AnimeCollection = () => {
-  const AnimeCovers = products.filter((cover) => cover.type === 'anime')
+  const AnimeCovers = items.filter((cover) => cover.type === 'anime')
   return (
     <Layout backgroundImage="url('/backgrounds/one-punch-man.jpg')">
       <SearchBar></SearchBar>

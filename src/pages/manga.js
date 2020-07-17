@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import SearchBar from '../components/SearchBar'
 import Card from '../components/Card'
 
-import products from '../data/products.json'
+import items from '../data/items.json'
 
 const Cards = styled.div`
   display: flex;
@@ -15,7 +15,7 @@ const Cards = styled.div`
 `
 
 const MangaCollection = () => {
-  const MangaCovers = products.filter((cover) => cover.type === 'manga')
+  const MangaCovers = items.filter((cover) => cover.type === 'manga')
   return (
     <Layout backgroundImage="url('/backgrounds/one-piece.jpg')">
       <SearchBar></SearchBar>

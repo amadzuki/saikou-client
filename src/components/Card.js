@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@xstyled/styled-components'
 import { Link } from 'react-router-dom'
 
-import products from '../data/products.json'
+import items from '../data/items.json'
 
 const CardStyled = styled.div`
   display: flex;
@@ -35,13 +35,13 @@ const CardName = styled.p`
 `
 
 const Card = ({ id }) => {
-  const product = products.find((product) => +product.id === +id)
+  const item = items.find((item) => +item.id === +id)
   return (
     <>
       <CardStyled>
-        <CardLink to={`${product.type}/${product.id}/${product.slug}`}>
-          <CardCover src={product.imageSrc} alt={product.imageAlt} />
-          <CardName>{product.name}</CardName>
+        <CardLink to={`${item.type}/${item.id}/${item.slug}`}>
+          <CardCover src={item.imageSrc} alt={item.imageAlt} />
+          <CardName>{item.name}</CardName>
         </CardLink>
       </CardStyled>
     </>
