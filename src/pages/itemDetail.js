@@ -8,15 +8,16 @@ import items from '../data/items.json'
 
 const PageContents = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `
 
 const ItemIntro = styled.div`
-  width: 75vw;
+  width: 80vw;
   max-height: 450;
   display: flex;
   position: relative;
-  margin-top: -60;
+  margin: -80 0 40 0;
   z-index: 1;
 `
 
@@ -24,7 +25,7 @@ const ItemInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 60 60 0 30;
+  margin: 80 60 0 30;
   max-height: 350;
   overflow: hidden;
 `
@@ -66,9 +67,99 @@ const FavoriteText = styled.span`
   margin-left: 10;
 `
 
+const DescriptionBox = styled.div`
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+`
+
+const DescriptionText = styled.p`
+  width: 65%;
+  font-family: paragraph;
+  font-size: 20;
+  line-height: 1.5;
+  margin-top: 0;
+`
+
+const MiniReviews = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+const MiniReview = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 30 0;
+`
+
+const UserAvatar = styled.img`
+  width: 68;
+  height: 68;
+  border: 1px solid black;
+  border-radius: 50%;
+  object-fit: cover;
+
+  &.medium {
+    width: 114;
+    height: 114;
+    border: 3px solid black;
+    margin: 30;
+  }
+`
+
+const DialogueBox = styled.div`
+  width: 250;
+  height: 130;
+  margin-left: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`
+
+const DialogueBoxImg = styled.img`
+  position: absolute;
+  height: inherit;
+  width: inherit;
+`
+
+const MiniReviewText = styled.p`
+  font-family: paragraph;
+  font-style: italic;
+  font-size: 20;
+  margin: 0 10 0 27;
+`
+
+const FavoritedByBox = styled.div`
+  margin: 100 0;
+  display: flex;
+  flex-direction: column;
+`
+
+const FavoritedByTitle = styled.h1`
+  font-family: title;
+  font-size: 30;
+  font-weight: 400;
+  text-align: center;
+`
+
+const AvatarsList = styled.div`
+  display: flex;
+`
+
 const ItemDetail = () => {
   const { id } = useParams()
   const item = items.find((item) => +item.id === +id)
+
+  item.description = `Alchemy is bound by this Law of Equivalent Exchange — something the young brothers Edward and Alphonse Elric only realize after attempting human transmutation: the one forbidden act of alchemy. They pay a terrible price for their transgression—Edward loses his left leg, Alphonse his physical body. It is only by the desperate sacrifice of Edward's right arm that he is able to affix Alphonse's soul to a suit of armor. Devastated and alone, it is the hope that they would both eventually return to their original bodies that gives Edward the inspiration to obtain metal limbs called "automail" and become a state alchemist, the Fullmetal Alchemist.
+  
+  Three years of searching later, the brothers seek the Philosopher's Stone, a mythical relic that allows an alchemist to overcome the Law of Equivalent Exchange. Even with military allies Colonel Roy Mustang, Lieutenant Riza Hawkeye, and Lieutenant Colonel Maes Hughes on their side, the brothers find themselves caught up in a nationwide conspiracy that leads them not only to the true nature of the elusive Philosopher's Stone, but their country's murky history as well. In between finding a serial killer and racing against time, Edward and Alphonse must ask themselves if what they are doing will make them human again... or take away their humanity.
+
+  (Source: MAL Rewrite)`
+
+  item.catchPhrase = `"In order for something to be obtained, something of equal value
+              must be lost. Just like this placeholder :)"`
+
   const isFavorited = true
   return (
     <Layout>
@@ -77,10 +168,7 @@ const ItemDetail = () => {
           <Card src={item.imageSrc} />
           <ItemInfo>
             <Title>{item.name}</Title>
-            <SubTitle>
-              "In order for something to be obtained, something of equal value
-              must be lost. Just like this placeholder :)"
-            </SubTitle>
+            <SubTitle>{item.catchPhrase}</SubTitle>
             <FavoriteBox>
               <StarSign
                 src={
@@ -97,6 +185,66 @@ const ItemDetail = () => {
             </FavoriteBox>
           </ItemInfo>
         </ItemIntro>
+        <DescriptionBox>
+          <DescriptionText>{item.description}</DescriptionText>
+          <MiniReviews></MiniReviews>
+          <MiniReviews>
+            <MiniReview>
+              <UserAvatar src="/avatars/chibi-luffy.png" />
+              <DialogueBox>
+                <DialogueBoxImg src="/misc/DialogueBox.svg" />
+                <MiniReviewText>"simply, a masterpiece"</MiniReviewText>
+              </DialogueBox>
+            </MiniReview>
+            <MiniReview>
+              <UserAvatar src="/avatars/chibi-L.png" />
+              <DialogueBox>
+                <DialogueBoxImg src="/misc/DialogueBox.svg" />
+                <MiniReviewText>
+                  “don’t make it your first anime, it’ll overshadow other anime”
+                </MiniReviewText>
+              </DialogueBox>
+            </MiniReview>
+            <MiniReview>
+              <UserAvatar src="/avatars/chibi-c2.png" />
+              <DialogueBox>
+                <DialogueBoxImg src="/misc/DialogueBox.svg" />
+                <MiniReviewText>
+                  “somehow I hear certain song just by seeing the cover”
+                </MiniReviewText>
+              </DialogueBox>
+            </MiniReview>
+          </MiniReviews>
+        </DescriptionBox>
+        <FavoritedByBox>
+          <FavoritedByTitle>Favorited by</FavoritedByTitle>
+          <AvatarsList>
+            <UserAvatar
+              className="medium"
+              src="/avatars/chibi-c2.png"
+            ></UserAvatar>
+            <UserAvatar
+              className="medium"
+              src="/avatars/chibi-goku.png"
+            ></UserAvatar>
+            <UserAvatar
+              className="medium"
+              src="/avatars/chibi-hitsugaya.png"
+            ></UserAvatar>
+            <UserAvatar
+              className="medium"
+              src="/avatars/chibi-L.png"
+            ></UserAvatar>
+            <UserAvatar
+              className="medium"
+              src="/avatars/chibi-lelouch.png"
+            ></UserAvatar>
+            <UserAvatar
+              className="medium"
+              src="/avatars/chibi-luffy.png"
+            ></UserAvatar>
+          </AvatarsList>
+        </FavoritedByBox>
       </PageContents>
     </Layout>
   )
