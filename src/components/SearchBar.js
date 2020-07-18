@@ -38,7 +38,7 @@ const SearchButton = styled.button`
   border-radius: 10;
   margin-left: 20;
 `
-const SearchIcon = styled.img`
+const IconSearch = styled.img`
   max-width: 40;
 `
 
@@ -58,7 +58,7 @@ const SearchBar = () => {
         <InputBox>
           <SearchInput name="search" ref={register} />
           <SearchButton type="submit">
-            <SearchIcon src="/misc/SearchIcon.svg" alt="Search Icon" />
+            <IconSearch src="/misc/IconSearch.svg" alt="Search Icon" />
           </SearchButton>
         </InputBox>
       </Container>
