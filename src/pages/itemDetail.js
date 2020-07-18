@@ -3,6 +3,7 @@ import styled from '@xstyled/styled-components'
 import { useParams } from 'react-router-dom'
 
 import Layout from '../components/Layout'
+import Avatar from '../components/Avatar'
 
 import items from '../data/items.json'
 
@@ -89,23 +90,23 @@ const MiniReviews = styled.div`
 const MiniReview = styled.div`
   display: flex;
   align-items: center;
-  margin: 30 0;
+  margin-bottom: 50;
 `
 
-const UserAvatar = styled.img`
-  width: 68;
-  height: 68;
-  border: 1px solid black;
-  border-radius: 50%;
-  object-fit: cover;
+// const Avatar = styled.img`
+//   width: 68;
+//   height: 68;
+//   border: 1px solid black;
+//   border-radius: 50%;
+//   object-fit: cover;
 
-  &.medium {
-    width: 114;
-    height: 114;
-    border: 3px solid black;
-    margin: 30;
-  }
-`
+//   &.medium {
+//     width: 114;
+//     height: 114;
+//     border: 3px solid black;
+//     margin: 30;
+//   }
+// `
 
 const DialogueBox = styled.div`
   width: 250;
@@ -158,7 +159,7 @@ const ItemDetail = () => {
   (Source: MAL Rewrite)`
 
   item.catchPhrase = `"In order for something to be obtained, something of equal value
-              must be lost. Just like this placeholder :)"`
+              must be lost."`
 
   const isFavorited = true
   return (
@@ -190,14 +191,14 @@ const ItemDetail = () => {
           <MiniReviews></MiniReviews>
           <MiniReviews>
             <MiniReview>
-              <UserAvatar src="/avatars/chibi-luffy.png" />
+              <Avatar variant="small" src="/avatars/chibi-luffy.png" />
               <DialogueBox>
                 <DialogueBoxImg src="/misc/DialogueBox.svg" />
                 <MiniReviewText>"simply, a masterpiece"</MiniReviewText>
               </DialogueBox>
             </MiniReview>
             <MiniReview>
-              <UserAvatar src="/avatars/chibi-L.png" />
+              <Avatar variant="small" src="/avatars/chibi-L.png" />
               <DialogueBox>
                 <DialogueBoxImg src="/misc/DialogueBox.svg" />
                 <MiniReviewText>
@@ -206,7 +207,7 @@ const ItemDetail = () => {
               </DialogueBox>
             </MiniReview>
             <MiniReview>
-              <UserAvatar src="/avatars/chibi-c2.png" />
+              <Avatar variant="small" src="/avatars/chibi-c2.png" />
               <DialogueBox>
                 <DialogueBoxImg src="/misc/DialogueBox.svg" />
                 <MiniReviewText>
@@ -219,30 +220,12 @@ const ItemDetail = () => {
         <FavoritedByBox>
           <FavoritedByTitle>Favorited by</FavoritedByTitle>
           <AvatarsList>
-            <UserAvatar
-              className="medium"
-              src="/avatars/chibi-c2.png"
-            ></UserAvatar>
-            <UserAvatar
-              className="medium"
-              src="/avatars/chibi-goku.png"
-            ></UserAvatar>
-            <UserAvatar
-              className="medium"
-              src="/avatars/chibi-hitsugaya.png"
-            ></UserAvatar>
-            <UserAvatar
-              className="medium"
-              src="/avatars/chibi-L.png"
-            ></UserAvatar>
-            <UserAvatar
-              className="medium"
-              src="/avatars/chibi-lelouch.png"
-            ></UserAvatar>
-            <UserAvatar
-              className="medium"
-              src="/avatars/chibi-luffy.png"
-            ></UserAvatar>
+            <Avatar src="/avatars/chibi-c2.png"></Avatar>
+            <Avatar src="/avatars/chibi-goku.png"></Avatar>
+            <Avatar src="/avatars/chibi-hitsugaya.png"></Avatar>
+            <Avatar src="/avatars/chibi-L.png"></Avatar>
+            <Avatar src="/avatars/chibi-lelouch.png"></Avatar>
+            <Avatar src="/avatars/chibi-luffy.png"></Avatar>
           </AvatarsList>
         </FavoritedByBox>
       </PageContents>
