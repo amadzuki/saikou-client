@@ -10,6 +10,7 @@ import Register from './pages/register'
 import Login from './pages/login'
 
 import ScrollToTop from './components/ScrollToTop'
+import RouteAddSlug from './components/RouteAddSlug'
 
 const App = () => {
   return (
@@ -19,11 +20,14 @@ const App = () => {
         <Route path="/" exact>
           <Home />
         </Route>
+        <Route path={['/anime/:id/', '/manga/:id/']} exact>
+          <RouteAddSlug />
+        </Route>
+        <Route path={['/anime/:id/:slug', '/manga/:id/:slug']}>
+          <ItemDetail />
+        </Route>
         <Route path="/anime" exact>
           <AnimeCollection />
-        </Route>
-        <Route path={['/anime/:id', '/manga/:id']}>
-          <ItemDetail />
         </Route>
         <Route path="/manga" exact>
           <MangaCollection />
