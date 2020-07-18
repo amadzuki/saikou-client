@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
 import { useParams } from 'react-router-dom'
+import ReactHtmlParser from 'react-html-parser'
 
 import Layout from '../components/Layout'
 import Avatar from '../components/Avatar'
@@ -90,23 +91,8 @@ const MiniReviews = styled.div`
 const MiniReview = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 50;
+  margin: 20 0 30 0;
 `
-
-// const Avatar = styled.img`
-//   width: 68;
-//   height: 68;
-//   border: 1px solid black;
-//   border-radius: 50%;
-//   object-fit: cover;
-
-//   &.medium {
-//     width: 114;
-//     height: 114;
-//     border: 3px solid black;
-//     margin: 30;
-//   }
-// `
 
 const DialogueBox = styled.div`
   width: 250;
@@ -152,15 +138,6 @@ const ItemDetail = () => {
   const { id } = useParams()
   const item = items.find((item) => +item.id === +id)
 
-  item.description = `Alchemy is bound by this Law of Equivalent Exchange — something the young brothers Edward and Alphonse Elric only realize after attempting human transmutation: the one forbidden act of alchemy. They pay a terrible price for their transgression—Edward loses his left leg, Alphonse his physical body. It is only by the desperate sacrifice of Edward's right arm that he is able to affix Alphonse's soul to a suit of armor. Devastated and alone, it is the hope that they would both eventually return to their original bodies that gives Edward the inspiration to obtain metal limbs called "automail" and become a state alchemist, the Fullmetal Alchemist.
-  
-  Three years of searching later, the brothers seek the Philosopher's Stone, a mythical relic that allows an alchemist to overcome the Law of Equivalent Exchange. Even with military allies Colonel Roy Mustang, Lieutenant Riza Hawkeye, and Lieutenant Colonel Maes Hughes on their side, the brothers find themselves caught up in a nationwide conspiracy that leads them not only to the true nature of the elusive Philosopher's Stone, but their country's murky history as well. In between finding a serial killer and racing against time, Edward and Alphonse must ask themselves if what they are doing will make them human again... or take away their humanity.
-
-  (Source: MAL Rewrite)`
-
-  item.catchPhrase = `"In order for something to be obtained, something of equal value
-              must be lost."`
-
   const isFavorited = true
   return (
     <Layout>
@@ -169,7 +146,7 @@ const ItemDetail = () => {
           <Card src={item.imageSrc} />
           <ItemInfo>
             <Title>{item.name}</Title>
-            <SubTitle>{item.catchPhrase}</SubTitle>
+            <SubTitle>"{item.catchPhrase}"</SubTitle>
             <FavoriteBox>
               <StarSign
                 src={
@@ -187,7 +164,7 @@ const ItemDetail = () => {
           </ItemInfo>
         </ItemIntro>
         <DescriptionBox>
-          <DescriptionText>{item.description}</DescriptionText>
+          <DescriptionText>{ReactHtmlParser(item.description)}</DescriptionText>
           <MiniReviews></MiniReviews>
           <MiniReviews>
             <MiniReview>
