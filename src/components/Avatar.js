@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
 
+import users from '../data/users.json'
+
 const StyledAvatar = styled.img`
   width: 114;
   height: 114;
@@ -23,8 +25,9 @@ const StyledAvatar = styled.img`
   }
 `
 
-const Avatar = ({ variant, src }) => {
-  return <StyledAvatar className={variant} src={src}></StyledAvatar>
+const Avatar = ({ variant, id }) => {
+  const { avatar } = users.find((item) => item.id === +id)
+  return <StyledAvatar className={variant} src={avatar}></StyledAvatar>
 }
 
 export default Avatar

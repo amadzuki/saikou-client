@@ -191,14 +191,14 @@ const ItemDetail = () => {
           <MiniReviews></MiniReviews>
           <MiniReviews>
             <MiniReview>
-              <Avatar variant="small" src="/avatars/chibi-luffy.png" />
+              <Avatar variant="small" id="1" />
               <DialogueBox>
                 <DialogueBoxImg src="/misc/DialogueBox.svg" />
                 <MiniReviewText>"simply, a masterpiece"</MiniReviewText>
               </DialogueBox>
             </MiniReview>
             <MiniReview>
-              <Avatar variant="small" src="/avatars/chibi-L.png" />
+              <Avatar variant="small" id="12" />
               <DialogueBox>
                 <DialogueBoxImg src="/misc/DialogueBox.svg" />
                 <MiniReviewText>
@@ -207,7 +207,7 @@ const ItemDetail = () => {
               </DialogueBox>
             </MiniReview>
             <MiniReview>
-              <Avatar variant="small" src="/avatars/chibi-c2.png" />
+              <Avatar variant="small" id="4" />
               <DialogueBox>
                 <DialogueBoxImg src="/misc/DialogueBox.svg" />
                 <MiniReviewText>
@@ -220,12 +220,12 @@ const ItemDetail = () => {
         <FavoritedByBox>
           <FavoritedByTitle>Favorited by</FavoritedByTitle>
           <AvatarsList>
-            <Avatar src="/avatars/chibi-c2.png"></Avatar>
-            <Avatar src="/avatars/chibi-goku.png"></Avatar>
-            <Avatar src="/avatars/chibi-hitsugaya.png"></Avatar>
-            <Avatar src="/avatars/chibi-L.png"></Avatar>
-            <Avatar src="/avatars/chibi-lelouch.png"></Avatar>
-            <Avatar src="/avatars/chibi-luffy.png"></Avatar>
+            <Avatar id="2"></Avatar>
+            <Avatar id="3"></Avatar>
+            <Avatar id="4"></Avatar>
+            <Avatar id="5"></Avatar>
+            <Avatar id="6"></Avatar>
+            <Avatar id="7"></Avatar>
           </AvatarsList>
         </FavoritedByBox>
       </PageContents>
