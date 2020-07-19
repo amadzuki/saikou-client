@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@xstyled/styled-components'
 import { height, backgroundImage, backgroundColor } from '@xstyled/system'
 
+import AppHelmet from './AppHelmet'
 import Navigation from './Navigation'
 
 const BackgroundShade = styled.div`
@@ -33,17 +34,20 @@ const HeroAction = styled.div`
   flex-direction: column;
 `
 
-const HeroWithContent = ({ height, children, shade }) => {
+const HeroWithContent = ({ height, children, shade, title }) => {
   const navBackground = shade === 'whiteShade' ? 'transparent' : 'whiteShade'
   return (
-    <Background height={height}>
-      <BackgroundShade backgroundColor={shade}>
-        <Navigation shade={navBackground}></Navigation>
-        <HeroContent>
-          <HeroAction>{children}</HeroAction>
-        </HeroContent>
-      </BackgroundShade>
-    </Background>
+    <>
+      <AppHelmet title={title}></AppHelmet>
+      <Background height={height}>
+        <BackgroundShade backgroundColor={shade}>
+          <Navigation shade={navBackground}></Navigation>
+          <HeroContent>
+            <HeroAction>{children}</HeroAction>
+          </HeroContent>
+        </BackgroundShade>
+      </Background>
+    </>
   )
 }
 

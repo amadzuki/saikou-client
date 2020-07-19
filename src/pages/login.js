@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 const Login = () => {
   return (
     <>
-      <HeroWithContent></HeroWithContent>
+      <HeroWithContent title="Login | Saikou"></HeroWithContent>
       <Footer></Footer>
     </>
   )

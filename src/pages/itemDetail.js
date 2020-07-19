@@ -140,7 +140,7 @@ const ItemDetail = () => {
 
   const isFavorited = true
   return (
-    <Layout>
+    <Layout title={item.name}>
       <PageContents>
         <ItemIntro>
           <Card src={item.imageSrc} />

@@ -17,7 +17,10 @@ const Cards = styled.div`
 const MangaCollection = () => {
   const MangaCovers = items.filter((cover) => cover.type === 'manga')
   return (
-    <Layout backgroundImage="url('/backgrounds/one-piece.jpg')">
+    <Layout
+      backgroundImage="url('/backgrounds/one-piece.jpg')"
+      title="Manga Collection | Saikou"
+    >
       <SearchBar></SearchBar>
       <Cards>
         {MangaCovers.map((cover, index) => (

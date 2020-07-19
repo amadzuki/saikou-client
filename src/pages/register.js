@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 const Register = () => {
   return (
     <>
-      <HeroWithContent></HeroWithContent>
+      <HeroWithContent title="Register | Saikou"></HeroWithContent>
       <Footer></Footer>
     </>
   )

@@ -17,7 +17,10 @@ const Cards = styled.div`
 const AnimeCollection = () => {
   const AnimeCovers = items.filter((cover) => cover.type === 'anime')
   return (
-    <Layout backgroundImage="url('/backgrounds/one-punch-man.jpg')">
+    <Layout
+      backgroundImage="url('/backgrounds/one-punch-man.jpg')"
+      title="Anime Collection | Saikou"
+    >
       <SearchBar></SearchBar>
       <Cards>
         {AnimeCovers.map((cover, index) => (

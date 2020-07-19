@@ -42,7 +42,7 @@ const Home = () => {
   const topManga = [30, 44, 27, 28, 32]
   return (
     <>
-      <HeroWithContent shade="whiteShade">
+      <HeroWithContent shade="whiteShade" title="Home | Saikou">
         <HeroHeading>Where people discuss anime and manga</HeroHeading>
         <Buttons>
           <Button to="/anime" backgroundColor="anime">
