@@ -15,7 +15,7 @@ const PageContents = styled.div`
 `
 
 const ItemIntro = styled.div`
-  width: 80vw;
+  width: 75vw;
   max-height: 450;
   display: flex;
   position: relative;
@@ -70,13 +70,13 @@ const FavoriteText = styled.span`
 `
 
 const DescriptionBox = styled.div`
-  width: 80vw;
+  width: 75vw;
   display: flex;
   justify-content: space-between;
 `
 
 const DescriptionText = styled.p`
-  width: 65%;
+  width: 60%;
   font-family: paragraph;
   font-size: 20;
   line-height: 1.5;
