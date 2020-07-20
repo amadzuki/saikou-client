@@ -42,13 +42,13 @@ const Home = () => {
   const topManga = [30, 44, 27, 28, 32]
   return (
     <>
-      <HeroWithContent shade="whiteShade" title="Home | Saikou">
+      <HeroWithContent shade="whiteShade" title="Saikou">
         <HeroHeading>Where people discuss anime and manga</HeroHeading>
         <Buttons>
-          <Button to="/anime" backgroundColor="anime">
+          <Button to="/anime" variant="anime">
             See Anime List
           </Button>
-          <Button to="/manga" backgroundColor="manga">
+          <Button to="/manga" variant="manga">
             See Manga List
           </Button>
         </Buttons>
@@ -56,15 +56,15 @@ const Home = () => {
       <HomeContents>
         <CardsTitle>Top Anime</CardsTitle>
         <Cards>
-          {topAnime.map((id) => (
-            <Card id={id} />
+          {topAnime.map((id, index) => (
+            <Card id={id} key={index} />
           ))}
         </Cards>
         <CollectionLink>See all anime</CollectionLink>
         <CardsTitle>Top Manga</CardsTitle>
         <Cards>
-          {topManga.map((id) => (
-            <Card id={id} />
+          {topManga.map((id, index) => (
+            <Card id={id} key={index} />
           ))}
         </Cards>
         <CollectionLink>See all manga</CollectionLink>

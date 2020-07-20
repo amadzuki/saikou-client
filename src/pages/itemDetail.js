@@ -75,7 +75,7 @@ const DescriptionBox = styled.div`
   justify-content: space-between;
 `
 
-const DescriptionText = styled.p`
+const DescriptionText = styled.div`
   width: 60%;
   font-family: paragraph;
   font-size: 20;
@@ -156,9 +156,7 @@ const ItemDetail = () => {
                 }
               />
               <FavoriteText>
-                {isFavorited
-                  ? `Unfavorite this ${item.type}`
-                  : `Favorite this ${item.type}`}
+                {isFavorited ? `Unfavorite` : `Favorite`}
               </FavoriteText>
             </FavoriteBox>
           </ItemInfo>

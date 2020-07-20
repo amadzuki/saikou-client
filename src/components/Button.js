@@ -13,19 +13,26 @@ const ButtonTemplate = styled(Link)`
   border-radius: 10px;
   color: lightFont;
   text-decoration: none;
-  ${borderColor}
-  ${backgroundColor}
-  ${color}
+
+  &.manga {
+    background-color: manga;
+  }
+
+  &.anime {
+    background-color: anime;
+  }
+
+  &.footer {
+    background-color: primary;
+    color: lightFont;
+    border-color: lightFont;
+  }
 `
 
-const Button = ({ to, borderColor, backgroundColor, color, children }) => {
+const Button = (props) => {
+  const { to, variant, children } = props
   return (
-    <ButtonTemplate
-      to={to}
-      color={color}
-      backgroundColor={backgroundColor}
-      borderColor={borderColor}
-    >
+    <ButtonTemplate to={to} className={variant}>
       {children}
     </ButtonTemplate>
   )

@@ -37,7 +37,7 @@ const Footer = () => {
   return (
     <FooterStyled>
       <FooterText>Become a Saikou contributor</FooterText>
-      <Button to="/register" borderColor="lightFont" backgroundColor="primary">
+      <Button to="/register" variant="footer">
         Join us!
       </Button>
       <WhiteLine width="750px"></WhiteLine>
