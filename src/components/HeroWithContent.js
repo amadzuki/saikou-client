@@ -32,6 +32,7 @@ const HeroAction = styled.div`
   width: 800;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `
 
 const HeroWithContent = ({ height, children, shade, title }) => {
