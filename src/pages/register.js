@@ -53,8 +53,7 @@ const SubmitButton = styled.button`
   font-family: title;
   font-size: 25;
   margin-top: 30;
-  padding: 0 20;
-  width: 150;
+  padding: 0 30;
   border: 3px solid black;
   border-radius: 10;
   background-color: darkRed;
@@ -109,7 +108,7 @@ const Register = () => {
                 Come on, it's for your own good...
               </ErrorPopper>
             )}
-            <SubmitButton type="submit">Log in</SubmitButton>
+            <SubmitButton type="submit">Count me in!</SubmitButton>
           </Form>
         </FormBox>
       </HeroWithContent>

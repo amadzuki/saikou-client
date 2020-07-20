@@ -138,9 +138,9 @@ const ItemDetail = () => {
   const { id } = useParams()
   const item = items.find((item) => +item.id === +id)
 
-  const isFavorited = true
+  const isFavorited = false
   return (
-    <Layout title={item.name}>
+    <Layout title={item.name + ' | Saikou'}>
       <PageContents>
         <ItemIntro>
           <Card src={item.imageSrc} />
@@ -156,7 +156,7 @@ const ItemDetail = () => {
                 }
               />
               <FavoriteText>
-                {isFavorited ? `Unfavorite` : `Favorite`}
+                {isFavorited ? `Favorited` : `Not yet Favorited`}
               </FavoriteText>
             </FavoriteBox>
           </ItemInfo>

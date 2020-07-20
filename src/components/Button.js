@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
-import { color, backgroundColor, borderColor } from '@xstyled/system'
 import { Link } from 'react-router-dom'
 
 const ButtonTemplate = styled(Link)`
