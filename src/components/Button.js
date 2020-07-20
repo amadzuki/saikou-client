@@ -23,8 +23,11 @@ const ButtonTemplate = styled(Link)`
 
   &.footer {
     background-color: primary;
-    color: lightFont;
     border-color: lightFont;
+  }
+
+  &.primary {
+    background-color: darkred;
   }
 `
 

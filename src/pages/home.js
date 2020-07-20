@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
+import { Link } from 'react-router-dom'
 
 import HeroWithContent from '../components/HeroWithContent'
 import Card from '../components/Card'
@@ -31,11 +32,12 @@ const Cards = styled.div`
   display: flex;
   justify-content: center;
 `
-const CollectionLink = styled.a`
+const CollectionLink = styled(Link)`
   font-family: title;
   font-size: 30px;
   color: #bdbdbd;
   margin: 20 0 60 0;
+  text-decoration: none;
 `
 const Home = () => {
   const topAnime = [7, 3, 2, 1, 4]
@@ -60,14 +62,14 @@ const Home = () => {
             <Card id={id} key={index} />
           ))}
         </Cards>
-        <CollectionLink>See all anime</CollectionLink>
+        <CollectionLink to="/anime">See all anime</CollectionLink>
         <CardsTitle>Top Manga</CardsTitle>
         <Cards>
           {topManga.map((id, index) => (
             <Card id={id} key={index} />
           ))}
         </Cards>
-        <CollectionLink>See all manga</CollectionLink>
+        <CollectionLink to="/manga">See all manga</CollectionLink>
       </HomeContents>
       <Footer></Footer>
     </>

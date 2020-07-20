@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@xstyled/styled-components'
 import { useForm } from 'react-hook-form'
 import { top } from '@xstyled/system'
+import { Link } from 'react-router-dom'
 
 import HeroWithContent from '../components/HeroWithContent'
 import Footer from '../components/Footer'
@@ -15,14 +16,14 @@ const FormBox = styled.div`
   background-color: white;
   border-radius: 10;
   margin: 20;
-  padding-bottom: 35;
+  padding-bottom: 10;
 `
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30;
+  margin-top: 15;
 `
 
 const FormTitle = styled.h1`
@@ -42,7 +43,7 @@ const Input = styled.input`
   border: 3px solid black;
   border-radius: 10;
   padding: 15;
-  margin: 20;
+  margin: 15;
   width: 100%;
   font-family: annotation;
   font-size: 20;
@@ -52,13 +53,30 @@ const Input = styled.input`
 const SubmitButton = styled.button`
   font-family: title;
   font-size: 25;
-  margin-top: 30;
+  margin-top: 20;
   padding: 0 30;
   border: 3px solid black;
   border-radius: 10;
   background-color: darkRed;
   color: lightFont;
+  cursor: pointer;
 `
+const TextBox = styled.p`
+  font-family: annotation;
+  font-size: 20;
+  margin: 10 0;
+`
+
+const LoginLink = styled(Link)`
+  font-family: title;
+  font-size: 20;
+  border: 3px solid black;
+  border-radius: 10;
+  padding: 0 20;
+  text-decoration: none;
+  color: primary;
+`
+
 const ErrorPopper = styled.p`
   position: absolute;
   color: red;
@@ -82,7 +100,7 @@ const Register = () => {
               placeholder="Email"
             />
             {errors.email && (
-              <ErrorPopper top="305px">
+              <ErrorPopper top="283px">
                 You're supposed to fill your email here:)
               </ErrorPopper>
             )}
@@ -93,7 +111,7 @@ const Register = () => {
               placeholder="Password"
             />
             {errors.email && (
-              <ErrorPopper top="405px">
+              <ErrorPopper top="375px">
                 You're supposed to fill your password here :)
               </ErrorPopper>
             )}{' '}
@@ -104,12 +122,14 @@ const Register = () => {
               placeholder="Re-enter Password"
             />
             {errors.email && (
-              <ErrorPopper top="505px">
+              <ErrorPopper top="465px">
                 Come on, it's for your own good...
               </ErrorPopper>
             )}
             <SubmitButton type="submit">Count me in!</SubmitButton>
           </Form>
+          <TextBox>Already a Nakama?</TextBox>
+          <LoginLink to="/login">Log in</LoginLink>
         </FormBox>
       </HeroWithContent>
       <Footer></Footer>

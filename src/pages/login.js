@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@xstyled/styled-components'
 import { useForm } from 'react-hook-form'
 import { top } from '@xstyled/system'
+import { Link } from 'react-router-dom'
 
 import HeroWithContent from '../components/HeroWithContent'
 import Footer from '../components/Footer'
@@ -11,11 +12,11 @@ const FormBox = styled.div`
   flex-direction: column;
   align-items: center;
   width: 450;
-  height: 450;
   border: 5px solid black;
   background-color: white;
   border-radius: 10;
   margin-top: 35;
+  padding-bottom: 20;
 `
 
 const Form = styled.form`
@@ -59,7 +60,24 @@ const SubmitButton = styled.button`
   border-radius: 10;
   background-color: darkRed;
   color: lightFont;
+  cursor: pointer;
 `
+const RegisterLink = styled(Link)`
+  font-family: title;
+  font-size: 20;
+  border: 3px solid black;
+  border-radius: 10;
+  padding: 0 20;
+  text-decoration: none;
+  color: primary;
+`
+
+const TextBox = styled.p`
+  font-family: annotation;
+  font-size: 20;
+  margin: 20 0 10 0;
+`
+
 const ErrorPopper = styled.p`
   position: absolute;
   color: red;
@@ -100,6 +118,8 @@ const Login = () => {
             )}
             <SubmitButton type="submit">Log in</SubmitButton>
           </Form>
+          <TextBox>Not a Nakama yet?</TextBox>
+          <RegisterLink to="/register">Register</RegisterLink>
         </FormBox>
       </HeroWithContent>
       <Footer></Footer>
