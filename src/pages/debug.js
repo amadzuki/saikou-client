@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from '@xstyled/styled-components'
 
 import HeroWithContent from '../components/HeroWithContent'
-import Footer from '../components/Footer'
+
+import fetch from '../utils/fetch'
 
 const HeroHeading = styled.h1`
   font-family: title;
@@ -15,21 +16,37 @@ const TextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   margin: 35 0 130 0;
 `
 
-const About = () => {
+const Debug = () => {
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch('/users')
+      setUsers(response.data.users)
+    }
+    fetchData()
+  }, [])
+
   return (
     <>
       <HeroWithContent height='50vh' shade='whiteShade' title='DEBUG MODE'>
         <HeroHeading>DEBUG MODE</HeroHeading>
       </HeroWithContent>
       <TextContainer>
-        <p>DEBUG_MODE</p>
+        <div>
+          <h3>Users from API:</h3>
+          <ul>
+            {users.map((user, index) => {
+              return <li key={index}>{user}</li>
+            })}
+          </ul>
+        </div>
       </TextContainer>
     </>
   )
 }
 
-export default About
+export default Debug
