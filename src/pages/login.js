@@ -3,6 +3,7 @@ import styled from '@xstyled/styled-components'
 import { useForm } from 'react-hook-form'
 import { top } from '@xstyled/system'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import HeroWithContent from '../components/HeroWithContent'
 import Footer from '../components/Footer'
@@ -83,9 +84,10 @@ const ErrorPopper = styled.p`
   color: red;
   ${top}
 `
-const Login = () => {
+const Login = ({ authorized }) => {
   const { register, handleSubmit, errors } = useForm()
   const onSubmit = (data) => {
+    authorized()
     console.log(data)
   }
   return (
@@ -127,4 +129,14 @@ const Login = () => {
   )
 }
 
-export default Login
+const mapStateToProps = (state) => {
+  return {}
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    authorized: () => dispatch({ type: 'ISAUTHORIZED_TRUE' }),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
