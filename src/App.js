@@ -10,6 +10,7 @@ import About from './pages/about'
 import MangaCollection from './pages/manga'
 import Register from './pages/register'
 import Login from './pages/login'
+import Debug from './pages/debug'
 
 import ScrollToTop from './components/ScrollToTop'
 import RouteAddSlug from './components/RouteAddSlug'
@@ -27,7 +28,7 @@ const App = () => {
       <Router>
         <ScrollToTop></ScrollToTop>
         <Switch>
-          <Route path="/" exact>
+          <Route path='/' exact>
             <Home />
           </Route>
           <Route path={['/anime/:id/', '/manga/:id/']} exact>
@@ -36,20 +37,23 @@ const App = () => {
           <Route path={['/anime/:id/:slug', '/manga/:id/:slug']}>
             <ItemDetail />
           </Route>
-          <Route path="/anime" exact>
+          <Route path='/anime' exact>
             <AnimeCollection />
           </Route>
-          <Route path="/manga" exact>
+          <Route path='/manga' exact>
             <MangaCollection />
           </Route>
-          <Route path="/register">
+          <Route path='/register'>
             <Register />
           </Route>
-          <Route path="/login">
+          <Route path='/login'>
             <Login />
           </Route>
-          <Route path="/about">
+          <Route path='/about'>
             <About />
+          </Route>
+          <Route path='/debug'>
+            <Debug />
           </Route>
         </Switch>
       </Router>
