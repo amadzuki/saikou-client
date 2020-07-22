@@ -110,7 +110,7 @@ const Register = () => {
               ref={register({ required: true })}
               placeholder="Password"
             />
-            {errors.email && (
+            {errors.password && (
               <ErrorPopper top="375px">
                 You're supposed to fill your password here :)
               </ErrorPopper>
@@ -121,7 +121,7 @@ const Register = () => {
               ref={register({ required: true })}
               placeholder="Re-enter Password"
             />
-            {errors.email && (
+            {errors.passwordConfirm && (
               <ErrorPopper top="465px">
                 Come on, it's for your own good...
               </ErrorPopper>

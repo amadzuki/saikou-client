@@ -111,7 +111,7 @@ const Login = () => {
               ref={register({ required: true })}
               placeholder="Password"
             />
-            {errors.email && (
+            {errors.password && (
               <ErrorPopper top="420px">
                 You're supposed to fill your password nakama :)
               </ErrorPopper>
