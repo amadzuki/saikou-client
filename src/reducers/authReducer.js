@@ -1,19 +1,19 @@
 const initialState = {
-  isAuthorized: false,
+  isAuthenticated: false,
 }
 
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'ISAUTHORIZED_TRUE':
+    case 'ISAUTHENTICATED_TRUE':
       return {
         ...state,
-        isAuthorized: true,
+        isAuthenticated: true,
       }
 
-    case 'ISAUTHORIZED_FALSE':
+    case 'ISAUTHENTICATED_FALSE':
       return {
         ...state,
-        isAuthorized: false,
+        isAuthenticated: false,
       }
     default:
       return state

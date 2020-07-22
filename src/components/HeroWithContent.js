@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
-import { height, backgroundImage, backgroundColor } from '@xstyled/system'
+import { height } from '@xstyled/system'
 
 import AppHelmet from './AppHelmet'
 import Navigation from './Navigation'
@@ -11,7 +11,10 @@ const BackgroundShade = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  ${backgroundColor}
+
+  &.whiteShade {
+    background-color: whiteShade;
+  }
 `
 
 const Background = styled.div`
@@ -19,7 +22,6 @@ const Background = styled.div`
   background-image: url('/backgrounds/home.jpg');
   background-size: cover;
   position: relative;
-  ${backgroundImage}
   ${height}
 `
 
@@ -41,7 +43,7 @@ const HeroWithContent = ({ height, children, shade, title }) => {
     <>
       <AppHelmet title={title}></AppHelmet>
       <Background height={height}>
-        <BackgroundShade backgroundColor={shade}>
+        <BackgroundShade className={shade}>
           <Navigation shade={navBackground}></Navigation>
           <HeroContent>
             <HeroAction>{children}</HeroAction>

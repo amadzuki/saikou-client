@@ -84,10 +84,10 @@ const ErrorPopper = styled.p`
   color: red;
   ${top}
 `
-const Login = ({ authorized }) => {
+const Login = ({ authenticate }) => {
   const { register, handleSubmit, errors } = useForm()
   const onSubmit = (data) => {
-    authorized()
+    authenticate()
     console.log(data)
   }
   return (
@@ -135,7 +135,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    authorized: () => dispatch({ type: 'ISAUTHORIZED_TRUE' }),
+    authenticate: () => dispatch({ type: 'ISAUTHENTICATED_TRUE' }),
   }
 }
 
