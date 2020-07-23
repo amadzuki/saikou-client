@@ -37,18 +37,18 @@ const Footer = () => {
   return (
     <FooterStyled>
       <FooterText>Become a Saikou contributor</FooterText>
-      <Button to="/register" variant="footer">
+      <Button to='/register' variant='footer'>
         Join us!
       </Button>
-      <WhiteLine width="750px"></WhiteLine>
+      <WhiteLine width='750px'></WhiteLine>
       <LinkContainer>
-        <SiteLink to="/about">about</SiteLink>
-        <SiteLink to="/about">contact</SiteLink>
-        <SiteLink to="/about">github</SiteLink>
-        <SiteLink to="/about">facebook</SiteLink>
-        <SiteLink to="/about">discord</SiteLink>
+        <SiteLink to='/about'>about</SiteLink>
+        <SiteLink to='/about'>contact</SiteLink>
+        <SiteLink to='/about'>github</SiteLink>
+        <SiteLink to='/about'>facebook</SiteLink>
+        <SiteLink to='/about'>discord</SiteLink>
       </LinkContainer>
-      <WhiteLine width="820px"></WhiteLine>
+      <WhiteLine width='820px'></WhiteLine>
       <FooterText>Copyright © 2020 Saikou</FooterText>
     </FooterStyled>
   )

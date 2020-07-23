@@ -19,7 +19,7 @@ const MangaCollection = () => {
   return (
     <Layout
       backgroundImage="url('/backgrounds/one-piece.jpg')"
-      title="Manga Collection | Saikou"
+      title='Manga Collection | Saikou'
     >
       <SearchBar></SearchBar>
       <Cards>

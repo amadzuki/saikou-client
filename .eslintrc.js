@@ -9,11 +9,13 @@ module.exports = {
   },
   parserOptions: {
     sourceType: 'module',
-    ecmaVersion: 2017,
+    ecmaVersion: 2018,
   },
   rules: {
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
+    'jsx-quotes': ['error', 'prefer-single'],
+    'react/no-unescaped-entities': ['error', {'forbid': ['>', '}']}],
   },
 }

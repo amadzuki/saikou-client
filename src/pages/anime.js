@@ -19,7 +19,7 @@ const AnimeCollection = () => {
   return (
     <Layout
       backgroundImage="url('/backgrounds/one-punch-man.jpg')"
-      title="Anime Collection | Saikou"
+      title='Anime Collection | Saikou'
     >
       <SearchBar></SearchBar>
       <Cards>

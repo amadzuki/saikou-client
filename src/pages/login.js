@@ -1,4 +1,5 @@
 import React from 'react'
+import { PropTypes } from 'prop-types'
 import styled from '@xstyled/styled-components'
 import { useForm } from 'react-hook-form'
 import { top } from '@xstyled/system'
@@ -92,36 +93,36 @@ const Login = ({ authenticate }) => {
   }
   return (
     <>
-      <HeroWithContent title="Login | Saikou">
+      <HeroWithContent title='Login | Saikou'>
         <FormBox>
           <FormTitle>Nakama Login</FormTitle>
           <SeparatorLine></SeparatorLine>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Input
-              name="email"
+              name='email'
               ref={register({ required: true })}
-              placeholder="Email"
+              placeholder='Email'
             />
             {errors.email && (
-              <ErrorPopper top="320px">
+              <ErrorPopper top='320px'>
                 You're supposed to fill your email nakama :)
               </ErrorPopper>
             )}
             <Input
-              name="password"
-              type="password"
+              name='password'
+              type='password'
               ref={register({ required: true })}
-              placeholder="Password"
+              placeholder='Password'
             />
             {errors.password && (
-              <ErrorPopper top="420px">
+              <ErrorPopper top='420px'>
                 You're supposed to fill your password nakama :)
               </ErrorPopper>
             )}
-            <SubmitButton type="submit">Log in</SubmitButton>
+            <SubmitButton type='submit'>Log in</SubmitButton>
           </Form>
           <TextBox>Not a Nakama yet?</TextBox>
-          <RegisterLink to="/register">Register</RegisterLink>
+          <RegisterLink to='/register'>Register</RegisterLink>
         </FormBox>
       </HeroWithContent>
       <Footer></Footer>
@@ -129,7 +130,7 @@ const Login = ({ authenticate }) => {
   )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = () => {
   return {}
 }
 
@@ -137,6 +138,10 @@ const mapDispatchToProps = (dispatch) => {
   return {
     authenticate: () => dispatch({ type: 'ISAUTHENTICATED_TRUE' }),
   }
+}
+
+Login.propTypes = {
+  authenticate: PropTypes.func,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login)

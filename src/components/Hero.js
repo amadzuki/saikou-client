@@ -26,7 +26,7 @@ const Background = styled.div`
 const Hero = ({ backgroundImage }) => {
   return (
     <Background backgroundImage={backgroundImage}>
-      <BackgroundShade backgroundColor="whiteShade">
+      <BackgroundShade backgroundColor='whiteShade'>
         <Navigation></Navigation>
       </BackgroundShade>
     </Background>

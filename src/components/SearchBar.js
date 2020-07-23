@@ -54,11 +54,11 @@ const SearchBar = () => {
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <Container>
-        <SearchLabel htmlFor="search">Search anime & manga</SearchLabel>
+        <SearchLabel htmlFor='search'>Search anime & manga</SearchLabel>
         <InputBox>
-          <SearchInput name="search" ref={register} />
-          <SearchButton type="submit">
-            <IconSearch src="/misc/IconSearch.svg" alt="Search Icon" />
+          <SearchInput name='search' ref={register} />
+          <SearchButton type='submit'>
+            <IconSearch src='/misc/IconSearch.svg' alt='Search Icon' />
           </SearchButton>
         </InputBox>
       </Container>

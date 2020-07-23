@@ -28,7 +28,7 @@ const App = () => {
       <Router>
         <ScrollToTop></ScrollToTop>
         <Switch>
-          <Route path="/" exact>
+          <Route path='/' exact>
             <Home />
           </Route>
           <Route path={['/anime/:id/', '/manga/:id/']} exact>
@@ -37,22 +37,22 @@ const App = () => {
           <Route path={['/anime/:id/:slug', '/manga/:id/:slug']}>
             <ItemDetail />
           </Route>
-          <Route path="/anime" exact>
+          <Route path='/anime' exact>
             <AnimeCollection />
           </Route>
-          <Route path="/manga" exact>
+          <Route path='/manga' exact>
             <MangaCollection />
           </Route>
-          <Route path="/register">
+          <Route path='/register'>
             <Register />
           </Route>
-          <Route path="/login">
+          <Route path='/login'>
             <Login />
           </Route>
-          <Route path="/about">
+          <Route path='/about'>
             <About />
           </Route>
-          <Route path="/debug">
+          <Route path='/debug'>
             <Debug />
           </Route>
         </Switch>

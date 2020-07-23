@@ -38,23 +38,23 @@ const Navigation = ({ shade }) => {
   return (
     <Nav backgroundColor={shade}>
       <SubNav>
-        <NavigationLink to="/">
+        <NavigationLink to='/'>
           <Logo>Saikou!</Logo>
         </NavigationLink>
       </SubNav>
       <SubNav>
-        <NavigationLink to="/anime" activeClassName="active">
+        <NavigationLink to='/anime' activeClassName='active'>
           Anime
         </NavigationLink>
-        <NavigationLink to="/manga" activeClassName="active">
+        <NavigationLink to='/manga' activeClassName='active'>
           Manga
         </NavigationLink>
       </SubNav>
       <SubNav>
-        <NavigationLink to="/register" activeClassName="active">
+        <NavigationLink to='/register' activeClassName='active'>
           Register
         </NavigationLink>
-        <NavigationLink to="/login" activeClassName="active">
+        <NavigationLink to='/login' activeClassName='active'>
           Login
         </NavigationLink>
       </SubNav>

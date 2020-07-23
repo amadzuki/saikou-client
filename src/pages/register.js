@@ -89,47 +89,47 @@ const Register = () => {
   }
   return (
     <>
-      <HeroWithContent title="Register | Saikou">
+      <HeroWithContent title='Register | Saikou'>
         <FormBox>
           <FormTitle>Become our Nakama!</FormTitle>
           <SeparatorLine></SeparatorLine>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Input
-              name="email"
+              name='email'
               ref={register({ required: true })}
-              placeholder="Email"
+              placeholder='Email'
             />
             {errors.email && (
-              <ErrorPopper top="283px">
+              <ErrorPopper top='283px'>
                 You're supposed to fill your email here:)
               </ErrorPopper>
             )}
             <Input
-              name="password"
-              type="password"
+              name='password'
+              type='password'
               ref={register({ required: true })}
-              placeholder="Password"
+              placeholder='Password'
             />
             {errors.password && (
-              <ErrorPopper top="375px">
+              <ErrorPopper top='375px'>
                 You're supposed to fill your password here :)
               </ErrorPopper>
             )}{' '}
             <Input
-              name="passwordConfirm"
-              type="password"
+              name='passwordConfirm'
+              type='password'
               ref={register({ required: true })}
-              placeholder="Re-enter Password"
+              placeholder='Re-enter Password'
             />
             {errors.passwordConfirm && (
-              <ErrorPopper top="465px">
+              <ErrorPopper top='465px'>
                 Come on, it's for your own good...
               </ErrorPopper>
             )}
-            <SubmitButton type="submit">Count me in!</SubmitButton>
+            <SubmitButton type='submit'>Count me in!</SubmitButton>
           </Form>
           <TextBox>Already a Nakama?</TextBox>
-          <LoginLink to="/login">Log in</LoginLink>
+          <LoginLink to='/login'>Log in</LoginLink>
         </FormBox>
       </HeroWithContent>
       <Footer></Footer>

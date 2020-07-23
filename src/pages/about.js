@@ -26,7 +26,7 @@ const AboutParagraph = styled.p`
 const About = () => {
   return (
     <>
-      <HeroWithContent height="50vh" shade="whiteShade" title="About | Saikou">
+      <HeroWithContent height='50vh' shade='whiteShade' title='About | Saikou'>
         <HeroHeading>About Saikou</HeroHeading>
       </HeroWithContent>
       <TextContainer>
