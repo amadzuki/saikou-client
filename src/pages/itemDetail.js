@@ -166,14 +166,14 @@ const ItemDetail = () => {
           <MiniReviews></MiniReviews>
           <MiniReviews>
             <MiniReview>
-              <Avatar variant='small' id='1' />
+              <Avatar variant='small' id={1} />
               <DialogueBox>
                 <DialogueBoxImg src='/misc/DialogueBox.svg' />
                 <MiniReviewText>"simply, a masterpiece"</MiniReviewText>
               </DialogueBox>
             </MiniReview>
             <MiniReview>
-              <Avatar variant='small' id='12' />
+              <Avatar variant='small' id={12} />
               <DialogueBox>
                 <DialogueBoxImg src='/misc/DialogueBox.svg' />
                 <MiniReviewText>
@@ -182,7 +182,7 @@ const ItemDetail = () => {
               </DialogueBox>
             </MiniReview>
             <MiniReview>
-              <Avatar variant='small' id='4' />
+              <Avatar variant='small' id={4} />
               <DialogueBox>
                 <DialogueBoxImg src='/misc/DialogueBox.svg' />
                 <MiniReviewText>
@@ -195,12 +195,12 @@ const ItemDetail = () => {
         <FavoritedByBox>
           <FavoritedByTitle>Favorited by</FavoritedByTitle>
           <AvatarsList>
-            <Avatar id='2'></Avatar>
-            <Avatar id='3'></Avatar>
-            <Avatar id='4'></Avatar>
-            <Avatar id='5'></Avatar>
-            <Avatar id='6'></Avatar>
-            <Avatar id='7'></Avatar>
+            <Avatar id={2}></Avatar>
+            <Avatar id={3}></Avatar>
+            <Avatar id={4}></Avatar>
+            <Avatar id={5}></Avatar>
+            <Avatar id={6}></Avatar>
+            <Avatar id={7}></Avatar>
           </AvatarsList>
         </FavoritedByBox>
       </PageContents>
