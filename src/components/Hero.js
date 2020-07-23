@@ -1,4 +1,5 @@
 import React from 'react'
+import { PropTypes } from 'prop-types'
 import styled from '@xstyled/styled-components'
 import { backgroundImage, backgroundColor } from '@xstyled/system'
 
@@ -31,6 +32,10 @@ const Hero = ({ backgroundImage }) => {
       </BackgroundShade>
     </Background>
   )
+}
+
+Hero.propTypes = {
+  backgroundImage: PropTypes.string,
 }
 
 export default Hero

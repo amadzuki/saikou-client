@@ -1,4 +1,5 @@
 import React from 'react'
+import { PropTypes } from 'prop-types'
 import styled from '@xstyled/styled-components'
 
 import users from '../data/users.json'
@@ -28,6 +29,11 @@ const StyledAvatar = styled.img`
 const Avatar = ({ variant, id }) => {
   const { avatar } = users.find((item) => item.id === +id)
   return <StyledAvatar className={variant} src={avatar}></StyledAvatar>
+}
+
+Avatar.propTypes = {
+  variant: PropTypes.string,
+  id: PropTypes.number,
 }
 
 export default Avatar

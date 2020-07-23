@@ -1,7 +1,12 @@
 module.exports = {
   extends: ['eslint:recommended', 'plugin:react/recommended'],
 
-  plugins: ['prettier'],
+  plugins: ['prettier', 'react'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   env: {
     es6: true,
     node: true,
@@ -16,6 +21,6 @@ module.exports = {
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
     'jsx-quotes': ['error', 'prefer-single'],
-    'react/no-unescaped-entities': ['error', {'forbid': ['>', '}']}],
+    'react/no-unescaped-entities': ['error', { forbid: ['>', '}'] }],
   },
 }

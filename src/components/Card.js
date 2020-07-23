@@ -1,4 +1,5 @@
 import React from 'react'
+import { PropTypes } from 'prop-types'
 import styled from '@xstyled/styled-components'
 import { Link } from 'react-router-dom'
 
@@ -46,6 +47,10 @@ const Card = ({ id }) => {
       </CardStyled>
     </>
   )
+}
+
+Card.propTypes = {
+  id: PropTypes.number,
 }
 
 export default Card

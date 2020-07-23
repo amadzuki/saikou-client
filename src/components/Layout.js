@@ -1,4 +1,5 @@
 import React from 'react'
+import { PropTypes } from 'prop-types'
 
 import AppHelmet from './AppHelmet'
 import Hero from './Hero'
@@ -15,4 +16,9 @@ const Layout = ({ backgroundImage, children, title }) => {
   )
 }
 
+Layout.propTypes = {
+  backgroundImage: PropTypes.string,
+  title: PropTypes.string,
+  children: PropTypes.element,
+}
 export default Layout

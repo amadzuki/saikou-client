@@ -1,4 +1,5 @@
 import React from 'react'
+import { PropTypes } from 'prop-types'
 import styled from '@xstyled/styled-components'
 import { Link } from 'react-router-dom'
 
@@ -38,6 +39,12 @@ const Button = (props) => {
       {children}
     </ButtonTemplate>
   )
+}
+
+Button.propTypes = {
+  to: PropTypes.string,
+  variant: PropTypes.string,
+  children: PropTypes.element,
 }
 
 export default Button

@@ -1,4 +1,5 @@
 import React from 'react'
+import { PropTypes } from 'prop-types'
 import styled from '@xstyled/styled-components'
 import { height } from '@xstyled/system'
 
@@ -52,6 +53,13 @@ const HeroWithContent = ({ height, children, shade, title }) => {
       </Background>
     </>
   )
+}
+
+HeroWithContent.propTypes = {
+  height: PropTypes.string,
+  children: PropTypes.element,
+  shade: PropTypes.string,
+  title: PropTypes.string,
 }
 
 export default HeroWithContent

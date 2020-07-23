@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "name": "Black Clover",
     "imageSrc": "/covers/anime_Black-Clover.jpg",
     "imageAlt": "Black Clover anime cover",
@@ -10,7 +10,7 @@
     "catchPhrase": "Even with no magical powers… I’ll become the Magic Emperor."
   },
   {
-    "id": "2",
+    "id": 2,
     "name": "Code Geass: Hangyaku no Lelouch",
     "imageSrc": "/covers/anime_Code-Geass-Hangyaku-no-Lelouch.jpg",
     "imageAlt": "Code Geass anime cover",
@@ -20,7 +20,7 @@
     "catchPhrase": "I am Zero!, I will destroy the world and create it anew!"
   },
   {
-    "id": "3",
+    "id": 3,
     "name": "Death Note",
     "imageSrc": "/covers/anime_Death-Note.jpg",
     "imageAlt": "Death Note anime cover",
@@ -30,7 +30,7 @@
     "catchPhrase": "This world is rotten, and those who are making it rot deserve to die. Someone has to do it, so why not me?"
   },
   {
-    "id": "4",
+    "id": 4,
     "name": "Dr. STONE",
     "imageSrc": "/covers/anime_Dr-STONE.jpg",
     "imageAlt": "Dr. STONE anime cover",
@@ -40,7 +40,7 @@
     "catchPhrase": "I’m going to use the power of science to rescue every single person."
   },
   {
-    "id": "5",
+    "id": 5,
     "name": "Dragon Ball Super",
     "imageSrc": "/covers/anime_Dragon-Ball-Super.jpg",
     "imageAlt": "Dragon Ball Super anime cover",
@@ -50,7 +50,7 @@
     "catchPhrase": "The truth is, I ain't a hero, or anything else like that. But anyone who tries to hurt my friends.... IS GONNA PAY!!"
   },
   {
-    "id": "6",
+    "id": 6,
     "name": "Gintama",
     "imageSrc": "/covers/anime_Gintama.png",
     "imageAlt": "Gintama anime cover",
@@ -60,7 +60,7 @@
     "catchPhrase": "I don't care if this country of Samurai fell. Then and now, what I protect has never changed!"
   },
   {
-    "id": "7",
+    "id": 7,
     "name": "Fullmetal Alchemist: Brotherhood",
     "imageSrc": "/covers/anime_Hagane-no-Renkinjutsushi-Fullmetal-Alchemist.jpg",
     "imageAlt": "Fullmetal Alchemist: Brotherhood anime cover",
@@ -70,7 +70,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "8",
+    "id": 8,
     "name": "Haikyuu!!",
     "imageSrc": "/covers/anime_Haikyuu!!.jpg",
     "imageAlt": "Haikyuu!! anime cover",
@@ -80,7 +80,7 @@
     "catchPhrase": "What will I be able to see there? 'The view from the top'. A scenery I will never be able to see on my own. But if I’m not alone, then… I might be able to see it."
   },
   {
-    "id": "9",
+    "id": 9,
     "name": "Hunter x Hunter 2011",
     "imageSrc": "/covers/anime_Hunter-x-Hunter-2011.jpg",
     "imageAlt": "Hunter x Hunter 2011 anime cover",
@@ -90,7 +90,7 @@
     "catchPhrase": "Plucky Gon’s quest to find his dad leads him into a whole world of crazy adventure"
   },
   {
-    "id": "10",
+    "id": 10,
     "name": "K-ON!",
     "imageSrc": "/covers/anime_K-ON!.png",
     "imageAlt": "K-ON! anime cover",
@@ -100,7 +100,7 @@
     "catchPhrase": " it’s a cute little show full of cute little marshmallowy girls, with a light color pallet, light music (which is the name of the show), and a relaxed sense of pacing"
   },
   {
-    "id": "11",
+    "id": 11,
     "name": "Kami nomi zo Shiru Sekai",
     "imageSrc": "/covers/anime_Kami-nomi-zo-Shiru-Sekai.jpg",
     "imageAlt": "Kami nomi zo Shiru Sekai",
@@ -110,7 +110,7 @@
     "catchPhrase": "I’m only attracted to girls in games!! Reality is just a shitty game."
   },
   {
-    "id": "12",
+    "id": 12,
     "name": "Kimetsu no Yaiba",
     "imageSrc": "/covers/anime_Kimetsu-no-Yaiba.jpg",
     "imageAlt": "Kimetsu no Yaiba anime cover",
@@ -120,7 +120,7 @@
     "catchPhrase": "Tanjiro sets out on the path of the Demon Slayer to save his sister and avenge his family!"
   },
   {
-    "id": "13",
+    "id": 13,
     "name": "Kimi no Na Wa",
     "imageSrc": "/covers/anime_Kimi-no-Na-wa.png",
     "imageAlt": "Kimi no Na Wa anime cover",
@@ -130,7 +130,7 @@
     "catchPhrase": "'Your Name.' is, in a word, a journey. A journey into what will surely be the future of cinematography, as well as a journey on a grand emotional roller coaster."
   },
   {
-    "id": "14",
+    "id": 14,
     "name": "Kuroko no Basket",
     "imageSrc": "/covers/anime_Kuroko-no-Basket.jpg",
     "imageAlt": "Kuroko no Basket anime cover",
@@ -140,7 +140,7 @@
     "catchPhrase": "I am a supporting actor, a shadow. But a shadow will become darker if the light is stronger and it will make the white of the light stand out. As the shadow of the main actor, I will make you, the light, the number one in Japan"
   },
   {
-    "id": "15",
+    "id": 15,
     "name": "Nanatsu no Taizai",
     "imageSrc": "/covers/anime_Nanatsu-no-Taizai.jpg",
     "imageAlt": "Nanatsu no Taizai anime cover",
@@ -150,7 +150,7 @@
     "catchPhrase": "I wanted to protect everything. But I failed, and that’s the sin I bare. So this time, I can’t fail to protect them!”"
   },
   {
-    "id": "16",
+    "id": 16,
     "name": "No Game No Life",
     "imageSrc": "/covers/anime_No-Game-No-Life.jpg",
     "imageAlt": "No Game No Life anime cover",
@@ -160,7 +160,7 @@
     "catchPhrase": "The winner of each game is decided before it even begins. Chance is never a factor."
   },
   {
-    "id": "17",
+    "id": 17,
     "name": "One Punch Man",
     "imageSrc": "/covers/anime_One-Punch-Man.jpg",
     "imageAlt": "One Punch Man anime cover",
@@ -170,7 +170,7 @@
     "catchPhrase": "Life gets pretty boring when you can beat the snot out of any villain with just one punch"
   },
   {
-    "id": "18",
+    "id": 18,
     "name": "Re:Zero kara Hajimeru Isekai Seikatsu",
     "imageSrc": "/covers/anime_ReZero-kara-Hajimeru-Isekai-Seikatsu.png",
     "imageAlt": "Re:Zero kara Hajimeru Isekai Seikatsu anime cover",
@@ -180,7 +180,7 @@
     "catchPhrase": "It's the usual isekai setting with the power of turning back time just like save point in games... albeit, by dying. Numerous depiction of 'death' really feels like... real"
   },
   {
-    "id": "19",
+    "id": 19,
     "name": "Saiki Kusuo no Ψ-nan",
     "imageSrc": "/covers/anime_Saiki-Kusuo-no-sainan.png",
     "imageAlt": "Saiki Kusuo no Ψ-nan anime cover",
@@ -190,7 +190,7 @@
     "catchPhrase": "An hilarious low-energy gag comedy. It uses the power of 5 min attention span and high speed incantation dialogues to deliver a climax and a cliff hanger at once. Yare yare…."
   },
   {
-    "id": "20",
+    "id": 20,
     "name": "Shingeki no Kyojin",
     "imageSrc": "/covers/anime_Shingeki-no-Kyojin.png",
     "imageAlt": "Shingeki no Kyojin anime cover",
@@ -200,7 +200,7 @@
     "catchPhrase": "On that day, mankind received a grim reminder. We lived in fear of the titans, and were disgraced to live in these cages we called walls."
   },
   {
-    "id": "21",
+    "id": 21,
     "name": "Shokugeki no Souma",
     "imageSrc": "/covers/anime_Shokugeki-no-Souma.jpg",
     "imageAlt": "Shokugeki no Souma anime cover",
@@ -210,7 +210,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "22",
+    "id": 22,
     "name": "Steins;Gate",
     "imageSrc": "/covers/anime_Steins;Gate.jpg",
     "imageAlt": "Steins;Gate anime cover",
@@ -220,7 +220,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "23",
+    "id": 23,
     "name": "Sword Art Online",
     "imageSrc": "/covers/anime_Sword-Art-Online.jpg",
     "imageAlt": "Sword Art Online anime cover",
@@ -230,7 +230,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "24",
+    "id": 24,
     "name": "Tokyo Ghoul",
     "imageSrc": "/covers/anime_Tokyo-Ghoul.jpg",
     "imageAlt": "Tokyo Ghoul anime cover",
@@ -240,7 +240,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "25",
+    "id": 25,
     "name": "21st Century Boys",
     "imageSrc": "/covers/manga_21st-Century-Boys.jpg",
     "imageAlt": "21st Century Boys manga cover",
@@ -250,7 +250,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "26",
+    "id": 26,
     "name": "Beelzebub",
     "imageSrc": "/covers/manga_Beelzebub.png",
     "imageAlt": "Beelzebub manga cover",
@@ -260,7 +260,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "27",
+    "id": 27,
     "name": "Berserk",
     "imageSrc": "/covers/manga_Berserk.jpg",
     "imageAlt": "Berserk manga cover",
@@ -270,7 +270,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "28",
+    "id": 28,
     "name": "Black Clover",
     "imageSrc": "/covers/manga_Black-Clover.png",
     "imageAlt": "Black Clover manga cover",
@@ -280,7 +280,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "29",
+    "id": 29,
     "name": "Bleach",
     "imageSrc": "/covers/manga_Bleach.png",
     "imageAlt": "Bleach manga cover",
@@ -290,7 +290,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "30",
+    "id": 30,
     "name": "Death Note",
     "imageSrc": "/covers/manga_Death-Note.jpg",
     "imageAlt": "Death Note manga cover",
@@ -300,7 +300,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "31",
+    "id": 31,
     "name": "Doraemon",
     "imageSrc": "/covers/manga_Doraemon.jpg",
     "imageAlt": "Doraemon manga cover",
@@ -310,7 +310,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "32",
+    "id": 32,
     "name": "Dr. STONE",
     "imageSrc": "/covers/manga_Dr.-STONE.jpg",
     "imageAlt": "Dr. STONE manga cover",
@@ -320,7 +320,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "33",
+    "id": 33,
     "name": "Dragon Ball Super",
     "imageSrc": "/covers/manga_Dragon-Ball-Super.jpg",
     "imageAlt": "Dragon Ball Super manga cover",
@@ -330,7 +330,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "34",
+    "id": 34,
     "name": "Eyeshield 21",
     "imageSrc": "/covers/manga_Eyeshield-21.png",
     "imageAlt": "Eyeshield 21 manga cover",
@@ -340,7 +340,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "35",
+    "id": 35,
     "name": "Horimiya",
     "imageSrc": "/covers/manga_Horimiya.png",
     "imageAlt": "Horimiya manga cover",
@@ -350,7 +350,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "36",
+    "id": 36,
     "name": "Imawa no Kuni no Alice",
     "imageSrc": "/covers/manga_Imawa-no-Kuni-no-Alice.jpg",
     "imageAlt": "Imawa no Kuni no Alice manga cover",
@@ -360,7 +360,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "37",
+    "id": 37,
     "name": "Konjiki no Gash",
     "imageSrc": "/covers/manga_Konjiki-no-Gash.jpg",
     "imageAlt": "Konjiki no Gash manga cover",
@@ -370,7 +370,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "38",
+    "id": 38,
     "name": "Machida-kun no Sekai",
     "imageSrc": "/covers/manga_Machidakun-no-Sekai.png",
     "imageAlt": "Machida-kun no Sekai manga cover",
@@ -380,7 +380,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "39",
+    "id": 39,
     "name": "Magi: The Labyrinth of Magic",
     "imageSrc": "/covers/manga_Magi-The-Labyrinth-of-Magic.png",
     "imageAlt": "Magi: The Labyrinth of Magic manga cover",
@@ -390,7 +390,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "40",
+    "id": 40,
     "name": "Nanatsu no Taizai",
     "imageSrc": "/covers/manga_Nanatsu-no-Taizai.jpg",
     "imageAlt": "Nanatsu no Taizai manga cover",
@@ -400,7 +400,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "41",
+    "id": 41,
     "name": "Naruto",
     "imageSrc": "/covers/manga_Naruto.jpg",
     "imageAlt": "Naruto manga cover",
@@ -410,7 +410,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "42",
+    "id": 42,
     "name": "Onanie Master Kurosawa",
     "imageSrc": "/covers/manga_Onanie-Master-Kurosawa.jpg",
     "imageAlt": "Onanie Master Kurosawa manga cover",
@@ -420,7 +420,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "43",
+    "id": 43,
     "name": "One Piece",
     "imageSrc": "/covers/manga_One-Piece.jpg",
     "imageAlt": "One Piece manga cover",
@@ -430,7 +430,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "44",
+    "id": 44,
     "name": "One Punch-Man",
     "imageSrc": "/covers/manga_One-Punch-Man.jpg",
     "imageAlt": "One Punch-Man manga cover",
@@ -440,7 +440,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "45",
+    "id": 45,
     "name": "Shin Angyo Onshi",
     "imageSrc": "/covers/manga_Shin-Angyo-Onshi.jpg",
     "imageAlt": "Shin Angyo Onshi manga cover",
@@ -450,7 +450,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "46",
+    "id": 46,
     "name": "Suashi no Meteorite",
     "imageSrc": "/covers/manga_Suashi-no-Meteorite.jpg",
     "imageAlt": "Suashi no Meteorite manga cover",
@@ -460,7 +460,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "47",
+    "id": 47,
     "name": "Tensei shitara Slime Datta Ken",
     "imageSrc": "/covers/manga_Tensei-Shitara-Slime-Datta-Ken.jpg",
     "imageAlt": "Tensei shitara Slime Datta Ken manga cover",
@@ -470,7 +470,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "48",
+    "id": 48,
     "name": "Tokyo Ghoul",
     "imageSrc": "/covers/manga_Tokyo-Ghoul.jpg",
     "imageAlt": "Tokyo Ghoul manga cover",
@@ -480,7 +480,7 @@
     "catchPhrase": "In order for something to be obtained, something of equal value must be lost."
   },
   {
-    "id": "49",
+    "id": 49,
     "name": "Vinland Saga",
     "imageSrc": "/covers/manga_Vinland-Saga.png",
     "imageAlt": "Vinland Saga manga cover",
