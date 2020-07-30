@@ -40,7 +40,7 @@ const Debug = () => {
           <h3>Users from API:</h3>
           <ul>
             {users.map((user, index) => {
-              return <li key={index}>{user}</li>
+              return <li key={index}>{user.email}</li>
             })}
           </ul>
         </div>
