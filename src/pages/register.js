@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styled from '@xstyled/styled-components'
 import { useForm } from 'react-hook-form'
 import { top } from '@xstyled/system'
@@ -83,7 +83,9 @@ const ErrorPopper = styled.p`
   ${top}
 `
 const Register = () => {
-  const { register, handleSubmit, errors } = useForm()
+  const { register, handleSubmit, errors, watch } = useForm()
+  const password = useRef({})
+  password.current = watch('password', '')
   const onSubmit = (data) => {
     console.log(data)
   }
@@ -107,23 +109,31 @@ const Register = () => {
             <Input
               name='password'
               type='password'
-              ref={register({ required: true })}
+              ref={register({
+                required: 'You are supposed to fill your password here :)',
+                minLength: {
+                  value: 8,
+                  message: 'Password must have at least 8 characters',
+                },
+              })}
               placeholder='Password'
             />
             {errors.password && (
-              <ErrorPopper top='375px'>
-                You're supposed to fill your password here :)
-              </ErrorPopper>
-            )}{' '}
+              <ErrorPopper top='375px'>{errors.password.message}</ErrorPopper>
+            )}
             <Input
               name='passwordConfirm'
               type='password'
-              ref={register({ required: true })}
+              ref={register({
+                required: 'Come on, it is for your own good...',
+                validate: (value) =>
+                  value === password.current || 'The passwords do not match',
+              })}
               placeholder='Re-enter Password'
             />
             {errors.passwordConfirm && (
               <ErrorPopper top='465px'>
-                Come on, it's for your own good...
+                {errors.passwordConfirm.message}
               </ErrorPopper>
             )}
             <SubmitButton type='submit'>Count me in!</SubmitButton>
