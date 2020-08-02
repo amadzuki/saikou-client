@@ -45,15 +45,17 @@ const Home = () => {
   return (
     <>
       <HeroWithContent shade='whiteShade' title='Saikou'>
-        <HeroHeading>Where people discuss anime and manga</HeroHeading>
-        <Buttons>
-          <Button to='/anime' variant='anime'>
-            See Anime List
-          </Button>
-          <Button to='/manga' variant='manga'>
-            See Manga List
-          </Button>
-        </Buttons>
+        <>
+          <HeroHeading>Where people discuss anime and manga</HeroHeading>
+          <Buttons>
+            <Button to='/anime' variant='anime'>
+              <span>See Anime List</span>
+            </Button>
+            <Button to='/manga' variant='manga'>
+              <span>See Manga List</span>
+            </Button>
+          </Buttons>
+        </>
       </HeroWithContent>
       <HomeContents>
         <CardsTitle>Top Anime</CardsTitle>

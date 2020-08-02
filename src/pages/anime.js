@@ -21,12 +21,14 @@ const AnimeCollection = () => {
       backgroundImage="url('/backgrounds/one-punch-man.jpg')"
       title='Anime Collection | Saikou'
     >
-      <SearchBar></SearchBar>
-      <Cards>
-        {AnimeCovers.map((cover, index) => (
-          <Card key={index} id={cover.id} />
-        ))}
-      </Cards>
+      <>
+        <SearchBar></SearchBar>
+        <Cards>
+          {AnimeCovers.map((cover, index) => (
+            <Card key={index} id={cover.id} />
+          ))}
+        </Cards>
+      </>
     </Layout>
   )
 }

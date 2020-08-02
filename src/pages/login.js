@@ -92,7 +92,7 @@ const Login = ({ authenticate }) => {
   const onSubmit = async (data) => {
     try {
       const response = await requests.getToken(data.email, data.password)
-      authenticate()
+      authenticate(response.accessToken)
       console.log(response)
     } catch (error) {
       console.error(error)
@@ -145,7 +145,8 @@ const mapStateToProps = () => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    authenticate: () => dispatch({ type: 'ISAUTHENTICATED_TRUE' }),
+    authenticate: (accessToken) =>
+      dispatch({ type: 'ISAUTHENTICATED_TRUE', accessToken: accessToken }),
   }
 }
 

@@ -21,12 +21,14 @@ const MangaCollection = () => {
       backgroundImage="url('/backgrounds/one-piece.jpg')"
       title='Manga Collection | Saikou'
     >
-      <SearchBar></SearchBar>
-      <Cards>
-        {MangaCovers.map((cover, index) => (
-          <Card key={index} id={cover.id} />
-        ))}
-      </Cards>
+      <>
+        <SearchBar></SearchBar>
+        <Cards>
+          {MangaCovers.map((cover, index) => (
+            <Card key={index} id={cover.id} />
+          ))}
+        </Cards>
+      </>
     </Layout>
   )
 }
