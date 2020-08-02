@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom'
 import HeroWithContent from '../components/HeroWithContent'
 import Footer from '../components/Footer'
 
+import requests from '../utils/requests'
+
 const FormBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -86,8 +88,10 @@ const Register = () => {
   const { register, handleSubmit, errors, watch } = useForm()
   const password = useRef({})
   password.current = watch('password', '')
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
+    const response = await requests.register(data.email, data.password)
     console.log(data)
+    console.log(response)
   }
   return (
     <>
