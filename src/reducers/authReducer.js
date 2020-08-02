@@ -1,5 +1,6 @@
 const initialState = {
   isAuthenticated: false,
+  accessToken: '',
 }
 
 const authReducer = (state = initialState, action) => {
@@ -8,12 +9,14 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         isAuthenticated: true,
+        accessToken: action.accessToken,
       }
 
-    case 'ISAUTHENTICATED_FALSE':
+    case 'DEAUTHENTICATE':
       return {
         ...state,
         isAuthenticated: false,
+        accessToken: '',
       }
     default:
       return state
