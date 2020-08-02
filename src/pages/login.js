@@ -9,6 +9,8 @@ import { connect } from 'react-redux'
 import HeroWithContent from '../components/HeroWithContent'
 import Footer from '../components/Footer'
 
+import requests from '../utils/requests'
+
 const FormBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -87,8 +89,15 @@ const ErrorPopper = styled.p`
 `
 const Login = ({ authenticate }) => {
   const { register, handleSubmit, errors } = useForm()
-  const onSubmit = (data) => {
-    authenticate()
+  const onSubmit = async (data) => {
+    try {
+      const response = await requests.getToken(data.email, data.password)
+      authenticate()
+      console.log(response)
+    } catch (error) {
+      console.error(error)
+    }
+
     console.log(data)
   }
   return (
@@ -100,24 +109,24 @@ const Login = ({ authenticate }) => {
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Input
               name='email'
-              ref={register({ required: true })}
+              ref={register({
+                required: 'You are supposed to fill your email nakama :)',
+              })}
               placeholder='Email'
             />
             {errors.email && (
-              <ErrorPopper top='320px'>
-                You're supposed to fill your email nakama :)
-              </ErrorPopper>
+              <ErrorPopper top='320px'>{errors.email.message}</ErrorPopper>
             )}
             <Input
               name='password'
               type='password'
-              ref={register({ required: true })}
+              ref={register({
+                required: 'You are supposed to fill your password nakama :)',
+              })}
               placeholder='Password'
             />
             {errors.password && (
-              <ErrorPopper top='420px'>
-                You're supposed to fill your password nakama :)
-              </ErrorPopper>
+              <ErrorPopper top='420px'>{errors.password.message}</ErrorPopper>
             )}
             <SubmitButton type='submit'>Log in</SubmitButton>
           </Form>
