@@ -146,7 +146,7 @@ const mapStateToProps = () => {
 const mapDispatchToProps = (dispatch) => {
   return {
     authenticate: (accessToken) =>
-      dispatch({ type: 'ISAUTHENTICATED_TRUE', accessToken: accessToken }),
+      dispatch({ type: 'AUTHENTICATE', accessToken: accessToken }),
   }
 }
 

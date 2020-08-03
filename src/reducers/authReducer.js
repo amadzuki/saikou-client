@@ -5,7 +5,7 @@ const initialState = {
 
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'ISAUTHENTICATED_TRUE':
+    case 'AUTHENTICATE':
       return {
         ...state,
         isAuthenticated: true,
