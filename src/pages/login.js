@@ -111,6 +111,10 @@ const Login = ({ authenticate }) => {
               name='email'
               ref={register({
                 required: 'You are supposed to fill your email nakama :)',
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: 'Invalid email address',
+                },
               })}
               placeholder='Email'
             />

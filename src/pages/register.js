@@ -102,13 +102,17 @@ const Register = () => {
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Input
               name='email'
-              ref={register({ required: true })}
+              ref={register({
+                required: 'You are supposed to fill your email here:)',
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: 'Invalid email address',
+                },
+              })}
               placeholder='Email'
             />
             {errors.email && (
-              <ErrorPopper top='283px'>
-                You're supposed to fill your email here:)
-              </ErrorPopper>
+              <ErrorPopper top='283px'>{errors.email.message}</ErrorPopper>
             )}
             <Input
               name='password'
