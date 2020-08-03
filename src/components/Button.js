@@ -29,6 +29,7 @@ const ButtonTemplate = styled(Link)`
 
   &.primary {
     background-color: darkred;
+    font-size: 25;
   }
 `
 
