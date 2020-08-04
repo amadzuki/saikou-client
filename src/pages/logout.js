@@ -12,7 +12,7 @@ const HeadingText = styled.h1`
   margin: 20 0;
 
   &.big {
-    font-size: 60;
+    font-size: 55;
     margin: 0;
   }
 `

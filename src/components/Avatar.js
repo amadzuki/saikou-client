@@ -20,9 +20,10 @@ const StyledAvatar = styled.img`
   }
 
   &.large {
-    width: 206;
-    height: 206;
+    width: 200;
+    height: 200;
     border: 5px solid black;
+    margin: 0;
   }
 `
 

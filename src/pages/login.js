@@ -93,9 +93,9 @@ const Login = ({ authenticate }) => {
     try {
       const response = await requests.getToken(data.email, data.password)
       authenticate(response.accessToken)
-      console.log(response)
+      localStorage.setItem('accessToken', response.accessToken)
     } catch (error) {
-      console.error(error)
+      console.error('Error requesting token to server')
     }
 
     console.log(data)

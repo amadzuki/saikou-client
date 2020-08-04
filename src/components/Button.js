@@ -28,8 +28,14 @@ const ButtonTemplate = styled(Link)`
   }
 
   &.primary {
-    background-color: darkred;
+    background-color: darkRed;
     font-size: 25;
+  }
+
+  &.small {
+    background-color: darkRed;
+    font-size: 20;
+    padding: 5px 10px;
   }
 `
 

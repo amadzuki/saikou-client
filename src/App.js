@@ -11,6 +11,7 @@ import MangaCollection from './pages/manga'
 import Register from './pages/register'
 import Login from './pages/login'
 import Logout from './pages/logout'
+import UserProfile from './pages/userProfile'
 import Debug from './pages/debug'
 
 import ScrollToTop from './components/ScrollToTop'
@@ -52,6 +53,9 @@ const App = () => {
           </Route>
           <Route path='/logout'>
             <Logout />
+          </Route>
+          <Route path='/user'>
+            <UserProfile />
           </Route>
           <Route path='/about'>
             <About />
