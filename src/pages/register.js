@@ -7,7 +7,7 @@ import { Link, useHistory } from 'react-router-dom'
 import HeroWithContent from '../components/HeroWithContent'
 import Footer from '../components/Footer'
 
-import requests from '../utils/requests'
+import requests from '../utils/requests/requests'
 
 const FormBox = styled.div`
   display: flex;

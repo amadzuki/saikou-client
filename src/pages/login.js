@@ -9,7 +9,7 @@ import { connect } from 'react-redux'
 import HeroWithContent from '../components/HeroWithContent'
 import Footer from '../components/Footer'
 
-import requests from '../utils/requests'
+import requests from '../utils/requests/requests'
 
 const FormBox = styled.div`
   display: flex;
@@ -94,11 +94,8 @@ const Login = ({ authenticate }) => {
     try {
       const response = await requests.getToken(data.email, data.password)
       authenticate(response.accessToken)
-      localStorage.setItem('accessToken', response.accessToken)
       history.push('/')
-
-      const user = await requests.getUserData(1)
-      localStorage.setItem('user', JSON.stringify(user))
+      // const user = await requests.getUserData(1)
     } catch (error) {
       console.error('Error requesting token to server')
     }
