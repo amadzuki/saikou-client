@@ -96,6 +96,9 @@ const Login = ({ authenticate }) => {
       authenticate(response.accessToken)
       localStorage.setItem('accessToken', response.accessToken)
       history.push('/')
+
+      const user = await requests.getUserData(1)
+      localStorage.setItem('user', JSON.stringify(user))
     } catch (error) {
       console.error('Error requesting token to server')
     }

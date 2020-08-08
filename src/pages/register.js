@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import styled from '@xstyled/styled-components'
 import { useForm } from 'react-hook-form'
 import { top } from '@xstyled/system'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 import HeroWithContent from '../components/HeroWithContent'
 import Footer from '../components/Footer'
@@ -85,6 +85,7 @@ const ErrorPopper = styled.p`
   ${top}
 `
 const Register = () => {
+  const history = useHistory()
   const { register, handleSubmit, errors, watch } = useForm()
   const password = useRef({})
   password.current = watch('password', '')
@@ -92,6 +93,7 @@ const Register = () => {
     const response = await requests.register(data.email, data.password)
     console.log(data)
     console.log(response)
+    history.push('/')
   }
   return (
     <>
