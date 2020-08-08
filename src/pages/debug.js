@@ -3,7 +3,7 @@ import styled from '@xstyled/styled-components'
 
 import HeroWithContent from '../components/HeroWithContent'
 
-import fetch from '../utils/fetch'
+import requests from '../utils/requests'
 
 const HeroHeading = styled.h1`
   font-family: title;
@@ -21,13 +21,19 @@ const TextContainer = styled.div`
 
 const Debug = () => {
   const [users, setUsers] = useState([])
+  const [user, setUser] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('/users')
+      const response = await requests.debugFetch('/users')
       setUsers(response.data.users)
     }
     fetchData()
+    const fetchUserById = async () => {
+      const response = await requests.getUserData(1)
+      setUser(response)
+    }
+    fetchUserById()
   }, [])
 
   return (
@@ -42,6 +48,17 @@ const Debug = () => {
             {users.map((user, index) => {
               return <li key={index}>{user.email}</li>
             })}
+          </ul>
+        </div>
+      </TextContainer>
+      <TextContainer>
+        <div>
+          <h3>User by id 1 from API:</h3>
+          <ul>
+            <li>id: {user.id}</li>
+            <li>alias: {user.alias}</li>
+            <li>avatar path: {user.avatar}</li>
+            <li>date joined: {user.dateJoined}</li>
           </ul>
         </div>
       </TextContainer>
