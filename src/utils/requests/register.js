@@ -1,4 +1,4 @@
-import axios from '../config/axios'
+import axios from '../../config/axios'
 
 const register = async (email, password) => {
   const response = await axios.post('/auth/register', {

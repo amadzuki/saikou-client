@@ -1,4 +1,4 @@
-import axios from '../config/axios'
+import axios from '../../config/axios'
 
 const debugFetch = axios.create({
   timeout: 1000,
