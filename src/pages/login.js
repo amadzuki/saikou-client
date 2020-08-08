@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types'
 import styled from '@xstyled/styled-components'
 import { useForm } from 'react-hook-form'
 import { top } from '@xstyled/system'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import HeroWithContent from '../components/HeroWithContent'
@@ -89,11 +89,13 @@ const ErrorPopper = styled.p`
 `
 const Login = ({ authenticate }) => {
   const { register, handleSubmit, errors } = useForm()
+  const history = useHistory()
   const onSubmit = async (data) => {
     try {
       const response = await requests.getToken(data.email, data.password)
       authenticate(response.accessToken)
       localStorage.setItem('accessToken', response.accessToken)
+      history.push('/')
     } catch (error) {
       console.error('Error requesting token to server')
     }
