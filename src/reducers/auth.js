@@ -3,7 +3,7 @@ const initialState = {
   accessToken: '',
 }
 
-const authReducer = (state = initialState, action) => {
+const auth = (state = initialState, action) => {
   switch (action.type) {
     case 'AUTHENTICATE':
       return {
@@ -23,4 +23,4 @@ const authReducer = (state = initialState, action) => {
   }
 }
 
-export default authReducer
+export default auth

@@ -3,6 +3,7 @@ import { PropTypes } from 'prop-types'
 import styled from '@xstyled/styled-components'
 import { NavLink } from 'react-router-dom'
 import { backgroundColor } from '@xstyled/system'
+import { connect } from 'react-redux'
 
 const Logo = styled.h1`
   font-family: title;
@@ -35,7 +36,7 @@ const NavigationLink = styled(NavLink)`
   }
 `
 
-const Navigation = ({ shade }) => {
+const Navigation = ({ shade, isAuthenticated }) => {
   return (
     <Nav backgroundColor={shade}>
       <SubNav>
@@ -52,19 +53,32 @@ const Navigation = ({ shade }) => {
         </NavigationLink>
       </SubNav>
       <SubNav>
-        <NavigationLink to='/register' activeClassName='active'>
-          Register
-        </NavigationLink>
-        <NavigationLink to='/login' activeClassName='active'>
-          Login
-        </NavigationLink>
+        {isAuthenticated ? (
+          <>
+            <NavigationLink to='/register' activeClassName='active'>
+              Register
+            </NavigationLink>
+            <NavigationLink to='/login' activeClassName='active'>
+              Login
+            </NavigationLink>
+          </>
+        ) : (
+          <NavigationLink to='/user' activeClassName='active'>
+            Hi, Nakama
+          </NavigationLink>
+        )}
       </SubNav>
     </Nav>
   )
 }
 
-Navigation.propTypes = {
-  shade: PropTypes.string,
+const mapStateToProps = (state) => {
+  return { isAuthenticated: state.auth.isAuthenticated }
 }
 
-export default Navigation
+Navigation.propTypes = {
+  shade: PropTypes.string,
+  isAuthenticated: PropTypes.bool,
+}
+
+export default connect(mapStateToProps)(Navigation)
