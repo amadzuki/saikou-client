@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
-// import { useParams } from 'react-router-dom'
+import { PropTypes } from 'prop-types'
+import { connect } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 
 import Layout from '../components/Layout'
 import Avatar from '../components/Avatar'
@@ -25,6 +27,17 @@ const AvatarBox = styled.div`
   align-items: center;
   position: relative;
   z-index: 1;
+`
+const ButtonLogOut = styled.button`
+  font-family: title;
+  margin: 0 20 20 20;
+  border: 5px solid #000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: lightFont;
+  background-color: darkRed;
+  font-size: 20;
+  padding: 5px 10px;
 `
 const WhiteRoundSpace = styled.div`
   border-radius: 50%;
@@ -63,8 +76,13 @@ const Favorites = styled.div`
   margin-top: 20;
   display: flex;
 `
-const UserProfile = () => {
+const UserProfile = ({ deauthenticate }) => {
   const favoriteList = [2, 7, 40, 9, 27]
+  const history = useHistory()
+  const logout = () => {
+    deauthenticate()
+    history.push('/logout')
+  }
   return (
     <>
       <Layout
@@ -80,6 +98,9 @@ const UserProfile = () => {
               <Button to='/' variant='small'>
                 <span>edit profile</span>
               </Button>
+              <ButtonLogOut onClick={logout}>
+                <span>log out</span>
+              </ButtonLogOut>
             </AvatarBox>
             <UserInfo>
               <TitleText>amadzuki</TitleText>
@@ -105,4 +126,13 @@ const UserProfile = () => {
   )
 }
 
-export default UserProfile
+const mapDispatchToProps = (dispatch) => {
+  return {
+    deauthenticate: () => dispatch({ type: 'DEAUTHENTICATE' }),
+  }
+}
+
+UserProfile.propTypes = {
+  deauthenticate: PropTypes.func,
+}
+export default connect(null, mapDispatchToProps)(UserProfile)

@@ -53,7 +53,7 @@ const Navigation = ({ shade, isAuthenticated }) => {
         </NavigationLink>
       </SubNav>
       <SubNav>
-        {isAuthenticated ? (
+        {!isAuthenticated ? (
           <>
             <NavigationLink to='/register' activeClassName='active'>
               Register
