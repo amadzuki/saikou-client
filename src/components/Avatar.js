@@ -27,14 +27,19 @@ const StyledAvatar = styled.img`
   }
 `
 
-const Avatar = ({ variant, id }) => {
-  const { avatar } = users.find((item) => item.id === +id)
-  return <StyledAvatar className={variant} src={avatar}></StyledAvatar>
+const Avatar = ({ variant, id, imagePath }) => {
+  if (id) {
+    const { avatar } = users.find((item) => item.id === +id)
+    return <StyledAvatar className={variant} src={avatar}></StyledAvatar>
+  } else if (imagePath) {
+    return <StyledAvatar className={variant} src={imagePath}></StyledAvatar>
+  }
 }
 
 Avatar.propTypes = {
   variant: PropTypes.string,
   id: PropTypes.number,
+  imagePath: PropTypes.string,
 }
 
 export default Avatar
