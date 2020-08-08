@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import styled from '@xstyled/styled-components'
+import { PropTypes } from 'prop-types'
+import { connect } from 'react-redux'
 
 import HeroWithContent from '../components/HeroWithContent'
 
-import requests from '../utils/requests'
+import requests from '../utils/requests/requests'
 
 const HeroHeading = styled.h1`
   font-family: title;
@@ -19,7 +21,7 @@ const TextContainer = styled.div`
   margin: 35 0 130 0;
 `
 
-const Debug = () => {
+const Debug = ({ accessToken }) => {
   const [users, setUsers] = useState([])
   const [user, setUser] = useState([])
 
@@ -29,12 +31,12 @@ const Debug = () => {
       setUsers(response.data.users)
     }
     fetchData()
-    const fetchUserById = async () => {
-      const response = await requests.getUserData(1)
+    const fetchUserById = async (accessToken) => {
+      const response = await requests.getUserData(accessToken)
       setUser(response)
     }
-    fetchUserById()
-  }, [])
+    fetchUserById(accessToken)
+  }, [accessToken])
 
   return (
     <>
@@ -53,12 +55,12 @@ const Debug = () => {
       </TextContainer>
       <TextContainer>
         <div>
-          <h3>User by id 1 from API:</h3>
+          <h3>Get user profile with token from API:</h3>
           <ul>
             <li>id: {user.id}</li>
             <li>alias: {user.alias}</li>
             <li>avatar path: {user.avatar}</li>
-            <li>date joined: {user.dateJoined}</li>
+            <li>date joined: {user.createdAt}</li>
           </ul>
         </div>
       </TextContainer>
@@ -66,4 +68,14 @@ const Debug = () => {
   )
 }
 
-export default Debug
+const mapStateToProps = (state) => {
+  return {
+    accessToken: state.auth.accessToken,
+  }
+}
+
+Debug.propTypes = {
+  accessToken: PropTypes.string,
+}
+
+export default connect(mapStateToProps)(Debug)
