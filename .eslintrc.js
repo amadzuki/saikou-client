@@ -18,7 +18,7 @@ module.exports = {
   },
   rules: {
     'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single'],
+    quotes: ['error', 'single', 'avoidEscape'],
     semi: ['error', 'never'],
     'jsx-quotes': ['error', 'prefer-single'],
     'react/no-unescaped-entities': ['error', { forbid: ['>', '}'] }],
