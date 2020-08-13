@@ -66,7 +66,7 @@ const App = () => {
           <Route path='/logout'>
             <Logout />
           </Route>
-          <Route path='/user'>
+          <Route path='/profile/:slug'>
             <UserProfile />
           </Route>
           <Route path='/about'>

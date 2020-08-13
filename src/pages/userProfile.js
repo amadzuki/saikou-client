@@ -88,7 +88,7 @@ const UserProfile = ({ deauthenticate, user }) => {
     <>
       <Layout
         backgroundImage='url("/backgrounds/tokyo-ghoul.jpg")'
-        title='Profile | '
+        title={'Profile | ' + user.alias}
       >
         <PageContents>
           <UserIntro>

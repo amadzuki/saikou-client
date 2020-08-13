@@ -36,7 +36,9 @@ const NavigationLink = styled(NavLink)`
   }
 `
 
-const Navigation = ({ shade, isAuthenticated }) => {
+const Navigation = ({ shade, isAuthenticated, alias }) => {
+  const aliasLowerCase = alias.toLowerCase()
+  const aliasSlug = aliasLowerCase.replace(/\s+/g, '-')
   return (
     <Nav backgroundColor={shade}>
       <SubNav>
@@ -63,7 +65,7 @@ const Navigation = ({ shade, isAuthenticated }) => {
             </NavigationLink>
           </>
         ) : (
-          <NavigationLink to='/user' activeClassName='active'>
+          <NavigationLink to={`/profile/${aliasSlug}`} activeClassName='active'>
             Hi, Nakama
           </NavigationLink>
         )}
@@ -73,12 +75,16 @@ const Navigation = ({ shade, isAuthenticated }) => {
 }
 
 const mapStateToProps = (state) => {
-  return { isAuthenticated: state.auth.isAuthenticated }
+  return {
+    isAuthenticated: state.auth.isAuthenticated,
+    alias: state.user.alias,
+  }
 }
 
 Navigation.propTypes = {
   shade: PropTypes.string,
   isAuthenticated: PropTypes.bool,
+  alias: PropTypes.string,
 }
 
 export default connect(mapStateToProps)(Navigation)
