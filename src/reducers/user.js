@@ -3,20 +3,20 @@ const initialState = {
   alias: '',
   avatar: '',
   dateJoined: '',
-  bio:
-    "I'm too busy watching anime and reading manga that I don't bother edit my own bio. Even when the edit profile button is just few pixels away",
+  bio: '',
 }
 
 const user = (state = initialState, action) => {
   switch (action.type) {
     case 'SET_USER':
-      const { id, alias, avatar, createdAt } = action.payload
+      const { id, alias, avatar, createdAt, bio } = action.payload
       return {
         ...state,
         id: id,
         alias: alias,
         avatar: avatar,
         dateJoined: createdAt,
+        bio: bio,
       }
     default:
       return state
