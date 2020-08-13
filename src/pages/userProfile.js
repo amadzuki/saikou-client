@@ -3,6 +3,7 @@ import styled from '@xstyled/styled-components'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import dayjs from 'dayjs'
 
 import Layout from '../components/Layout'
 import Avatar from '../components/Avatar'
@@ -76,7 +77,7 @@ const Favorites = styled.div`
   margin-top: 20;
   display: flex;
 `
-const UserProfile = ({ deauthenticate }) => {
+const UserProfile = ({ deauthenticate, user }) => {
   const favoriteList = [2, 7, 40, 9, 27]
   const history = useHistory()
   const logout = () => {
@@ -93,7 +94,7 @@ const UserProfile = ({ deauthenticate }) => {
           <UserIntro>
             <AvatarBox>
               <WhiteRoundSpace>
-                <Avatar variant='large' id={1}></Avatar>
+                <Avatar variant='large' imagePath={user.avatar}></Avatar>
               </WhiteRoundSpace>
               <Button to='/' variant='small'>
                 <span>edit profile</span>
@@ -103,13 +104,11 @@ const UserProfile = ({ deauthenticate }) => {
               </ButtonLogOut>
             </AvatarBox>
             <UserInfo>
-              <TitleText>amadzuki</TitleText>
-              <DateJoined>Joined July 14, 2020</DateJoined>
-              <UserBio>
-                “I’m an omnivor. I watch almost all kinds of anime & manga and
-                appreciate their appeal. My favorite is the one with complicated
-                story with anti-hero MC.”
-              </UserBio>
+              <TitleText>{user.alias}</TitleText>
+              <DateJoined>
+                Joined {dayjs(user.dateJoined).format('MMMM D, YYYY')}
+              </DateJoined>
+              <UserBio>"{user.bio}"</UserBio>
             </UserInfo>
           </UserIntro>
           <FavoriteItems>
@@ -126,6 +125,12 @@ const UserProfile = ({ deauthenticate }) => {
   )
 }
 
+const mapStateToProps = (state) => {
+  return {
+    user: state.user,
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
   return {
     deauthenticate: () => dispatch({ type: 'DEAUTHENTICATE' }),
@@ -135,4 +140,4 @@ const mapDispatchToProps = (dispatch) => {
 UserProfile.propTypes = {
   deauthenticate: PropTypes.func,
 }
-export default connect(null, mapDispatchToProps)(UserProfile)
+export default connect(mapStateToProps, mapDispatchToProps)(UserProfile)

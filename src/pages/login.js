@@ -87,7 +87,7 @@ const ErrorPopper = styled.p`
   color: red;
   ${top}
 `
-const Login = ({ authenticate }) => {
+const Login = ({ authenticate, setUser }) => {
   const { register, handleSubmit, errors } = useForm()
   const history = useHistory()
   const onSubmit = async (data) => {
@@ -95,7 +95,8 @@ const Login = ({ authenticate }) => {
       const response = await requests.getToken(data.email, data.password)
       authenticate(response.accessToken)
       history.push('/')
-      // const user = await requests.getUserData(1)
+      const userData = await requests.getUserData(response.accessToken)
+      setUser(userData)
     } catch (error) {
       console.error('Error requesting token to server')
     }
@@ -153,6 +154,10 @@ const mapDispatchToProps = (dispatch) => {
   return {
     authenticate: (accessToken) =>
       dispatch({ type: 'AUTHENTICATE', accessToken: accessToken }),
+
+    setUser: (userData) => {
+      dispatch({ type: 'SET_USER', payload: userData })
+    },
   }
 }
 
