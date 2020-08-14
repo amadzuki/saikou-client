@@ -2,16 +2,18 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
-import Home from './pages/home'
-import AnimeCollection from './pages/anime'
-import ItemDetail from './pages/itemDetail'
-import About from './pages/about'
-import MangaCollection from './pages/manga'
-import Register from './pages/register'
-import Login from './pages/login'
-import Logout from './pages/logout'
-import UserProfile from './pages/userProfile'
-import Debug from './pages/debug'
+import {
+  Home,
+  AnimeCollection,
+  ItemDetail,
+  About,
+  MangaCollection,
+  Register,
+  Login,
+  Logout,
+  UserProfile,
+  Debug,
+} from './pages/index'
 
 import ScrollToTop from './components/ScrollToTop'
 import RouteAddSlug from './components/RouteAddSlug'
