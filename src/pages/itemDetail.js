@@ -146,7 +146,7 @@ const ItemDetail = () => {
           <Card src={item.imageSrc} />
           <ItemInfo>
             <Title>{item.name}</Title>
-            <SubTitle>"{item.catchPhrase}"</SubTitle>
+            <SubTitle>"{item.tagLine}"</SubTitle>
             <FavoriteBox>
               <StarSign
                 src={

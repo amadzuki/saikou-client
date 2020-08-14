@@ -145,6 +145,7 @@ UserProfile.propTypes = {
   deauthenticate: PropTypes.func,
   resetUser: PropTypes.func,
 }
+
 export default connect(mapStateToProps, { deauthenticate, resetUser })(
   UserProfile
 )
