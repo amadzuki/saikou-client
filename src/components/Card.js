@@ -40,7 +40,7 @@ const Card = ({ id }) => {
   return (
     <>
       <CardStyled>
-        <CardLink to={`${item.type}/${item.id}/${item.slug}`}>
+        <CardLink to={`/${item.type}/${item.id}/${item.slug}`} replace>
           <CardCover src={item.imageSrc} alt={item.imageAlt} />
           <CardName>{item.name}</CardName>
         </CardLink>

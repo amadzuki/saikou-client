@@ -7,7 +7,7 @@ const RouteAddSlug = () => {
   const { id } = useParams()
   const item = items.find((item) => +item.id === +id)
 
-  return <Redirect to={`${item.id}/${item.slug}`}></Redirect>
+  return <Redirect to={`/${item.type}/${item.id}/${item.slug}`}></Redirect>
 }
 
 export default RouteAddSlug
