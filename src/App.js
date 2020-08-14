@@ -11,12 +11,12 @@ import {
   Register,
   Login,
   Logout,
-  UserProfile,
   Debug,
 } from './pages/index'
 
 import ScrollToTop from './components/ScrollToTop'
 import RouteAddSlug from './components/RouteAddSlug'
+import PrivateRoute from './containers/PrivateRoute'
 
 import reduxStore from './redux/store'
 
@@ -51,7 +51,7 @@ const App = () => {
             <Logout />
           </Route>
           <Route path='/profile/:slug'>
-            <UserProfile />
+            <PrivateRoute />
           </Route>
           <Route path='/about'>
             <About />
