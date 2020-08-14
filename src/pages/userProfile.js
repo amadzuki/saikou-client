@@ -10,7 +10,7 @@ import Avatar from '../components/Avatar'
 import Button from '../components/Button'
 import Card from '../components/Card'
 
-// import users from '../data/users.json'
+import { deauthenticate } from '../redux/actions/index'
 
 const PageContents = styled.div`
   display: flex;
@@ -78,7 +78,8 @@ const Favorites = styled.div`
   display: flex;
 `
 const UserProfile = ({ deauthenticate, user }) => {
-  const favoriteList = [2, 7, 40, 9, 27]
+  const favoriteAnime = [2, 7, 11, 9, 19]
+  const favoriteManga = [32, 27, 41, 49, 29]
   const history = useHistory()
   const logout = () => {
     deauthenticate()
@@ -112,9 +113,17 @@ const UserProfile = ({ deauthenticate, user }) => {
             </UserInfo>
           </UserIntro>
           <FavoriteItems>
-            <TitleText>Favorites anime and manga</TitleText>
+            <TitleText>Favorite anime</TitleText>
             <Favorites>
-              {favoriteList.map((id, index) => (
+              {favoriteAnime.map((id, index) => (
+                <Card key={index} id={id}></Card>
+              ))}
+            </Favorites>
+          </FavoriteItems>
+          <FavoriteItems>
+            <TitleText>Favorite manga</TitleText>
+            <Favorites>
+              {favoriteManga.map((id, index) => (
                 <Card key={index} id={id}></Card>
               ))}
             </Favorites>
@@ -131,13 +140,7 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    deauthenticate: () => dispatch({ type: 'DEAUTHENTICATE' }),
-  }
-}
-
 UserProfile.propTypes = {
   deauthenticate: PropTypes.func,
 }
-export default connect(mapStateToProps, mapDispatchToProps)(UserProfile)
+export default connect(mapStateToProps, { deauthenticate })(UserProfile)

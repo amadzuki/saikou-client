@@ -1,3 +1,5 @@
+import { AUTHENTICATE, DEAUTHENTICATE } from '../actions/types'
+
 const initialState = {
   isAuthenticated: false,
   accessToken: '',
@@ -5,14 +7,14 @@ const initialState = {
 
 const auth = (state = initialState, action) => {
   switch (action.type) {
-    case 'AUTHENTICATE':
+    case AUTHENTICATE:
       return {
         ...state,
         isAuthenticated: true,
         accessToken: action.accessToken,
       }
 
-    case 'DEAUTHENTICATE':
+    case DEAUTHENTICATE:
       return {
         ...state,
         isAuthenticated: false,

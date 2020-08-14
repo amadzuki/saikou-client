@@ -9,6 +9,8 @@ import { connect } from 'react-redux'
 import HeroWithContent from '../components/HeroWithContent'
 import Footer from '../components/Footer'
 
+import { authenticate, setUser } from '../redux/actions/index'
+
 import requests from '../utils/requests/requests'
 
 const FormBox = styled.div`
@@ -150,19 +152,9 @@ const mapStateToProps = () => {
   return {}
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    authenticate: (accessToken) =>
-      dispatch({ type: 'AUTHENTICATE', accessToken: accessToken }),
-
-    setUser: (userData) => {
-      dispatch({ type: 'SET_USER', payload: userData })
-    },
-  }
-}
-
 Login.propTypes = {
   authenticate: PropTypes.func,
+  setUser: PropTypes.func,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login)
+export default connect(mapStateToProps, { authenticate, setUser })(Login)

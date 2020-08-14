@@ -33,10 +33,10 @@ const Logout = () => {
             alt='Parting Chibi Miku Image'
           />
           <HeadingText className='big'>mata ne~</HeadingText>
+          <Button to='/' variant='primary'>
+            <span>go to home page</span>
+          </Button>
         </>
-        <Button to='/' variant='primary'>
-          go to home page
-        </Button>
       </HeroWithContent>
       <Footer></Footer>
     </>

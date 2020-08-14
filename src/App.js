@@ -1,8 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import throttle from 'lodash.throttle'
 
 import Home from './pages/home'
 import AnimeCollection from './pages/anime'
@@ -18,29 +16,13 @@ import Debug from './pages/debug'
 import ScrollToTop from './components/ScrollToTop'
 import RouteAddSlug from './components/RouteAddSlug'
 
-import reducers from './reducers/index'
-
-import { saveState, loadState } from './utils/localStorage'
-
-const previousData = loadState()
-
-const reduxStore = createStore(
-  reducers,
-  previousData,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
-
-reduxStore.subscribe(
-  throttle(() => {
-    saveState(reduxStore.getState())
-  }, 2000)
-)
+import reduxStore from './redux/store'
 
 const App = () => {
   return (
     <Provider store={reduxStore}>
       <Router>
-        <ScrollToTop></ScrollToTop>
+        <ScrollToTop />
         <Switch>
           <Route path='/' exact>
             <Home />

@@ -1,3 +1,5 @@
+import { SET_USER } from '../actions/types'
+
 const initialState = {
   id: 0,
   alias: '',
@@ -8,7 +10,7 @@ const initialState = {
 
 const user = (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_USER':
+    case SET_USER:
       const { id, alias, avatar, createdAt, bio } = action.payload
       return {
         ...state,
