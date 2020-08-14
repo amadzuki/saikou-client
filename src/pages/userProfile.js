@@ -10,7 +10,7 @@ import Avatar from '../components/Avatar'
 import Button from '../components/Button'
 import Card from '../components/Card'
 
-import { deauthenticate } from '../redux/actions/index'
+import { deauthenticate, resetUser } from '../redux/actions/index'
 
 const PageContents = styled.div`
   display: flex;
@@ -77,12 +77,13 @@ const Favorites = styled.div`
   margin-top: 20;
   display: flex;
 `
-const UserProfile = ({ deauthenticate, user }) => {
+const UserProfile = ({ deauthenticate, resetUser, user }) => {
   const favoriteAnime = [2, 7, 11, 9, 19]
   const favoriteManga = [32, 27, 41, 49, 29]
   const history = useHistory()
   const logout = () => {
     deauthenticate()
+    resetUser()
     history.push('/logout')
   }
   return (
@@ -142,5 +143,8 @@ const mapStateToProps = (state) => {
 
 UserProfile.propTypes = {
   deauthenticate: PropTypes.func,
+  resetUser: PropTypes.func,
 }
-export default connect(mapStateToProps, { deauthenticate })(UserProfile)
+export default connect(mapStateToProps, { deauthenticate, resetUser })(
+  UserProfile
+)

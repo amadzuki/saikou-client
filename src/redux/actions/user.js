@@ -1,8 +1,12 @@
-import { SET_USER } from './types'
+import { SET_USER, RESET_USER } from './types'
 
 const setUser = (userData) => ({
   type: SET_USER,
   payload: userData,
 })
 
-export { setUser }
+const resetUser = () => ({
+  type: RESET_USER,
+})
+
+export { setUser, resetUser }

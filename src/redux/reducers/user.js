@@ -1,4 +1,4 @@
-import { SET_USER } from '../actions/types'
+import { SET_USER, RESET_USER } from '../actions/types'
 
 const initialState = {
   id: 0,
@@ -20,6 +20,17 @@ const user = (state = initialState, action) => {
         dateJoined: createdAt,
         bio: bio,
       }
+
+    case RESET_USER:
+      return {
+        ...state,
+        id: 0,
+        alias: '',
+        avatar: '',
+        dateJoined: '',
+        bio: '',
+      }
+
     default:
       return state
   }
