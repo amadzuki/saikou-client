@@ -14,8 +14,8 @@ import {
   Debug,
 } from './pages/index'
 
-import ScrollToTop from './components/ScrollToTop'
-import RouteAddSlug from './components/RouteAddSlug'
+import ScrollToTop from './containers/ScrollToTop'
+import RouteAddSlug from './containers/RouteAddSlug'
 import PrivateRoute from './containers/PrivateRoute'
 
 import reduxStore from './redux/store'
