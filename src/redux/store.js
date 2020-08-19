@@ -1,16 +1,22 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import { createBrowserHistory } from 'history'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import { routerMiddleware } from 'connected-react-router'
 import throttle from 'lodash.throttle'
+import thunk from 'redux-thunk'
 
-import reducers from './reducers/index'
+import createRootReducers from './reducers/index'
 
 import { saveState, loadState } from '../utils/localStorage'
 
 const previousData = loadState()
 
+const history = createBrowserHistory()
+
 const reduxStore = createStore(
-  reducers,
+  createRootReducers(history),
   previousData,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeWithDevTools(applyMiddleware(routerMiddleware(history, thunk)))
 )
 
 reduxStore.subscribe(
