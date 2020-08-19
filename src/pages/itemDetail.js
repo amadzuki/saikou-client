@@ -1,10 +1,16 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
 import { useParams } from 'react-router-dom'
+import { connect } from 'react-redux'
 import ReactHtmlParser from 'react-html-parser'
 
 import Layout from '../components/Layout'
 import Avatar from '../components/Avatar'
+
+import {
+  toggleFavoriteAnime,
+  toggleFavoriteManga,
+} from '../redux/actions/index'
 
 import items from '../data/items.json'
 
@@ -134,11 +140,21 @@ const AvatarsList = styled.div`
   display: flex;
 `
 
-const ItemDetail = () => {
+const ItemDetail = ({
+  userFavorites,
+  toggleFavoriteManga,
+  toggleFavoriteAnime,
+}) => {
   const { id } = useParams()
   const item = items.find((item) => +item.id === +id)
-
-  const isFavorited = false
+  let isFavorited = userFavorites.includes(item.id)
+  const toggleFavorite = (id) => {
+    if (item.type === 'manga') {
+      toggleFavoriteManga(id, isFavorited)
+    } else if (item.type === 'anime') {
+      toggleFavoriteAnime(id, isFavorited)
+    }
+  }
   return (
     <Layout title={item.name + ' | Saikou'}>
       <PageContents>
@@ -149,6 +165,9 @@ const ItemDetail = () => {
             <SubTitle>"{item.tagLine}"</SubTitle>
             <FavoriteBox>
               <StarSign
+                onClick={() => {
+                  toggleFavorite(item.id)
+                }}
                 src={
                   isFavorited
                     ? '/misc/IconFavorited.svg'
@@ -208,4 +227,13 @@ const ItemDetail = () => {
   )
 }
 
-export default ItemDetail
+const mapStateToProps = (state) => {
+  return {
+    userFavorites: [...state.user.favoriteAnime, ...state.user.favoriteManga],
+  }
+}
+
+export default connect(mapStateToProps, {
+  toggleFavoriteAnime,
+  toggleFavoriteManga,
+})(ItemDetail)

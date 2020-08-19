@@ -66,7 +66,7 @@ const UserBio = styled.p`
   font-style: italic;
   padding-top: 27;
 `
-const FavoriteItems = styled.div`
+const ItemsBlock = styled.div`
   width: 1000;
   display: flex;
   flex-direction: column;
@@ -78,8 +78,6 @@ const Favorites = styled.div`
   display: flex;
 `
 const UserProfile = ({ deauthenticate, resetUser, user }) => {
-  const favoriteAnime = [2, 7, 11, 9, 19]
-  const favoriteManga = [32, 27, 41, 49, 29]
   const history = useHistory()
   const logout = () => {
     deauthenticate()
@@ -113,22 +111,28 @@ const UserProfile = ({ deauthenticate, resetUser, user }) => {
               <UserBio>"{user.bio}"</UserBio>
             </UserInfo>
           </UserIntro>
-          <FavoriteItems>
-            <TitleText>Favorite anime</TitleText>
+          <ItemsBlock>
+            <TitleText>My Favorite Anime</TitleText>
             <Favorites>
-              {favoriteAnime.map((id, index) => (
+              {user.favoriteAnime.map((id, index) => (
                 <Card key={index} id={id}></Card>
               ))}
             </Favorites>
-          </FavoriteItems>
-          <FavoriteItems>
-            <TitleText>Favorite manga</TitleText>
+          </ItemsBlock>
+          <ItemsBlock>
+            <TitleText>My Favorite Manga</TitleText>
             <Favorites>
-              {favoriteManga.map((id, index) => (
+              {user.favoriteManga.map((id, index) => (
                 <Card key={index} id={id}></Card>
               ))}
             </Favorites>
-          </FavoriteItems>
+          </ItemsBlock>
+          <ItemsBlock>
+            <TitleText>My Reviews</TitleText>
+          </ItemsBlock>
+          <ItemsBlock>
+            <TitleText>My Custom List</TitleText>
+          </ItemsBlock>
         </PageContents>
       </Layout>
     </>
