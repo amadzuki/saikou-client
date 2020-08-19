@@ -1,8 +1,8 @@
 import React from 'react'
-import styled from '@xstyled/styled-components'
+import styled, { Box } from '@xstyled/styled-components'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import dayjs from 'dayjs'
 
 import Layout from '../components/Layout'
@@ -40,6 +40,7 @@ const ButtonLogOut = styled.button`
   background-color: darkRed;
   font-size: 20;
   padding: 5px 10px;
+  width: 143;
 `
 const WhiteRoundSpace = styled.div`
   border-radius: 50%;
@@ -72,13 +73,33 @@ const ItemsBlock = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30;
+  margin: 30 0;
 `
 const Favorites = styled.div`
   margin-top: 20;
   display: flex;
   flex-wrap: wrap;
 `
+const AnimeTitle = styled.h3`
+  margin: 20 0;
+  font-family: title;
+  font-weight: 400;
+  font-size: 20;
+`
+const RatingText = styled.p`
+  font-family: annotation;
+  font-size: 20;
+  margin: 0;
+`
+const ReviewText = styled.p`
+  font-family: paragraph;
+  font-size: 18;
+`
+const FullReviewLink = styled(Link)`
+  color: secondary;
+  text-decoration: none;
+`
+
 const UserProfile = ({ deauthenticate, resetUser, user }) => {
   const history = useHistory()
   const logout = () => {
@@ -130,8 +151,45 @@ const UserProfile = ({ deauthenticate, resetUser, user }) => {
             </Favorites>
           </ItemsBlock>
           <ItemsBlock>
-            <TitleText>My Reviews</TitleText>
-            <Tag></Tag>
+            <TitleText>My Review</TitleText>
+            <Box>
+              <Box row>
+                <Box col>
+                  <Card id={1} hideName />
+                </Box>
+                <Box col={3 / 4}>
+                  <Box row>
+                    <AnimeTitle>Black Clover</AnimeTitle>
+                  </Box>
+                  <Box row>
+                    <Box col={4 / 5}>
+                      <Tag type='anime' />
+                    </Box>
+                    <Box col>
+                      <RatingText>overall rating: 10/10</RatingText>
+                    </Box>
+                  </Box>
+                  <Box row>
+                    <ReviewText>
+                      We used to have Big 3 when it comes to anime including
+                      shows like Naruto, One piece, and Bleach. Throw Fairytail
+                      in there also. Now as those shows are going away we look
+                      to replace them and this show was supposed to be one of
+                      those shows hyped to the point it crashed streaming
+                      websites when it released. The thing is all this show has
+                      are the bad parts of the Big 3. The story also wants to be
+                      compared to them and since it is I'm going to compare them
+                      here.
+                    </ReviewText>
+                    <ReviewText>
+                      The story is about a boy who can't use magic but through
+                      some stroke{' '}
+                      <FullReviewLink to='/'>read more...</FullReviewLink>
+                    </ReviewText>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
           </ItemsBlock>
           <ItemsBlock>
             <TitleText>My Custom List</TitleText>

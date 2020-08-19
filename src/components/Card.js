@@ -35,14 +35,14 @@ const CardName = styled.p`
   max-width: 200px;
 `
 
-const Card = ({ id }) => {
+const Card = ({ id, hideName }) => {
   const item = items.find((item) => +item.id === +id)
   return (
     <>
       <CardStyled>
         <CardLink to={`/${item.type}/${item.id}/${item.slug}`} replace>
           <CardCover src={item.imageSrc} alt={item.imageAlt} />
-          <CardName>{item.name}</CardName>
+          {!hideName && <CardName>{item.name}</CardName>}
         </CardLink>
       </CardStyled>
     </>
@@ -51,6 +51,7 @@ const Card = ({ id }) => {
 
 Card.propTypes = {
   id: PropTypes.number,
+  hideName: PropTypes.bool,
 }
 
 export default Card
