@@ -46,7 +46,7 @@ const Home = () => {
     <>
       <HeroWithContent shade='whiteShade' title='Saikou'>
         <>
-          <HeroHeading>Where people discuss anime and manga</HeroHeading>
+          <HeroHeading>Find out The Best Anime and Manga</HeroHeading>
           <Buttons>
             <Button to='/anime' variant='anime'>
               <span>See Anime List</span>

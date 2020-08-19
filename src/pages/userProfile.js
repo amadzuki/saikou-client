@@ -9,6 +9,7 @@ import Layout from '../components/Layout'
 import Avatar from '../components/Avatar'
 import Button from '../components/Button'
 import Card from '../components/Card'
+import Tag from '../components/Tag'
 
 import { deauthenticate, resetUser } from '../redux/actions/index'
 
@@ -76,6 +77,7 @@ const ItemsBlock = styled.div`
 const Favorites = styled.div`
   margin-top: 20;
   display: flex;
+  flex-wrap: wrap;
 `
 const UserProfile = ({ deauthenticate, resetUser, user }) => {
   const history = useHistory()
@@ -129,9 +131,11 @@ const UserProfile = ({ deauthenticate, resetUser, user }) => {
           </ItemsBlock>
           <ItemsBlock>
             <TitleText>My Reviews</TitleText>
+            <Tag></Tag>
           </ItemsBlock>
           <ItemsBlock>
             <TitleText>My Custom List</TitleText>
+            <Tag type='anime'></Tag>
           </ItemsBlock>
         </PageContents>
       </Layout>
