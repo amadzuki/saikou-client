@@ -13,10 +13,19 @@ const previousData = loadState()
 
 const history = createBrowserHistory()
 
+const middlewares = [thunk]
+
+if (process.env.NODE_ENV === 'development') {
+  const { logger } = require('redux-logger')
+  middlewares.push(logger)
+}
+
 const reduxStore = createStore(
   createRootReducers(history),
   previousData,
-  composeWithDevTools(applyMiddleware(routerMiddleware(history, thunk)))
+  composeWithDevTools(
+    applyMiddleware(routerMiddleware(history), ...middlewares)
+  )
 )
 
 reduxStore.subscribe(
