@@ -11,12 +11,15 @@ import Button from '../components/Button'
 import Card from '../components/Card'
 import Tag from '../components/Tag'
 
+import items from '../data/items.json'
+
 import { deauthenticate, resetUser } from '../redux/actions/index'
 
 const PageContents = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30;
 `
 const UserIntro = styled.div`
   display: flex;
@@ -99,6 +102,28 @@ const FullReviewLink = styled(Link)`
   color: secondary;
   text-decoration: none;
 `
+const OverlayBox = styled.div`
+  display: flex;
+  margin-left: 90px;
+`
+const OverlayImage = styled.img`
+  width: 172;
+  height: 240;
+  margin-left: -90px;
+  border: 3px solid white;
+`
+const ListDescriptionBox = styled.div`
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30;
+`
+const ListTitle = styled.h2`
+  font-family: title;
+  font-weight: 400;
+  font-size: 22;
+`
 
 const UserProfile = ({ deauthenticate, resetUser, user }) => {
   const history = useHistory()
@@ -107,6 +132,10 @@ const UserProfile = ({ deauthenticate, resetUser, user }) => {
     resetUser()
     history.push('/logout')
   }
+  const customList = [10, 12, 13, 14, 19]
+  const imagePaths = customList.map(
+    (id) => items.find((item) => item.id === id).imageSrc
+  )
   return (
     <>
       <Layout
@@ -193,7 +222,23 @@ const UserProfile = ({ deauthenticate, resetUser, user }) => {
           </ItemsBlock>
           <ItemsBlock>
             <TitleText>My Custom List</TitleText>
-            <Tag type='anime'></Tag>
+            <Box row>
+              <Box col>
+                <OverlayBox>
+                  {imagePaths.map((path, index) => (
+                    <OverlayImage src={path} key={index} />
+                  ))}
+                </OverlayBox>
+              </Box>
+              <Box col>
+                <ListDescriptionBox>
+                  <ListTitle>Complete Healthy Anime Mix</ListTitle>
+                  <ReviewText>
+                    All about youth in different genres without ecchi whatsoever
+                  </ReviewText>
+                </ListDescriptionBox>
+              </Box>
+            </Box>
           </ItemsBlock>
         </PageContents>
       </Layout>
