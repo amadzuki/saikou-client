@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import HeroWithContent from '../components/HeroWithContent'
 
-import requests from '../utils/requests/requests'
+import requests from '../utils/requests'
 
 const HeroHeading = styled.h1`
   font-family: title;

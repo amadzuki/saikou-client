@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
 
 import { authenticate, setUser } from '../redux/actions/index'
 
-import requests from '../utils/requests/requests'
+import requests from '../utils/requests'
 
 const FormBox = styled.div`
   display: flex;

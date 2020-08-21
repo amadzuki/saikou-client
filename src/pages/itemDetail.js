@@ -66,6 +66,7 @@ const FavoriteBox = styled.div`
 
 const StarSign = styled.img`
   max-height: 50;
+  cursor: pointer;
 `
 
 const FavoriteText = styled.span`

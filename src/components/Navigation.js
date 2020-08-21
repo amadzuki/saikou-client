@@ -66,7 +66,7 @@ const Navigation = ({ shade, isAuthenticated, alias }) => {
           </>
         ) : (
           <NavigationLink to={`/profile/${aliasSlug}`} activeClassName='active'>
-            Hi, Nakama
+            Hi, {alias}
           </NavigationLink>
         )}
       </SubNav>
