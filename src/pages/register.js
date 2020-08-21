@@ -2,12 +2,13 @@ import React, { useRef } from 'react'
 import styled from '@xstyled/styled-components'
 import { useForm } from 'react-hook-form'
 import { top } from '@xstyled/system'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import HeroWithContent from '../components/HeroWithContent'
 import Footer from '../components/Footer'
 
-import requests from '../utils/requests/requests'
+import { register as registerAction } from '../redux/actions'
 
 const FormBox = styled.div`
   display: flex;
@@ -84,16 +85,13 @@ const ErrorPopper = styled.p`
   color: red;
   ${top}
 `
-const Register = () => {
-  const history = useHistory()
+const Register = ({ registerAction }) => {
   const { register, handleSubmit, errors, watch } = useForm()
   const password = useRef({})
   password.current = watch('password', '')
-  const onSubmit = async (data) => {
-    const response = await requests.register(data.email, data.password)
+  const onSubmit = (data) => {
+    registerAction(data.email, data.password)
     console.log(data)
-    console.log(response)
-    history.push('/')
   }
   return (
     <>
@@ -157,4 +155,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default connect(null, { registerAction })(Register)

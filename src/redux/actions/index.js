@@ -1,4 +1,4 @@
-import { authenticate, deauthenticate } from './auth'
+import { authenticate, deauthenticate, register } from './auth'
 import {
   setUser,
   resetUser,
@@ -7,6 +7,7 @@ import {
 } from './user'
 
 export {
+  register,
   authenticate,
   deauthenticate,
   setUser,
