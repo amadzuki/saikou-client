@@ -1,11 +1,16 @@
 import { push } from 'connected-react-router'
 
 import {
-  AUTHENTICATE,
-  DEAUTHENTICATE,
   REGISTER_START,
   REGISTER_SUCCESS,
   REGISTER_FAILURE,
+  LOGIN_START,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE,
+  LOGOUT_START,
+  LOGOUT_SUCCESS,
+  SET_USER,
+  RESET_USER,
 } from '../actions/types'
 
 import requests from '../../utils/requests'
@@ -25,13 +30,34 @@ const register = (email, password) => async (dispatch) => {
   }
 }
 
-const authenticate = (accessToken) => ({
-  type: AUTHENTICATE,
-  payload: { accessToken: accessToken },
-})
+const authenticate = (email, password) => async (dispatch) => {
+  dispatch({ type: LOGIN_START })
+  await delay(500)
 
-const deauthenticate = () => ({
-  type: DEAUTHENTICATE,
-})
+  try {
+    const token = await requests.getToken(email, password)
+    const userData = await requests.getUserData(token.accessToken)
+    dispatch({
+      type: LOGIN_SUCCESS,
+      payload: { accessToken: token.accessToken },
+    })
+    dispatch({
+      type: SET_USER,
+      payload: userData,
+    })
+    dispatch(push('/'))
+  } catch (error) {
+    dispatch({ type: LOGIN_FAILURE, payload: error })
+  }
+}
+
+const deauthenticate = () => async (dispatch) => {
+  dispatch({ type: LOGOUT_START })
+  await delay(500)
+
+  dispatch(push('/'))
+  dispatch({ type: RESET_USER })
+  dispatch({ type: LOGOUT_SUCCESS })
+}
 
 export { authenticate, deauthenticate, register }

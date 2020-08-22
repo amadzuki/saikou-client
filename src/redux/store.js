@@ -5,13 +5,13 @@ import { routerMiddleware } from 'connected-react-router'
 import throttle from 'lodash.throttle'
 import thunk from 'redux-thunk'
 
-import createRootReducers from './reducers/index'
+import createRootReducer from './reducers/index'
 
 import { saveState, loadState } from '../utils/localStorage'
 
 const previousData = loadState()
 
-const history = createBrowserHistory()
+export const history = createBrowserHistory()
 
 const middlewares = [thunk]
 
@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const reduxStore = createStore(
-  createRootReducers(history),
+  createRootReducer(history),
   previousData,
   composeWithDevTools(
     applyMiddleware(routerMiddleware(history), ...middlewares)

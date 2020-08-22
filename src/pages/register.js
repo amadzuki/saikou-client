@@ -91,7 +91,6 @@ const Register = ({ registerAction }) => {
   password.current = watch('password', '')
   const onSubmit = (data) => {
     registerAction(data.email, data.password)
-    console.log(data)
   }
   return (
     <>

@@ -1,6 +1,7 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
+import { ConnectedRouter } from 'connected-react-router'
 
 import {
   Home,
@@ -18,12 +19,12 @@ import ScrollToTop from './containers/ScrollToTop'
 import RouteAddSlug from './containers/RouteAddSlug'
 import PrivateRoute from './containers/PrivateRoute'
 
-import reduxStore from './redux/store'
+import reduxStore, { history } from './redux/store'
 
 const App = () => {
   return (
     <Provider store={reduxStore}>
-      <Router>
+      <ConnectedRouter history={history}>
         <ScrollToTop />
         <Switch>
           <Route path='/' exact>
@@ -60,7 +61,7 @@ const App = () => {
             <Debug />
           </Route>
         </Switch>
-      </Router>
+      </ConnectedRouter>
     </Provider>
   )
 }

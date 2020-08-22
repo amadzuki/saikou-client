@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { Box } from '@xstyled/styled-components'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
-import { useHistory, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import dayjs from 'dayjs'
 
 import Layout from '../components/Layout'
@@ -13,7 +13,7 @@ import Tag from '../components/Tag'
 
 import items from '../data/items.json'
 
-import { deauthenticate, resetUser } from '../redux/actions/index'
+import { deauthenticate } from '../redux/actions/index'
 
 const PageContents = styled.div`
   display: flex;
@@ -125,12 +125,9 @@ const ListTitle = styled.h2`
   font-size: 22;
 `
 
-const UserProfile = ({ deauthenticate, resetUser, user }) => {
-  const history = useHistory()
+const UserProfile = ({ deauthenticate, user }) => {
   const logout = () => {
     deauthenticate()
-    resetUser()
-    history.push('/logout')
   }
   const customList = [10, 12, 13, 14, 19]
   const imagePaths = customList.map(
@@ -254,9 +251,6 @@ const mapStateToProps = (state) => {
 
 UserProfile.propTypes = {
   deauthenticate: PropTypes.func,
-  resetUser: PropTypes.func,
 }
 
-export default connect(mapStateToProps, { deauthenticate, resetUser })(
-  UserProfile
-)
+export default connect(mapStateToProps, { deauthenticate })(UserProfile)

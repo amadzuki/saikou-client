@@ -1,9 +1,12 @@
 import {
-  AUTHENTICATE,
-  DEAUTHENTICATE,
   REGISTER_START,
   REGISTER_SUCCESS,
   REGISTER_FAILURE,
+  LOGIN_START,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE,
+  LOGOUT_START,
+  LOGOUT_SUCCESS,
 } from '../actions/types'
 
 const initialState = {
@@ -37,19 +40,40 @@ const auth = (state = initialState, action) => {
         error: action.payload,
       }
 
-    case AUTHENTICATE:
+    case LOGIN_START:
       return {
         ...state,
+        isLoading: true,
+        error: null,
+      }
+
+    case LOGIN_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
         isAuthenticated: true,
         data: action.payload,
       }
 
-    case DEAUTHENTICATE:
+    case LOGIN_FAILURE:
       return {
         ...state,
-        isAuthenticated: false,
-        data: {},
+        isLoading: false,
+        error: action.payload,
       }
+
+    case LOGOUT_START:
+      return {
+        ...state,
+        isLoading: true,
+        error: null,
+      }
+
+    case LOGOUT_SUCCESS:
+      return {
+        ...initialState,
+      }
+
     default:
       return state
   }

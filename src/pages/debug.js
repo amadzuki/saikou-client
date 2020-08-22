@@ -70,7 +70,7 @@ const Debug = ({ accessToken }) => {
 
 const mapStateToProps = (state) => {
   return {
-    accessToken: state.auth.accessToken,
+    accessToken: state.auth.data.accessToken,
   }
 }
 

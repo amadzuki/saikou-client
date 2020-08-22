@@ -3,15 +3,13 @@ import { PropTypes } from 'prop-types'
 import styled from '@xstyled/styled-components'
 import { useForm } from 'react-hook-form'
 import { top } from '@xstyled/system'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import HeroWithContent from '../components/HeroWithContent'
 import Footer from '../components/Footer'
 
-import { authenticate, setUser } from '../redux/actions/index'
-
-import requests from '../utils/requests'
+import { authenticate } from '../redux/actions/index'
 
 const FormBox = styled.div`
   display: flex;
@@ -89,21 +87,10 @@ const ErrorPopper = styled.p`
   color: red;
   ${top}
 `
-const Login = ({ authenticate, setUser }) => {
+const Login = ({ authenticate }) => {
   const { register, handleSubmit, errors } = useForm()
-  const history = useHistory()
-  const onSubmit = async (data) => {
-    try {
-      const response = await requests.getToken(data.email, data.password)
-      authenticate(response.accessToken)
-      history.push('/')
-      const userData = await requests.getUserData(response.accessToken)
-      setUser(userData)
-    } catch (error) {
-      console.error('Error requesting token to server')
-    }
-
-    console.log(data)
+  const onSubmit = (data) => {
+    authenticate(data.email, data.password)
   }
   return (
     <>
@@ -154,7 +141,6 @@ const mapStateToProps = () => {
 
 Login.propTypes = {
   authenticate: PropTypes.func,
-  setUser: PropTypes.func,
 }
 
-export default connect(mapStateToProps, { authenticate, setUser })(Login)
+export default connect(mapStateToProps, { authenticate })(Login)
