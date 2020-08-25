@@ -1,46 +1,45 @@
 import {
-  SET_USER,
-  RESET_USER,
-  SET_FAVORITE_ANIME,
-  SET_FAVORITE_MANGA,
-  SET_UNFAVORITE_ANIME,
-  SET_UNFAVORITE_MANGA,
+  UPDATE_USER_START,
+  UPDATE_USER_SUCCESS,
+  UPDATE_USER_FAILURE,
 } from './types'
 
-const setUser = (userData) => ({
-  type: SET_USER,
-  payload: userData,
-})
+import requests from '../../utils/requests'
+import delay from '../../utils/timer'
 
-const resetUser = () => ({
-  type: RESET_USER,
-})
+const toggleFavorite = (id, itemType, isFavorited) => async (
+  dispatch,
+  getState
+) => {
+  const state = getState()
+  const accessToken = state.auth.data.accessToken
 
-const toggleFavoriteAnime = (id, isFavorited) => {
-  if (isFavorited) {
-    return {
-      type: SET_UNFAVORITE_ANIME,
-      payload: { id: id },
-    }
+  dispatch({ type: UPDATE_USER_START })
+  await delay(500)
+
+  const favorites =
+    itemType === 'anime'
+      ? state.user.data.favoriteAnime
+      : state.user.data.favoriteManga
+
+  const updatedFavorites = !isFavorited
+    ? [...favorites, id]
+    : favorites.filter((itemId) => itemId !== id)
+
+  const body = {}
+
+  if (itemType === 'anime') {
+    body.favoriteAnime = updatedFavorites
   } else {
-    return {
-      type: SET_FAVORITE_ANIME,
-      payload: { id: id },
-    }
+    body.favoriteManga = updatedFavorites
+  }
+
+  try {
+    const response = await requests.updateUserProfile(accessToken, body)
+    dispatch({ type: UPDATE_USER_SUCCESS, payload: response })
+  } catch (error) {
+    dispatch({ type: UPDATE_USER_FAILURE, payload: error })
   }
 }
-const toggleFavoriteManga = (id, isFavorited) => {
-  if (isFavorited) {
-    return {
-      type: SET_UNFAVORITE_MANGA,
-      payload: { id: id },
-    }
-  } else {
-    return {
-      type: SET_FAVORITE_MANGA,
-      payload: { id: id },
-    }
-  }
-}
 
-export { setUser, resetUser, toggleFavoriteAnime, toggleFavoriteManga }
+export { toggleFavorite }

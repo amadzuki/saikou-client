@@ -1,17 +1,4 @@
 import { authenticate, deauthenticate, register } from './auth'
-import {
-  setUser,
-  resetUser,
-  toggleFavoriteAnime,
-  toggleFavoriteManga,
-} from './user'
+import { toggleFavorite } from './user'
 
-export {
-  register,
-  authenticate,
-  deauthenticate,
-  setUser,
-  resetUser,
-  toggleFavoriteAnime,
-  toggleFavoriteManga,
-}
+export { register, authenticate, deauthenticate, toggleFavorite }

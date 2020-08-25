@@ -37,8 +37,14 @@ const NavigationLink = styled(NavLink)`
 `
 
 const Navigation = ({ shade, isAuthenticated, alias }) => {
-  const aliasLowerCase = alias.toLowerCase()
-  const aliasSlug = aliasLowerCase.replace(/\s+/g, '-')
+  const createSlug = (alias) => {
+    if (alias) {
+      const aliasLowerCase = alias.toLowerCase()
+      return aliasLowerCase.replace(/\s+/g, '-')
+    }
+    return 'Nakama'
+  }
+  const aliasSlug = createSlug(alias)
   return (
     <Nav backgroundColor={shade}>
       <SubNav>
@@ -77,7 +83,7 @@ const Navigation = ({ shade, isAuthenticated, alias }) => {
 const mapStateToProps = (state) => {
   return {
     isAuthenticated: state.auth.isAuthenticated,
-    alias: state.user.alias,
+    alias: state.user.data.alias,
   }
 }
 

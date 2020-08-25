@@ -1,15 +1,15 @@
 import axios from '../../config/axios'
 import decodeToken from '../jsonwebtoken'
 
-const getUserData = async (accessToken) => {
+const updateUserProfile = async (accessToken, body = {}) => {
   try {
     const { _id } = decodeToken(accessToken)
     axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`
-    const response = await axios.get(`/users/${_id}/profile`)
-    return response.data.data
+    const response = await axios.put(`/users/${_id}/profile`, body)
+    return response.data.data.user
   } catch (error) {
     console.error(error)
   }
 }
 
-export default getUserData
+export default updateUserProfile

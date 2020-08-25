@@ -1,6 +1,9 @@
 import {
   SET_USER,
   RESET_USER,
+  UPDATE_USER_START,
+  UPDATE_USER_SUCCESS,
+  UPDATE_USER_FAILURE,
   SET_FAVORITE_ANIME,
   SET_FAVORITE_MANGA,
   SET_UNFAVORITE_ANIME,
@@ -8,48 +11,52 @@ import {
 } from '../actions/types'
 
 const initialState = {
-  id: 0,
-  alias: '',
-  avatar: '',
-  dateJoined: '',
-  bio: '',
-  favoriteAnime: [],
-  favoriteManga: [],
+  isLoading: false,
+  error: null,
+  data: {
+    email: '',
+    alias: '',
+    avatar: '',
+    bio: '',
+    createdAt: '',
+    id: 0,
+    favoriteAnime: [],
+    favoriteManga: [],
+  },
 }
 
 const user = (state = initialState, action) => {
   switch (action.type) {
     case SET_USER:
-      const {
-        id,
-        alias,
-        avatar,
-        createdAt,
-        bio,
-        favoriteAnime,
-        favoriteManga,
-      } = action.payload
       return {
         ...state,
-        id: id,
-        alias: alias,
-        avatar: avatar,
-        dateJoined: createdAt,
-        bio: bio,
-        favoriteAnime: favoriteAnime,
-        favoriteManga: favoriteManga,
+        data: action.payload,
       }
 
     case RESET_USER:
       return {
+        ...initialState,
+      }
+
+    case UPDATE_USER_START:
+      return {
         ...state,
-        id: 0,
-        alias: '',
-        avatar: '',
-        dateJoined: '',
-        bio: '',
-        favoriteAnime: [],
-        favoriteManga: [],
+        isLoading: true,
+        error: null,
+      }
+
+    case UPDATE_USER_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        data: action.payload,
+      }
+
+    case UPDATE_USER_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        error: action.payload,
       }
 
     case SET_FAVORITE_ANIME:

@@ -7,10 +7,7 @@ import ReactHtmlParser from 'react-html-parser'
 import Layout from '../components/Layout'
 import Avatar from '../components/Avatar'
 
-import {
-  toggleFavoriteAnime,
-  toggleFavoriteManga,
-} from '../redux/actions/index'
+import { toggleFavorite } from '../redux/actions/index'
 
 import items from '../data/items.json'
 
@@ -141,19 +138,15 @@ const AvatarsList = styled.div`
   display: flex;
 `
 
-const ItemDetail = ({
-  userFavorites,
-  toggleFavoriteManga,
-  toggleFavoriteAnime,
-}) => {
+const ItemDetail = ({ userFavorites, isAuthenticated, toggleFavorite }) => {
   const { id } = useParams()
   const item = items.find((item) => +item.id === +id)
   let isFavorited = userFavorites.includes(item.id)
-  const toggleFavorite = (id) => {
-    if (item.type === 'manga') {
-      toggleFavoriteManga(id, isFavorited)
-    } else if (item.type === 'anime') {
-      toggleFavoriteAnime(id, isFavorited)
+  const handleToggleFavorite = (id, itemType) => {
+    if (isAuthenticated) {
+      toggleFavorite(id, itemType, isFavorited)
+    } else {
+      alert('you have not logged in yet')
     }
   }
   return (
@@ -167,7 +160,7 @@ const ItemDetail = ({
             <FavoriteBox>
               <StarSign
                 onClick={() => {
-                  toggleFavorite(item.id)
+                  handleToggleFavorite(item.id, item.type)
                 }}
                 src={
                   isFavorited
@@ -229,12 +222,17 @@ const ItemDetail = ({
 }
 
 const mapStateToProps = (state) => {
-  return {
-    userFavorites: [...state.user.favoriteAnime, ...state.user.favoriteManga],
+  if (state.user.data.favoriteAnime) {
+    return {
+      userFavorites: [
+        ...state.user.data.favoriteAnime,
+        ...state.user.data.favoriteManga,
+      ],
+      isAuthenticated: state.auth.isAuthenticated,
+    }
+  } else {
+    return { userFavorites: [] }
   }
 }
 
-export default connect(mapStateToProps, {
-  toggleFavoriteAnime,
-  toggleFavoriteManga,
-})(ItemDetail)
+export default connect(mapStateToProps, { toggleFavorite })(ItemDetail)
