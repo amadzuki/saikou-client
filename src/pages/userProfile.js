@@ -131,7 +131,7 @@ const UserProfile = ({ deauthenticate, user }) => {
   }
   const customList = [10, 12, 13, 14, 19]
   const imagePaths = customList.map(
-    (id) => items.find((item) => item.id === id).imageSrc
+    (id) => items.find((item) => item.id === id).coverSrc
   )
   return (
     <>

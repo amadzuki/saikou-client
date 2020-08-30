@@ -153,7 +153,7 @@ const ItemDetail = ({ userFavorites, isAuthenticated, toggleFavorite }) => {
     <Layout title={item.name + ' | Saikou'}>
       <PageContents>
         <ItemIntro>
-          <Card src={item.imageSrc} />
+          <Card src={item.coverSrc} />
           <ItemInfo>
             <Title>{item.name}</Title>
             <SubTitle>"{item.tagLine}"</SubTitle>
