@@ -2,6 +2,12 @@ import {
   UPDATE_USER_START,
   UPDATE_USER_SUCCESS,
   UPDATE_USER_FAILURE,
+  UPDATE_ANIME_DETAIL_START,
+  UPDATE_ANIME_DETAIL_SUCCESS,
+  UPDATE_ANIME_DETAIL_FAILURE,
+  UPDATE_MANGA_DETAIL_START,
+  UPDATE_MANGA_DETAIL_SUCCESS,
+  UPDATE_MANGA_DETAIL_FAILURE,
 } from './types'
 
 import requests from '../../utils/requests'
@@ -15,6 +21,11 @@ const toggleFavorite = (id, itemType, isFavorited) => async (
   const accessToken = state.auth.data.accessToken
 
   dispatch({ type: UPDATE_USER_START })
+  if (itemType === 'anime') {
+    dispatch({ type: UPDATE_ANIME_DETAIL_START })
+  } else {
+    dispatch({ type: UPDATE_MANGA_DETAIL_START })
+  }
   await delay(500)
 
   const favorites =
@@ -35,10 +46,29 @@ const toggleFavorite = (id, itemType, isFavorited) => async (
   }
 
   try {
-    const response = await requests.updateUserProfile(accessToken, body)
-    dispatch({ type: UPDATE_USER_SUCCESS, payload: response })
+    const responseUser = await requests.updateUserProfile(accessToken, body)
+    const responseItem = await requests.updateItem(accessToken, itemType, id, {
+      favorited: !isFavorited,
+    })
+    dispatch({ type: UPDATE_USER_SUCCESS, payload: responseUser })
+    if (itemType === 'anime') {
+      dispatch({
+        type: UPDATE_ANIME_DETAIL_SUCCESS,
+        payload: responseItem.anime,
+      })
+    } else {
+      dispatch({
+        type: UPDATE_MANGA_DETAIL_SUCCESS,
+        payload: responseItem.manga,
+      })
+    }
   } catch (error) {
     dispatch({ type: UPDATE_USER_FAILURE, payload: error })
+    if (itemType === 'anime') {
+      dispatch({ type: UPDATE_ANIME_DETAIL_FAILURE, payload: error })
+    } else {
+      dispatch({ type: UPDATE_MANGA_DETAIL_FAILURE, payload: error })
+    }
   }
 }
 

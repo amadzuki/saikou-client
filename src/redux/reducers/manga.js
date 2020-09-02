@@ -2,6 +2,9 @@ import {
   GET_MANGA_DETAIL_START,
   GET_MANGA_DETAIL_FAILURE,
   GET_MANGA_DETAIL_SUCCESS,
+  UPDATE_MANGA_DETAIL_START,
+  UPDATE_MANGA_DETAIL_SUCCESS,
+  UPDATE_MANGA_DETAIL_FAILURE,
 } from '../actions/types'
 
 const initialState = {
@@ -25,6 +28,25 @@ const manga = (state = initialState, action) => {
         data: action.payload,
       }
     case GET_MANGA_DETAIL_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        error: action.payload,
+      }
+
+    case UPDATE_MANGA_DETAIL_START:
+      return {
+        ...state,
+        isLoading: false,
+        error: null,
+      }
+    case UPDATE_MANGA_DETAIL_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        data: action.payload,
+      }
+    case UPDATE_MANGA_DETAIL_FAILURE:
       return {
         ...state,
         isLoading: false,

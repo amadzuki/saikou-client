@@ -2,6 +2,9 @@ import {
   GET_ANIME_DETAIL_START,
   GET_ANIME_DETAIL_SUCCESS,
   GET_ANIME_DETAIL_FAILURE,
+  UPDATE_ANIME_DETAIL_START,
+  UPDATE_ANIME_DETAIL_SUCCESS,
+  UPDATE_ANIME_DETAIL_FAILURE,
 } from '../actions/types'
 
 const initialState = {
@@ -25,6 +28,25 @@ const anime = (state = initialState, action) => {
         data: action.payload,
       }
     case GET_ANIME_DETAIL_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        error: action.payload,
+      }
+
+    case UPDATE_ANIME_DETAIL_START:
+      return {
+        ...state,
+        isLoading: false,
+        error: null,
+      }
+    case UPDATE_ANIME_DETAIL_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        data: action.payload,
+      }
+    case UPDATE_ANIME_DETAIL_FAILURE:
       return {
         ...state,
         isLoading: false,
