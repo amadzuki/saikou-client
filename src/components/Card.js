@@ -1,9 +1,8 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
+import { connect } from 'react-redux'
 import styled from '@xstyled/styled-components'
 import { Link } from 'react-router-dom'
-
-import items from '../data/items.json'
 
 const CardStyled = styled.div`
   display: flex;
@@ -35,12 +34,19 @@ const CardName = styled.p`
   max-width: 200px;
 `
 
-const Card = ({ id, hideName }) => {
-  const item = items.find((item) => +item.id === +id)
+const Card = ({ id, hideName, type, animeArray, mangaArray }) => {
+  const pickItem = (animeArray, mangaArray) => {
+    if (type === 'manga') {
+      return mangaArray.find((item) => +item.id === +id)
+    } else {
+      return animeArray.find((item) => +item.id === +id)
+    }
+  }
+  const item = pickItem(animeArray, mangaArray)
   return (
     <>
       <CardStyled>
-        <CardLink to={`/${item.type}/${item.id}/${item.slug}`} replace>
+        <CardLink to={`/${type}/${item.id}/${item.slug}`} replace>
           <CardCover src={item.coverSrc} alt={item.coverAlt} />
           {!hideName && <CardName>{item.name}</CardName>}
         </CardLink>
@@ -49,9 +55,18 @@ const Card = ({ id, hideName }) => {
   )
 }
 
+const mapStateToProps = (state) => {
+  return {
+    animeArray: state.anime.data,
+    mangaArray: state.manga.data,
+  }
+}
+
 Card.propTypes = {
   id: PropTypes.number,
   hideName: PropTypes.bool,
+  animeArray: PropTypes.array,
+  mangaArray: PropTypes.array,
 }
 
-export default Card
+export default connect(mapStateToProps, null)(Card)

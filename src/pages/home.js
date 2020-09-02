@@ -41,7 +41,7 @@ const CollectionLink = styled(Link)`
 `
 const Home = () => {
   const topAnime = [7, 3, 2, 1, 4]
-  const topManga = [30, 44, 27, 28, 32]
+  const topManga = [7, 3, 2, 1, 4]
   return (
     <>
       <HeroWithContent shade='whiteShade' title='Saikou'>
@@ -61,14 +61,14 @@ const Home = () => {
         <CardsTitle>Top Anime</CardsTitle>
         <Cards>
           {topAnime.map((id, index) => (
-            <Card id={id} key={index} />
+            <Card id={id} key={index} type='anime' />
           ))}
         </Cards>
         <CollectionLink to='/anime'>See all anime</CollectionLink>
         <CardsTitle>Top Manga</CardsTitle>
         <Cards>
           {topManga.map((id, index) => (
-            <Card id={id} key={index} />
+            <Card id={id} key={index} type='manga' />
           ))}
         </Cards>
         <CollectionLink to='/manga'>See all manga</CollectionLink>
