@@ -5,4 +5,9 @@ const getAnime = async () => {
   return response.data.data
 }
 
-export default getAnime
+const getAnimeById = async (id) => {
+  const response = await axios.get(`/anime/${id}`)
+  return response.data.data
+}
+
+export { getAnime, getAnimeById }

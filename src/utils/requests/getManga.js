@@ -5,4 +5,9 @@ const getManga = async () => {
   return response.data.data
 }
 
-export default getManga
+const getMangaById = async (id) => {
+  const response = await axios.get(`/anime/${id}`)
+  return response.data.data
+}
+
+export { getManga, getMangaById }

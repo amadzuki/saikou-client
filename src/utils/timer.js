@@ -1,4 +1,4 @@
-const delay = (time = 200) => {
+const delay = (time) => {
   new Promise((resolve) => {
     process.env.NODE_ENV === 'development' && setTimeout(resolve, time)
   })
