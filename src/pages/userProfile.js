@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled, { Box } from '@xstyled/styled-components'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
@@ -14,7 +14,7 @@ import { CardContainer } from '../containers'
 
 import items from '../data/items.json'
 
-import { deauthenticate } from '../redux/actions/index'
+import { deauthenticate, fetchLatestData } from '../redux/actions'
 
 const PageContents = styled.div`
   display: flex;
@@ -126,7 +126,16 @@ const ListTitle = styled.h2`
   font-size: 22;
 `
 
-const UserProfile = ({ deauthenticate, user }) => {
+const UserProfile = ({
+  deauthenticate,
+  fetchLatestData,
+  accessToken,
+  user,
+}) => {
+  useEffect(() => {
+    fetchLatestData(accessToken)
+  }, [fetchLatestData, accessToken])
+
   const logout = () => {
     deauthenticate()
   }
@@ -247,11 +256,15 @@ const UserProfile = ({ deauthenticate, user }) => {
 const mapStateToProps = (state) => {
   return {
     user: state.user.data,
+    accessToken: state.auth.data.accessToken,
   }
 }
 
 UserProfile.propTypes = {
   deauthenticate: PropTypes.func,
+  fetchLatestData: PropTypes.func,
 }
 
-export default connect(mapStateToProps, { deauthenticate })(UserProfile)
+export default connect(mapStateToProps, { deauthenticate, fetchLatestData })(
+  UserProfile
+)

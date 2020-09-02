@@ -1,5 +1,5 @@
 import { authenticate, deauthenticate, register } from './auth'
-import { toggleFavorite } from './user'
+import { toggleFavorite, fetchLatestData } from './user'
 import { getAllAnime, getAnimeDetails } from './anime'
 import { getAllManga, getMangaDetails } from './manga'
 
@@ -8,6 +8,7 @@ export {
   authenticate,
   deauthenticate,
   toggleFavorite,
+  fetchLatestData,
   getAllAnime,
   getAnimeDetails,
   getAllManga,

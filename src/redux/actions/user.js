@@ -42,4 +42,16 @@ const toggleFavorite = (id, itemType, isFavorited) => async (
   }
 }
 
-export { toggleFavorite }
+const fetchLatestData = (accessToken) => async (dispatch) => {
+  dispatch({ type: UPDATE_USER_START })
+  await delay(500)
+
+  try {
+    const response = await requests.getUserData(accessToken)
+    dispatch({ type: UPDATE_USER_SUCCESS, payload: response })
+  } catch (error) {
+    dispatch({ type: UPDATE_USER_FAILURE, payload: error })
+  }
+}
+
+export { toggleFavorite, fetchLatestData }
