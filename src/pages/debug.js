@@ -21,22 +21,36 @@ const TextContainer = styled.div`
   margin: 35 0 130 0;
 `
 
-const Debug = ({ accessToken }) => {
+const Debug = ({ isAuthenticated, accessToken }) => {
   const [users, setUsers] = useState([])
   const [user, setUser] = useState([])
+  const [anime, setAnime] = useState({})
+  const [allAnime, setAllAnime] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await requests.debugFetch('/users')
-      setUsers(response.data.users)
+      setUsers(response.data.data)
     }
     fetchData()
-    const fetchUserById = async (accessToken) => {
-      const response = await requests.getUserData(accessToken)
-      setUser(response)
+    if (isAuthenticated) {
+      const fetchUserById = async (accessToken) => {
+        const response = await requests.getUserData(accessToken)
+        setUser(response)
+      }
+      fetchUserById(accessToken)
     }
-    fetchUserById(accessToken)
-  }, [accessToken])
+
+    const fetchAllAnime = async () => {
+      const response = await requests.getAnime()
+      setAllAnime(response)
+    }
+    fetchAllAnime()
+    ;(async (id) => {
+      const response = await requests.getAnimeById(+id)
+      setAnime(response)
+    })(1)
+  }, [accessToken, isAuthenticated])
 
   return (
     <>
@@ -56,13 +70,32 @@ const Debug = ({ accessToken }) => {
       <TextContainer>
         <div>
           <h3>Get user profile with token from API:</h3>
-          <ul>
-            <li>id: {user.id}</li>
-            <li>alias: {user.alias}</li>
-            <li>avatar path: {user.avatar}</li>
-            <li>date joined: {user.createdAt}</li>
-          </ul>
+          {isAuthenticated && (
+            <ul>
+              <li>id: {user.id}</li>
+              <li>alias: {user.alias}</li>
+              <li>avatar path: {user.avatar}</li>
+              <li>date joined: {user.createdAt}</li>
+            </ul>
+          )}
+          {!isAuthenticated && <h4>user is not authenticated</h4>}
         </div>
+      </TextContainer>
+      <TextContainer>
+        <h3>Get All Anime</h3>
+        <ul>
+          {allAnime.map((anime, index) => (
+            <li key={index}>{anime.name}</li>
+          ))}
+        </ul>
+      </TextContainer>
+      <TextContainer>
+        <h3>Get Anime Details by ID</h3>
+        <ul>
+          <li>id: {anime.id}</li>
+          <li>name: {anime.name}</li>
+          <li>coverSrc: {anime.coverSrc}</li>
+        </ul>
       </TextContainer>
     </>
   )
@@ -70,13 +103,14 @@ const Debug = ({ accessToken }) => {
 
 const mapStateToProps = (state) => {
   return {
+    isAuthenticated: state.auth.isAuthenticated,
     accessToken: state.auth.data.accessToken,
-    id: state.user.id,
   }
 }
 
 Debug.propTypes = {
   accessToken: PropTypes.string,
+  isAuthenticated: PropTypes.bool,
 }
 
 export default connect(mapStateToProps)(Debug)
