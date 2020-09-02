@@ -8,8 +8,9 @@ import dayjs from 'dayjs'
 import Layout from '../components/Layout'
 import Avatar from '../components/Avatar'
 import Button from '../components/Button'
-import Card from '../components/Card'
 import Tag from '../components/Tag'
+
+import { CardContainer } from '../containers'
 
 import items from '../data/items.json'
 
@@ -164,7 +165,7 @@ const UserProfile = ({ deauthenticate, user }) => {
             <TitleText>My Favorite Anime</TitleText>
             <Favorites>
               {user.favoriteAnime.map((id, index) => (
-                <Card key={index} id={id}></Card>
+                <CardContainer key={index} id={id} type='anime' />
               ))}
             </Favorites>
           </ItemsBlock>
@@ -172,7 +173,7 @@ const UserProfile = ({ deauthenticate, user }) => {
             <TitleText>My Favorite Manga</TitleText>
             <Favorites>
               {user.favoriteManga.map((id, index) => (
-                <Card key={index} id={id}></Card>
+                <CardContainer key={index} id={id} type='manga' />
               ))}
             </Favorites>
           </ItemsBlock>
@@ -181,7 +182,7 @@ const UserProfile = ({ deauthenticate, user }) => {
             <Box>
               <Box row>
                 <Box col>
-                  <Card id={1} hideName />
+                  <CardContainer id={19} type='anime' hideName />
                 </Box>
                 <Box col={3 / 4}>
                   <Box row>
