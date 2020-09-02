@@ -6,7 +6,7 @@ const getManga = async () => {
 }
 
 const getMangaById = async (id) => {
-  const response = await axios.get(`/anime/${id}`)
+  const response = await axios.get(`/manga/${id}`)
   return response.data.data
 }
 
