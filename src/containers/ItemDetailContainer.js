@@ -31,9 +31,10 @@ const ItemDetailContainer = ({
   const { isLoading, data } = type === 'manga' ? mangaState : animeState
   const isFavorited =
     type === 'anime'
-      ? userFavoriteAnime.includes(id)
-      : userFavoriteManga.includes(id)
+      ? userFavoriteAnime.includes(+id)
+      : userFavoriteManga.includes(+id)
 
+  console.log(isFavorited)
   useEffect(() => {
     if (type === 'anime') {
       getAnimeDetails(id)
