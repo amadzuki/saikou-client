@@ -2,6 +2,9 @@ import {
   GET_ALL_ANIME_START,
   GET_ALL_ANIME_SUCCESS,
   GET_ALL_ANIME_FAILURE,
+  GET_ANIME_DETAIL_START,
+  GET_ANIME_DETAIL_SUCCESS,
+  GET_ANIME_DETAIL_FAILURE,
 } from './types'
 
 import delay from '../../utils/timer'
@@ -19,4 +22,15 @@ const getAllAnime = () => async (dispatch) => {
   }
 }
 
-export { getAllAnime }
+const getAnimeDetails = (id) => async (dispatch) => {
+  dispatch({ type: GET_ANIME_DETAIL_START })
+
+  try {
+    const animeDetails = await requests.getAnimeById(+id)
+    dispatch({ type: GET_ANIME_DETAIL_SUCCESS, payload: animeDetails })
+  } catch (error) {
+    dispatch({ type: GET_ANIME_DETAIL_FAILURE, payload: error })
+  }
+}
+
+export { getAllAnime, getAnimeDetails }

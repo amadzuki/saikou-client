@@ -2,6 +2,9 @@ import {
   GET_ALL_MANGA_START,
   GET_ALL_MANGA_SUCCESS,
   GET_ALL_MANGA_FAILURE,
+  GET_MANGA_DETAIL_START,
+  GET_MANGA_DETAIL_SUCCESS,
+  GET_MANGA_DETAIL_FAILURE,
 } from './types'
 
 import delay from '../../utils/timer'
@@ -19,4 +22,15 @@ const getAllManga = () => async (dispatch) => {
   }
 }
 
-export { getAllManga }
+const getMangaDetails = (id) => async (dispatch) => {
+  dispatch({ type: GET_MANGA_DETAIL_START })
+
+  try {
+    const mangaDetails = await requests.getMangaById(+id)
+    dispatch({ type: GET_MANGA_DETAIL_SUCCESS, payload: mangaDetails })
+  } catch (error) {
+    dispatch({ type: GET_MANGA_DETAIL_FAILURE, payload: error })
+  }
+}
+
+export { getAllManga, getMangaDetails }
