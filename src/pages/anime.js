@@ -5,7 +5,7 @@ import styled from '@xstyled/styled-components'
 
 import Layout from '../components/Layout'
 import SearchBar from '../components/SearchBar'
-import Card from '../components/Card'
+import CardContainer from '../containers/CardContainer'
 import StylishLoader from '../components/StylishLoader'
 
 import { getAllAnime } from '../redux/actions'
@@ -49,7 +49,7 @@ const AnimeCollection = ({ animeState, getAllAnime }) => {
         {!isLoading && data.length > 0 && (
           <Cards>
             {data.map((cover, index) => (
-              <Card key={index} id={cover.id} type='anime' />
+              <CardContainer key={index} id={cover.id} type='anime' />
             ))}
           </Cards>
         )}
@@ -60,7 +60,7 @@ const AnimeCollection = ({ animeState, getAllAnime }) => {
 
 const mapStateToProps = (state) => {
   return {
-    animeState: state.anime,
+    animeState: state.allAnime,
   }
 }
 

@@ -1,30 +1,30 @@
 import {
-  GET_ALL_MANGA_START,
-  GET_ALL_MANGA_SUCCESS,
-  GET_ALL_MANGA_FAILURE,
+  GET_ALL_ANIME_START,
+  GET_ALL_ANIME_SUCCESS,
+  GET_ALL_ANIME_FAILURE,
 } from '../actions/types'
 
 const initialState = {
   isLoading: false,
   error: null,
-  data: {},
+  data: [],
 }
 
-const manga = (state = initialState, action) => {
+const allAnime = (state = initialState, action) => {
   switch (action.type) {
-    case GET_ALL_MANGA_START:
+    case GET_ALL_ANIME_START:
       return {
         ...state,
         isLoading: true,
         error: null,
       }
-    case GET_ALL_MANGA_SUCCESS:
+    case GET_ALL_ANIME_SUCCESS:
       return {
         ...state,
         isLoading: false,
         data: action.payload,
       }
-    case GET_ALL_MANGA_FAILURE:
+    case GET_ALL_ANIME_FAILURE:
       return {
         ...state,
         isLoading: false,
@@ -35,4 +35,4 @@ const manga = (state = initialState, action) => {
   }
 }
 
-export default manga
+export default allAnime

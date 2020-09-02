@@ -3,7 +3,7 @@ import styled from '@xstyled/styled-components'
 import { Link } from 'react-router-dom'
 
 import HeroWithContent from '../components/HeroWithContent'
-import Card from '../components/Card'
+import CardContainer from '../containers/CardContainer'
 import Button from '../components/Button'
 import Footer from '../components/Footer'
 
@@ -61,14 +61,14 @@ const Home = () => {
         <CardsTitle>Top Anime</CardsTitle>
         <Cards>
           {topAnime.map((id, index) => (
-            <Card id={id} key={index} type='anime' />
+            <CardContainer id={id} key={index} type='anime' />
           ))}
         </Cards>
         <CollectionLink to='/anime'>See all anime</CollectionLink>
         <CardsTitle>Top Manga</CardsTitle>
         <Cards>
           {topManga.map((id, index) => (
-            <Card id={id} key={index} type='manga' />
+            <CardContainer id={id} key={index} type='manga' />
           ))}
         </Cards>
         <CollectionLink to='/manga'>See all manga</CollectionLink>

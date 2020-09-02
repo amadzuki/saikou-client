@@ -5,7 +5,7 @@ import styled from '@xstyled/styled-components'
 
 import Layout from '../components/Layout'
 import SearchBar from '../components/SearchBar'
-import Card from '../components/Card'
+import CardContainer from '../containers/CardContainer'
 
 import { getAllManga } from '../redux/actions'
 
@@ -47,7 +47,7 @@ const MangaCollection = ({ mangaState, getAllManga }) => {
         {!isLoading && data.length > 0 && (
           <Cards>
             {data.map((cover, index) => (
-              <Card key={index} id={cover.id} type='manga' />
+              <CardContainer key={index} id={cover.id} type='manga' />
             ))}
           </Cards>
         )}
@@ -58,7 +58,7 @@ const MangaCollection = ({ mangaState, getAllManga }) => {
 
 const mapStateToProps = (state) => {
   return {
-    mangaState: state.manga,
+    mangaState: state.allManga,
   }
 }
 
