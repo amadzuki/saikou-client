@@ -27,8 +27,8 @@ const Title = styled.h2`
   padding: auto;
 `
 
-const MangaCollection = ({ mangaState, getAllManga }) => {
-  const { isLoading, data } = mangaState
+const MangaCollection = ({ allMangaState, getAllManga }) => {
+  const { isLoading, data } = allMangaState
   useEffect(() => {
     getAllManga()
   }, [getAllManga])
@@ -58,12 +58,12 @@ const MangaCollection = ({ mangaState, getAllManga }) => {
 
 const mapStateToProps = (state) => {
   return {
-    mangaState: state.allManga,
+    allMangaState: state.allManga,
   }
 }
 
 MangaCollection.propTypes = {
-  mangaState: PropTypes.object,
+  allMangaState: PropTypes.object,
   getAllManga: PropTypes.func,
 }
 

@@ -3,9 +3,10 @@ import styled from '@xstyled/styled-components'
 import { Link } from 'react-router-dom'
 
 import HeroWithContent from '../components/HeroWithContent'
-import CardContainer from '../containers/CardContainer'
 import Button from '../components/Button'
 import Footer from '../components/Footer'
+
+import { TopItemContainer } from '../containers'
 
 const HeroHeading = styled.h1`
   font-family: title;
@@ -60,16 +61,12 @@ const Home = () => {
       <HomeContents>
         <CardsTitle>Top Anime</CardsTitle>
         <Cards>
-          {topAnime.map((id, index) => (
-            <CardContainer id={id} key={index} type='anime' />
-          ))}
+          <TopItemContainer topArray={topAnime} type='anime' />
         </Cards>
         <CollectionLink to='/anime'>See all anime</CollectionLink>
         <CardsTitle>Top Manga</CardsTitle>
         <Cards>
-          {topManga.map((id, index) => (
-            <CardContainer id={id} key={index} type='manga' />
-          ))}
+          <TopItemContainer topArray={topManga} type='manga' />
         </Cards>
         <CollectionLink to='/manga'>See all manga</CollectionLink>
       </HomeContents>

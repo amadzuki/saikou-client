@@ -28,8 +28,8 @@ const Title = styled.h2`
   padding: auto;
 `
 
-const AnimeCollection = ({ animeState, getAllAnime }) => {
-  const { isLoading, data } = animeState
+const AnimeCollection = ({ allAnimeState, getAllAnime }) => {
+  const { isLoading, data } = allAnimeState
   useEffect(() => {
     getAllAnime()
   }, [getAllAnime])
@@ -60,12 +60,12 @@ const AnimeCollection = ({ animeState, getAllAnime }) => {
 
 const mapStateToProps = (state) => {
   return {
-    animeState: state.allAnime,
+    allAnimeState: state.allAnime,
   }
 }
 
 AnimeCollection.propTypes = {
-  animeState: PropTypes.object,
+  allAnimeState: PropTypes.object,
   getAllAnime: PropTypes.func,
 }
 
