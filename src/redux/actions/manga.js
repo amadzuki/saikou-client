@@ -24,7 +24,7 @@ const getAllManga = () => async (dispatch) => {
 
 const getMangaDetails = (id) => async (dispatch) => {
   dispatch({ type: GET_MANGA_DETAIL_START })
-
+  await delay(1000)
   try {
     const mangaDetails = await requests.getMangaById(+id)
     dispatch({ type: GET_MANGA_DETAIL_SUCCESS, payload: mangaDetails })

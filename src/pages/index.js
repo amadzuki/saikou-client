@@ -1,7 +1,7 @@
 import Home from './home'
 import AnimeCollection from './anime'
-import ItemDetail from './itemDetail'
 import About from './about'
+import PageItemDetail from './PageItemDetail'
 import MangaCollection from './manga'
 import Register from './register'
 import Login from './login'
@@ -12,7 +12,7 @@ import Debug from './debug'
 export {
   Home,
   AnimeCollection,
-  ItemDetail,
+  PageItemDetail,
   About,
   MangaCollection,
   Register,

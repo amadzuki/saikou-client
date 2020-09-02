@@ -24,7 +24,7 @@ const getAllAnime = () => async (dispatch) => {
 
 const getAnimeDetails = (id) => async (dispatch) => {
   dispatch({ type: GET_ANIME_DETAIL_START })
-
+  await delay(1000)
   try {
     const animeDetails = await requests.getAnimeById(+id)
     dispatch({ type: GET_ANIME_DETAIL_SUCCESS, payload: animeDetails })

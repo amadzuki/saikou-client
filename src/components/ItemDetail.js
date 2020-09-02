@@ -1,15 +1,12 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
-import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 import ReactHtmlParser from 'react-html-parser'
 
-import Layout from '../components/Layout'
-import Avatar from '../components/Avatar'
+import Layout from './Layout'
+import Avatar from './Avatar'
 
 import { toggleFavorite } from '../redux/actions/index'
-
-import items from '../data/items.json'
 
 const PageContents = styled.div`
   display: flex;
@@ -138,10 +135,13 @@ const AvatarsList = styled.div`
   display: flex;
 `
 
-const ItemDetail = ({ userFavorites, isAuthenticated, toggleFavorite }) => {
-  const { id } = useParams()
-  const item = items.find((item) => +item.id === +id)
-  let isFavorited = userFavorites.includes(item.id)
+const ItemDetail = ({
+  isFavorited,
+  isAuthenticated,
+  toggleFavorite,
+  item,
+  type,
+}) => {
   const handleToggleFavorite = (id, itemType) => {
     if (isAuthenticated) {
       toggleFavorite(id, itemType, isFavorited)
@@ -160,7 +160,7 @@ const ItemDetail = ({ userFavorites, isAuthenticated, toggleFavorite }) => {
             <FavoriteBox>
               <StarSign
                 onClick={() => {
-                  handleToggleFavorite(item.id, item.type)
+                  handleToggleFavorite(item.id, type)
                 }}
                 src={
                   isFavorited
@@ -222,16 +222,10 @@ const ItemDetail = ({ userFavorites, isAuthenticated, toggleFavorite }) => {
 }
 
 const mapStateToProps = (state) => {
-  if (state.user.data.favoriteAnime) {
-    return {
-      userFavorites: [
-        ...state.user.data.favoriteAnime,
-        ...state.user.data.favoriteManga,
-      ],
-      isAuthenticated: state.auth.isAuthenticated,
-    }
-  } else {
-    return { userFavorites: [] }
+  return {
+    userFavoriteAnime: state.user.data.favoriteAnime || [],
+    userFavoriteManga: state.user.data.favoriteManga || [],
+    isAuthenticated: state.auth.isAuthenticated,
   }
 }
 
