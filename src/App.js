@@ -6,7 +6,7 @@ import { ConnectedRouter } from 'connected-react-router'
 import {
   Home,
   AnimeCollection,
-  ItemDetail,
+  PageItemDetail,
   About,
   MangaCollection,
   Register,
@@ -30,11 +30,17 @@ const App = () => {
           <Route path='/' exact>
             <Home />
           </Route>
-          <Route path={['/anime/:id/', '/manga/:id/']} exact>
-            <RouteAddSlug />
+          <Route path='/anime/:id/' exact>
+            <RouteAddSlug type='anime' />
           </Route>
-          <Route path={['/anime/:id/:slug', '/manga/:id/:slug']}>
-            <ItemDetail />
+          <Route path='/manga/:id/' exact>
+            <RouteAddSlug type='manga' />
+          </Route>
+          <Route path='/anime/:id/:slug'>
+            <PageItemDetail type='anime' />
+          </Route>
+          <Route path='/manga/:id/:slug'>
+            <PageItemDetail type='manga' />
           </Route>
           <Route path='/anime' exact>
             <AnimeCollection />

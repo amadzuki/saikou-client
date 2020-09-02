@@ -1,13 +1,16 @@
 import React from 'react'
-import { Redirect, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
-import items from '../data/items.json'
+import Redirector from './Redirector'
+import ItemPicker from './ItemPicker'
 
-const RouteAddSlug = () => {
+const RouteAddSlug = ({ type }) => {
   const { id } = useParams()
-  const item = items.find((item) => +item.id === +id)
-
-  return <Redirect to={`/${item.type}/${item.id}/${item.slug}`}></Redirect>
+  return (
+    <ItemPicker id={id} type={type}>
+      <Redirector></Redirector>
+    </ItemPicker>
+  )
 }
 
 export default RouteAddSlug
