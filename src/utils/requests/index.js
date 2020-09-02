@@ -3,7 +3,7 @@ import register from './register'
 import getToken from './getToken'
 import getUserData from './getUserData'
 import updateUserProfile from './updateUserProfile'
-import getAnime from './getAnime'
+import { getAnime, getAnimeById } from './getAnime'
 import getManga from './getManga'
 
 const requests = {
@@ -13,6 +13,7 @@ const requests = {
   getUserData: getUserData,
   updateUserProfile: updateUserProfile,
   getAnime: getAnime,
+  getAnimeById: getAnimeById,
   getManga: getManga,
 }
 
