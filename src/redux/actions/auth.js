@@ -17,12 +17,12 @@ import requests from '../../utils/requests'
 
 import delay from '../../utils/timer'
 
-const register = (email, password) => async (dispatch) => {
+const register = (alias, email, password) => async (dispatch) => {
   dispatch({ type: REGISTER_START })
   await delay(500)
 
   try {
-    const response = await requests.register(email, password)
+    const response = await requests.register(alias, email, password)
     dispatch({ type: REGISTER_SUCCESS, payload: response })
     dispatch(push('/login'))
   } catch (error) {
@@ -55,7 +55,7 @@ const deauthenticate = () => async (dispatch) => {
   dispatch({ type: LOGOUT_START })
   await delay(500)
 
-  dispatch(push('/'))
+  dispatch(push('/logout'))
   dispatch({ type: RESET_USER })
   dispatch({ type: LOGOUT_SUCCESS })
 }

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import styled from '@xstyled/styled-components'
 import { useForm } from 'react-hook-form'
 import { top } from '@xstyled/system'
@@ -86,11 +86,9 @@ const ErrorPopper = styled.p`
   ${top}
 `
 const Register = ({ registerAction }) => {
-  const { register, handleSubmit, errors, watch } = useForm()
-  const password = useRef({})
-  password.current = watch('password', '')
+  const { register, handleSubmit, errors } = useForm()
   const onSubmit = (data) => {
-    registerAction(data.email, data.password)
+    registerAction(data.alias, data.email, data.password)
   }
   return (
     <>
@@ -99,6 +97,21 @@ const Register = ({ registerAction }) => {
           <FormTitle>Become our Nakama!</FormTitle>
           <SeparatorLine></SeparatorLine>
           <Form onSubmit={handleSubmit(onSubmit)}>
+            <Input
+              name='alias'
+              ref={register({
+                required:
+                  "I'll wait, preferably don't use your real name. Use alias",
+                maxLength: {
+                  value: 21,
+                  message: "Please think of shorter alias, it's too long",
+                },
+              })}
+              placeholder='Alias or username'
+            />
+            {errors.alias && (
+              <ErrorPopper top='283px'>{errors.alias.message}</ErrorPopper>
+            )}
             <Input
               name='email'
               ref={register({
@@ -111,7 +124,7 @@ const Register = ({ registerAction }) => {
               placeholder='Email'
             />
             {errors.email && (
-              <ErrorPopper top='283px'>{errors.email.message}</ErrorPopper>
+              <ErrorPopper top='375px'>{errors.email.message}</ErrorPopper>
             )}
             <Input
               name='password'
@@ -126,23 +139,9 @@ const Register = ({ registerAction }) => {
               placeholder='Password'
             />
             {errors.password && (
-              <ErrorPopper top='375px'>{errors.password.message}</ErrorPopper>
+              <ErrorPopper top='465px'>{errors.password.message}</ErrorPopper>
             )}
-            <Input
-              name='passwordConfirm'
-              type='password'
-              ref={register({
-                required: 'Come on, it is for your own good...',
-                validate: (value) =>
-                  value === password.current || 'The passwords do not match',
-              })}
-              placeholder='Re-enter Password'
-            />
-            {errors.passwordConfirm && (
-              <ErrorPopper top='465px'>
-                {errors.passwordConfirm.message}
-              </ErrorPopper>
-            )}
+
             <SubmitButton type='submit'>Count me in!</SubmitButton>
           </Form>
           <TextBox>Already a Nakama?</TextBox>
