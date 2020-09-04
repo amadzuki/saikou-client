@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from '@xstyled/styled-components'
-import { PropTypes } from 'prop-types'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import HeroWithContent from '../components/HeroWithContent'

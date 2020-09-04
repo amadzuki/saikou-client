@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import styled, { Box } from '@xstyled/styled-components'
-import { PropTypes } from 'prop-types'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import dayjs from 'dayjs'

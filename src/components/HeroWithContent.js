@@ -1,5 +1,5 @@
 import React from 'react'
-import { PropTypes } from 'prop-types'
+import PropTypes from 'prop-types'
 import styled from '@xstyled/styled-components'
 import { height } from '@xstyled/system'
 

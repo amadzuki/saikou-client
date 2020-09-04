@@ -1,5 +1,5 @@
 import React from 'react'
-import { PropTypes } from 'prop-types'
+import PropTypes from 'prop-types'
 
 import AppHelmet from './AppHelmet'
 import Hero from './Hero'
