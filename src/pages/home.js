@@ -2,9 +2,7 @@ import React from 'react'
 import styled from '@xstyled/styled-components'
 import { Link } from 'react-router-dom'
 
-import HeroWithContent from '../components/HeroWithContent'
-import Button from '../components/Button'
-import Footer from '../components/Footer'
+import { HeroWithContent, Button, Footer } from '../components'
 
 import { TopItemContainer } from '../containers'
 

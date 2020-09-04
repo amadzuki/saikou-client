@@ -3,9 +3,8 @@ import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
 import styled from '@xstyled/styled-components'
 
-import Layout from '../components/Layout'
-import SearchBar from '../components/SearchBar'
-import CardContainer from '../containers/CardContainer'
+import { Layout, SearchBar } from '../components'
+import { CardContainer } from '../containers'
 
 import { getAllManga } from '../redux/actions'
 

@@ -3,6 +3,7 @@ import Avatar from './Avatar'
 import Button from './Button'
 import Card from './Footer'
 import CenterContent from './CenterContent'
+import Footer from './Footer'
 import Hero from './Hero'
 import HeroWithContent from './HeroWithContent'
 import ItemDetail from './ItemDetail'
@@ -19,6 +20,7 @@ export {
   Button,
   Card,
   CenterContent,
+  Footer,
   Hero,
   HeroWithContent,
   ItemDetail,

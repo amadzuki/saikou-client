@@ -3,12 +3,7 @@ import { PropTypes } from 'prop-types'
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import {
-  ItemDetail,
-  StylishLoader,
-  CenterContent,
-  TitleText,
-} from '../components'
+import { ItemDetail, CenterContent, TitleText } from '../components'
 
 import {
   toggleFavorite,
@@ -48,7 +43,6 @@ const ItemDetailContainer = ({
       {isLoading && (
         <CenterContent>
           <TitleText text='Casting Genjutsu' />
-          <StylishLoader />
         </CenterContent>
       )}
       {!isLoading && data && (

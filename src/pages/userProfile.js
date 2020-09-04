@@ -5,10 +5,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import dayjs from 'dayjs'
 
-import Layout from '../components/Layout'
-import Avatar from '../components/Avatar'
-import Button from '../components/Button'
-import Tag from '../components/Tag'
+import { Layout, Avatar, Button, Tag } from '../components'
 
 import { CardContainer } from '../containers'
 

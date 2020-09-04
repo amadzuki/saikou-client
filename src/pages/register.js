@@ -5,8 +5,7 @@ import { top } from '@xstyled/system'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import HeroWithContent from '../components/HeroWithContent'
-import Footer from '../components/Footer'
+import { HeroWithContent, Footer } from '../components'
 
 import { register as registerAction } from '../redux/actions'
 

@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from '@xstyled/styled-components'
 
-import HeroWithContent from '../components/HeroWithContent'
-import Footer from '../components/Footer'
-import Button from '../components/Button'
+import { HeroWithContent, Footer, Button } from '../components'
 
 const HeadingText = styled.h1`
   font-family: title;

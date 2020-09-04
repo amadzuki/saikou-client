@@ -3,10 +3,8 @@ import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
 import styled from '@xstyled/styled-components'
 
-import Layout from '../components/Layout'
-import SearchBar from '../components/SearchBar'
-import CardContainer from '../containers/CardContainer'
-import StylishLoader from '../components/StylishLoader'
+import { Layout, SearchBar, StylishLoader } from '../components'
+import { CardContainer } from '../containers'
 
 import { getAllAnime } from '../redux/actions'
 import { useEffect } from 'react'
