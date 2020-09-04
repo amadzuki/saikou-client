@@ -1,73 +1,16 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import { ConnectedRouter } from 'connected-react-router'
 
-import {
-  Home,
-  AnimeCollection,
-  PageItemDetail,
-  About,
-  MangaCollection,
-  Register,
-  Login,
-  Logout,
-  Debug,
-} from './pages/index'
+import { ThemeContainer, RouterContainer } from './containers'
 
-import ScrollToTop from './containers/ScrollToTop'
-import RouteAddSlug from './containers/RouteAddSlug'
-import PrivateRoute from './containers/PrivateRoute'
-
-import reduxStore, { history } from './redux/store'
+import reduxStore from './redux/store'
 
 const App = () => {
   return (
     <Provider store={reduxStore}>
-      <ConnectedRouter history={history}>
-        <ScrollToTop />
-        <Switch>
-          <Route path='/' exact>
-            <Home />
-          </Route>
-          <Route path='/anime/:id/' exact>
-            <RouteAddSlug type='anime' />
-          </Route>
-          <Route path='/manga/:id/' exact>
-            <RouteAddSlug type='manga' />
-          </Route>
-          <Route path='/anime/:id/:slug'>
-            <PageItemDetail type='anime' />
-          </Route>
-          <Route path='/manga/:id/:slug'>
-            <PageItemDetail type='manga' />
-          </Route>
-          <Route path='/anime' exact>
-            <AnimeCollection />
-          </Route>
-          <Route path='/manga' exact>
-            <MangaCollection />
-          </Route>
-          <Route path='/register'>
-            <Register />
-          </Route>
-          <Route path='/login'>
-            <Login />
-          </Route>
-          <Route path='/logout'>
-            <Logout />
-          </Route>
-          <Route path='/profile/:slug'>
-            <PrivateRoute />
-          </Route>
-          <Route path='/about'>
-            <About />
-          </Route>
-          <Route path='/debug'>
-            <Debug />
-          </Route>
-        </Switch>
-      </ConnectedRouter>
+      <ThemeContainer>
+        <RouterContainer></RouterContainer>
+      </ThemeContainer>
     </Provider>
   )
 }
