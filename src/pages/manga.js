@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import styled from '@xstyled/styled-components'
 
-import { Layout, SearchBar } from '../components'
-import { CardContainer } from '../containers'
+import { Layout } from '../components'
+import { CardContainer, SearchContainer } from '../containers'
 
 import { getAllManga } from '../redux/actions'
 
@@ -37,7 +37,7 @@ const MangaCollection = ({ allMangaState, getAllManga }) => {
       title='Manga Collection | Saikou'
     >
       <>
-        <SearchBar></SearchBar>
+        <SearchContainer></SearchContainer>
         {isLoading && (
           <Contents>
             <Title>now loading</Title>

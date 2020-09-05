@@ -8,6 +8,7 @@ import Login from './login'
 import Logout from './logout'
 import UserProfile from './userProfile'
 import Debug from './debug'
+import PageSearch from './PageSearch'
 
 export {
   Home,
@@ -20,4 +21,5 @@ export {
   Logout,
   UserProfile,
   Debug,
+  PageSearch,
 }

@@ -1,12 +1,12 @@
 import React from 'react'
-import { useForm } from 'react-hook-form'
+import PropTypes from 'prop-types'
 import styled from '@xstyled/styled-components'
 
 const Form = styled.form`
   display: flex;
   justify-content: center;
   position: relative;
-  margin-top: -80px;
+  margin-top: -83px;
   z-index: 1;
 `
 
@@ -46,17 +46,13 @@ const InputBox = styled.div`
   display: flex;
 `
 
-const SearchBar = () => {
-  const { register, handleSubmit } = useForm()
-  const onSubmit = (data) => {
-    console.log(data)
-  }
+const SearchBar = ({ register, handleSubmit, onSubmit }) => {
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <Container>
-        <SearchLabel htmlFor='search'>Search anime & manga</SearchLabel>
+        <SearchLabel htmlFor='keyword'>Search anime & manga</SearchLabel>
         <InputBox>
-          <SearchInput name='search' ref={register} />
+          <SearchInput name='keyword' ref={register} />
           <SearchButton type='submit'>
             <IconSearch src='/misc/IconSearch.svg' alt='Search Icon' />
           </SearchButton>
@@ -64,6 +60,12 @@ const SearchBar = () => {
       </Container>
     </Form>
   )
+}
+
+SearchBar.propTypes = {
+  register: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 }
 
 export default SearchBar

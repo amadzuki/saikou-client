@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import styled from '@xstyled/styled-components'
 
-import { Layout, SearchBar, StylishLoader } from '../components'
-import { CardContainer } from '../containers'
+import { Layout, StylishLoader } from '../components'
+import { CardContainer, SearchContainer } from '../containers'
 
 import { getAllAnime } from '../redux/actions'
 import { useEffect } from 'react'
@@ -37,7 +37,7 @@ const AnimeCollection = ({ allAnimeState, getAllAnime }) => {
       title='Anime Collection | Saikou'
     >
       <>
-        <SearchBar></SearchBar>
+        <SearchContainer></SearchContainer>
         {isLoading && (
           <Contents>
             <Title>Casting Genjutsu</Title>
