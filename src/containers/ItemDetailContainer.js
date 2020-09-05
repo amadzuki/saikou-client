@@ -42,7 +42,7 @@ const ItemDetailContainer = ({
     <>
       {isLoading && (
         <CenterContent>
-          <TitleText text='Casting Genjutsu' />
+          <TitleText>Casting Genjutsu</TitleText>
         </CenterContent>
       )}
       {!isLoading && data && (

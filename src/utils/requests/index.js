@@ -6,6 +6,7 @@ import updateUserProfile from './updateUserProfile'
 import { getAnime, getAnimeById } from './getAnime'
 import { getManga, getMangaById } from './getManga'
 import updateItem from './updateItem'
+import searchItems from './searchItems'
 
 const requests = {
   debugFetch: debugFetch,
@@ -18,6 +19,7 @@ const requests = {
   getManga: getManga,
   getMangaById: getMangaById,
   updateItem: updateItem,
+  searchItems: searchItems,
 }
 
 export default requests

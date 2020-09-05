@@ -2,6 +2,7 @@ import AppHelmet from './AppHelmet'
 import Avatar from './Avatar'
 import Button from './Button'
 import Card from './Footer'
+import Cards from './Cards'
 import CenterContent from './CenterContent'
 import Footer from './Footer'
 import Hero from './Hero'
@@ -19,6 +20,7 @@ export {
   Avatar,
   Button,
   Card,
+  Cards,
   CenterContent,
   Footer,
   Hero,

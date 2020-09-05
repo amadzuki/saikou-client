@@ -46,11 +46,11 @@ const InputBox = styled.div`
   display: flex;
 `
 
-const SearchBar = ({ register, handleSubmit, onSubmit }) => {
+const SearchBar = ({ register, handleSubmit, onSubmit, itemType }) => {
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <Container>
-        <SearchLabel htmlFor='keyword'>Search anime & manga</SearchLabel>
+        <SearchLabel htmlFor='keyword'>Search {itemType}</SearchLabel>
         <InputBox>
           <SearchInput name='keyword' ref={register} />
           <SearchButton type='submit'>
@@ -66,6 +66,7 @@ SearchBar.propTypes = {
   register: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
+  itemType: PropTypes.string,
 }
 
 export default SearchBar
