@@ -9,6 +9,7 @@ import Logout from './logout'
 import UserProfile from './userProfile'
 import Debug from './debug'
 import PageSearch from './PageSearch'
+import PageNotFound from './PageNotFound'
 
 export {
   Home,
@@ -22,4 +23,5 @@ export {
   UserProfile,
   Debug,
   PageSearch,
+  PageNotFound,
 }

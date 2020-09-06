@@ -42,7 +42,7 @@ const ButtonTemplate = styled(Link)`
 const Button = (props) => {
   const { to, variant, children } = props
   return (
-    <ButtonTemplate to={to} className={variant} replace>
+    <ButtonTemplate to={to} className={variant}>
       {children}
     </ButtonTemplate>
   )

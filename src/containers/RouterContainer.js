@@ -17,6 +17,7 @@ import {
   Logout,
   Debug,
   PageSearch,
+  PageNotFound,
 } from '../pages'
 
 const RouterContainer = () => {
@@ -65,6 +66,9 @@ const RouterContainer = () => {
         </Route>
         <Route path='/search'>
           <PageSearch />
+        </Route>
+        <Route path='*'>
+          <PageNotFound />
         </Route>
       </Switch>
     </ConnectedRouter>

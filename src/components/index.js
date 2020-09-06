@@ -14,6 +14,7 @@ import SearchBar from './SearchBar'
 import StylishLoader from './StylishLoader'
 import Tag from './Tag'
 import TitleText from './TitleText'
+import Chibi404 from './Chibi404'
 
 export {
   AppHelmet,
@@ -22,6 +23,7 @@ export {
   Card,
   Cards,
   CenterContent,
+  Chibi404,
   Footer,
   Hero,
   HeroWithContent,
