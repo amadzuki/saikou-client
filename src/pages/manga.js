@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import styled from '@xstyled/styled-components'
 
-import { Layout } from '../components'
+import { Layout, CenterContent } from '../components'
 import { CardContainer, SearchContainer } from '../containers'
 
 import { getAllManga } from '../redux/actions'
@@ -16,10 +16,7 @@ const Cards = styled.div`
   justify-content: center;
   padding: 70px 5vw;
 `
-const Contents = styled.div`
-  width: 100vw;
-  height: 100vh;
-`
+
 const Title = styled.h2`
   font-family: title;
   font-weight: 400;
@@ -39,9 +36,9 @@ const MangaCollection = ({ allMangaState, getAllManga }) => {
       <>
         <SearchContainer></SearchContainer>
         {isLoading && (
-          <Contents>
+          <CenterContent>
             <Title>now loading</Title>
-          </Contents>
+          </CenterContent>
         )}
         {!isLoading && data.length > 0 && (
           <Cards>
