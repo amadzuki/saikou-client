@@ -17,6 +17,8 @@
   - [Run Development](#run-development)
   - [Lint](#lint)
   - [Test](#test)
+- [Author](#author)
+- [License](#license)
 
 ---
 
@@ -25,7 +27,9 @@
 There are 3 repos in the project: `saikou` is for documentary, `saikou-client` is the web app using React and lastly `saikou-server` is the back-end server using Express and mongoDB. You can check it at the following:
 
 [saikou](https://github.com/amadzuki/saikou)
+
 [saikou-client](https://github.com/amadzuki/saikou-client)
+
 [saikou-server](https://github.com/amadzuki/saikou-server)
 
 ## Tech Stacks
@@ -73,6 +77,7 @@ Interesting tech stacks that seems worth try
 
 ## Application Structure
 
+```sh
 src/
 ├── App.js
 ├── components
@@ -162,6 +167,7 @@ src/
 │ ├── updateItem.js
 │ └── updateUserProfile.js
 └── timer.js
+```
 
 ## Getting Started
 
