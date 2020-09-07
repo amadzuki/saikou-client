@@ -170,16 +170,16 @@ const UserProfile = ({
           <ItemsBlock>
             <TitleText>My Favorite Anime</TitleText>
             <Favorites>
-              {user.favoriteAnime.map((id, index) => (
-                <CardContainer key={index} id={id} type='anime' />
+              {user.favoriteAnime.map((item, index) => (
+                <CardContainer key={index} id={item.id} type='anime' />
               ))}
             </Favorites>
           </ItemsBlock>
           <ItemsBlock>
             <TitleText>My Favorite Manga</TitleText>
             <Favorites>
-              {user.favoriteManga.map((id, index) => (
-                <CardContainer key={index} id={id} type='manga' />
+              {user.favoriteManga.map((item, index) => (
+                <CardContainer key={index} id={item.id} type='manga' />
               ))}
             </Favorites>
           </ItemsBlock>

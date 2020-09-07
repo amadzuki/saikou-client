@@ -13,7 +13,7 @@ import {
 import requests from '../../utils/requests'
 import delay from '../../utils/timer'
 
-const toggleFavorite = (id, itemType, isFavorited) => async (
+const toggleFavorite = (_id, itemType, isFavorited) => async (
   dispatch,
   getState
 ) => {
@@ -34,8 +34,8 @@ const toggleFavorite = (id, itemType, isFavorited) => async (
       : state.user.data.favoriteManga
 
   const updatedFavorites = !isFavorited
-    ? [...favorites, id]
-    : favorites.filter((itemId) => itemId !== id)
+    ? [...favorites, _id]
+    : favorites.filter((item_Id) => item_Id !== _id)
 
   const body = {}
 
@@ -47,7 +47,7 @@ const toggleFavorite = (id, itemType, isFavorited) => async (
 
   try {
     const responseUser = await requests.updateUserProfile(accessToken, body)
-    const responseItem = await requests.updateItem(accessToken, itemType, id, {
+    const responseItem = await requests.updateItem(accessToken, itemType, _id, {
       favorited: !isFavorited,
     })
     dispatch({ type: UPDATE_USER_SUCCESS, payload: responseUser })

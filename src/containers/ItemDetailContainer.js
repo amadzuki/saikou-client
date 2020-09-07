@@ -26,8 +26,8 @@ const ItemDetailContainer = ({
   const { isLoading, data } = type === 'manga' ? mangaState : animeState
   const isFavorited =
     type === 'anime'
-      ? userFavoriteAnime.includes(+id)
-      : userFavoriteManga.includes(+id)
+      ? userFavoriteAnime.includes(data._id)
+      : userFavoriteManga.includes(data._id)
 
   console.log(isFavorited)
   useEffect(() => {
@@ -37,7 +37,6 @@ const ItemDetailContainer = ({
       getMangaDetails(id)
     }
   }, [getAnimeDetails, getMangaDetails, id, type])
-  console.log(data)
   return (
     <>
       {isLoading && (

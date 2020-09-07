@@ -1,9 +1,9 @@
 import axios from '../../config/axios'
 
-const updateItem = async (accessToken, type, id, body = {}) => {
+const updateItem = async (accessToken, type, _id, body = {}) => {
   try {
     axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`
-    const response = await axios.put(`/${type}/${id}`, body)
+    const response = await axios.put(`/${type}/${_id}`, body)
     return response.data.data
   } catch (error) {
     console.error(error)
