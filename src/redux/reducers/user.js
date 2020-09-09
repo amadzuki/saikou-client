@@ -9,16 +9,7 @@ import {
 const initialState = {
   isLoading: false,
   error: null,
-  data: {
-    email: '',
-    alias: '',
-    avatar: '',
-    bio: '',
-    createdAt: '',
-    id: 0,
-    favoriteAnime: [],
-    favoriteManga: [],
-  },
+  data: {},
 }
 
 const user = (state = initialState, action) => {

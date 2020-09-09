@@ -142,9 +142,9 @@ const ItemDetail = ({
   item,
   type,
 }) => {
-  const handleToggleFavorite = (_id, itemType) => {
+  const handleToggleFavorite = (_id, id, itemType) => {
     if (isAuthenticated) {
-      toggleFavorite(_id, itemType, isFavorited)
+      toggleFavorite(_id, id, itemType, isFavorited)
     } else {
       alert('you have not logged in yet')
     }
@@ -160,7 +160,7 @@ const ItemDetail = ({
             <FavoriteBox>
               <StarSign
                 onClick={() => {
-                  handleToggleFavorite(item._id, type)
+                  handleToggleFavorite(item._id, item.id, type)
                 }}
                 src={
                   isFavorited

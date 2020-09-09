@@ -23,11 +23,12 @@ const ItemDetailContainer = ({
   isAuthenticated,
 }) => {
   const { id } = useParams()
-  const { isLoading, data } = type === 'manga' ? mangaState : animeState
+  const { isLoading, data } = type === 'anime' ? animeState : mangaState
+
   const isFavorited =
     type === 'anime'
-      ? userFavoriteAnime.includes(data._id)
-      : userFavoriteManga.includes(data._id)
+      ? userFavoriteAnime.map((item) => item.id).includes(data.id)
+      : userFavoriteManga.map((item) => item.id).includes(data.id)
 
   console.log(isFavorited)
   useEffect(() => {
@@ -70,10 +71,10 @@ const mapStateToProps = (state) => {
 ItemDetailContainer.propTypes = {
   userFavoriteAnime: PropTypes.array.isRequired,
   userFavoriteManga: PropTypes.array.isRequired,
-  isAuthenticated: PropTypes.bool.isRequired,
-  toggleFavorite: PropTypes.func.isRequired,
   animeState: PropTypes.object.isRequired,
   mangaState: PropTypes.object.isRequired,
+  isAuthenticated: PropTypes.bool.isRequired,
+  toggleFavorite: PropTypes.func.isRequired,
   getAnimeDetails: PropTypes.func.isRequired,
 }
 

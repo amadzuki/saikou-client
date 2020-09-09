@@ -13,7 +13,7 @@ import {
 import requests from '../../utils/requests'
 import delay from '../../utils/timer'
 
-const toggleFavorite = (_id, itemType, isFavorited) => async (
+const toggleFavorite = (_id, id, itemType, isFavorited) => async (
   dispatch,
   getState
 ) => {
@@ -30,12 +30,12 @@ const toggleFavorite = (_id, itemType, isFavorited) => async (
 
   const favorites =
     itemType === 'anime'
-      ? state.user.data.favoriteAnime
-      : state.user.data.favoriteManga
+      ? state.user.data.favoriteAnime.map((item) => item._id)
+      : state.user.data.favoriteManga.map((item) => item._id)
 
   const updatedFavorites = !isFavorited
     ? [...favorites, _id]
-    : favorites.filter((item_Id) => item_Id !== _id)
+    : favorites.filter((id) => id !== _id)
 
   const body = {}
 
@@ -44,10 +44,10 @@ const toggleFavorite = (_id, itemType, isFavorited) => async (
   } else {
     body.favoriteManga = updatedFavorites
   }
-
+  console.log(isFavorited, updatedFavorites, body)
   try {
     const responseUser = await requests.updateUserProfile(accessToken, body)
-    const responseItem = await requests.updateItem(accessToken, itemType, _id, {
+    const responseItem = await requests.updateItem(accessToken, itemType, id, {
       favorited: !isFavorited,
     })
     dispatch({ type: UPDATE_USER_SUCCESS, payload: responseUser })

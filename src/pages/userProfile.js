@@ -128,6 +128,7 @@ const UserProfile = ({
   fetchLatestData,
   accessToken,
   user,
+  isLoading,
 }) => {
   useEffect(() => {
     fetchLatestData(accessToken)
@@ -142,116 +143,121 @@ const UserProfile = ({
   )
   return (
     <>
-      <Layout
-        backgroundImage='url("/backgrounds/tokyo-ghoul.jpg")'
-        title={'Profile | ' + user.alias}
-      >
-        <PageContents>
-          <UserIntro>
-            <AvatarBox>
-              <WhiteRoundSpace>
-                <Avatar variant='large' imagePath={user.avatar}></Avatar>
-              </WhiteRoundSpace>
-              <Button to='/' variant='small'>
-                <span>edit profile</span>
-              </Button>
-              <ButtonLogOut onClick={logout}>
-                <span>log out</span>
-              </ButtonLogOut>
-            </AvatarBox>
-            <UserInfo>
-              <TitleText>{user.alias}</TitleText>
-              <DateJoined>
-                Joined {dayjs(user.dateJoined).format('MMMM D, YYYY')}
-              </DateJoined>
-              <UserBio>"{user.bio}"</UserBio>
-            </UserInfo>
-          </UserIntro>
-          <ItemsBlock>
-            <TitleText>My Favorite Anime</TitleText>
-            <Favorites>
-              {user.favoriteAnime.map((item, index) => (
-                <CardContainer key={index} id={item.id} type='anime' />
-              ))}
-            </Favorites>
-          </ItemsBlock>
-          <ItemsBlock>
-            <TitleText>My Favorite Manga</TitleText>
-            <Favorites>
-              {user.favoriteManga.map((item, index) => (
-                <CardContainer key={index} id={item.id} type='manga' />
-              ))}
-            </Favorites>
-          </ItemsBlock>
-          <ItemsBlock>
-            <TitleText>My Review</TitleText>
-            <Box>
+      {isLoading && <h1>now loading</h1>}
+      {!isLoading && user && user.length !== 0 && (
+        <Layout
+          backgroundImage='url("/backgrounds/tokyo-ghoul.jpg")'
+          title={'Profile | ' + user.alias}
+        >
+          <PageContents>
+            <UserIntro>
+              <AvatarBox>
+                <WhiteRoundSpace>
+                  <Avatar variant='large' imagePath={user.avatar}></Avatar>
+                </WhiteRoundSpace>
+                <Button to='/' variant='small'>
+                  <span>edit profile</span>
+                </Button>
+                <ButtonLogOut onClick={logout}>
+                  <span>log out</span>
+                </ButtonLogOut>
+              </AvatarBox>
+              <UserInfo>
+                <TitleText>{user.alias}</TitleText>
+                <DateJoined>
+                  Joined {dayjs(user.dateJoined).format('MMMM D, YYYY')}
+                </DateJoined>
+                <UserBio>"{user.bio}"</UserBio>
+              </UserInfo>
+            </UserIntro>
+            <ItemsBlock>
+              <TitleText>My Favorite Anime</TitleText>
+              <Favorites>
+                {user.favoriteAnime.map((item, index) => (
+                  <CardContainer key={index} id={item.id} type='anime' />
+                ))}
+              </Favorites>
+            </ItemsBlock>
+            <ItemsBlock>
+              <TitleText>My Favorite Manga</TitleText>
+              <Favorites>
+                {user.favoriteManga.map((item, index) => (
+                  <CardContainer key={index} id={item.id} type='manga' />
+                ))}
+              </Favorites>
+            </ItemsBlock>
+            <ItemsBlock>
+              <TitleText>My Review</TitleText>
+              <Box>
+                <Box row>
+                  <Box col>
+                    <CardContainer id={19} type='anime' hideName />
+                  </Box>
+                  <Box col={3 / 4}>
+                    <Box row>
+                      <AnimeTitle>Black Clover</AnimeTitle>
+                    </Box>
+                    <Box row>
+                      <Box col={4 / 5}>
+                        <Tag type='anime' />
+                      </Box>
+                      <Box col>
+                        <RatingText>overall rating: 10/10</RatingText>
+                      </Box>
+                    </Box>
+                    <Box row>
+                      <ReviewText>
+                        We used to have Big 3 when it comes to anime including
+                        shows like Naruto, One piece, and Bleach. Throw
+                        Fairytail in there also. Now as those shows are going
+                        away we look to replace them and this show was supposed
+                        to be one of those shows hyped to the point it crashed
+                        streaming websites when it released. The thing is all
+                        this show has are the bad parts of the Big 3. The story
+                        also wants to be compared to them and since it is I'm
+                        going to compare them here.
+                      </ReviewText>
+                      <ReviewText>
+                        The story is about a boy who can't use magic but through
+                        some stroke{' '}
+                        <FullReviewLink to='/'>read more...</FullReviewLink>
+                      </ReviewText>
+                    </Box>
+                  </Box>
+                </Box>
+              </Box>
+            </ItemsBlock>
+            <ItemsBlock>
+              <TitleText>My Custom List</TitleText>
               <Box row>
                 <Box col>
-                  <CardContainer id={19} type='anime' hideName />
+                  <OverlayBox>
+                    {imagePaths.map((path, index) => (
+                      <OverlayImage src={path} key={index} />
+                    ))}
+                  </OverlayBox>
                 </Box>
-                <Box col={3 / 4}>
-                  <Box row>
-                    <AnimeTitle>Black Clover</AnimeTitle>
-                  </Box>
-                  <Box row>
-                    <Box col={4 / 5}>
-                      <Tag type='anime' />
-                    </Box>
-                    <Box col>
-                      <RatingText>overall rating: 10/10</RatingText>
-                    </Box>
-                  </Box>
-                  <Box row>
+                <Box col>
+                  <ListDescriptionBox>
+                    <ListTitle>Complete Healthy Anime Mix</ListTitle>
                     <ReviewText>
-                      We used to have Big 3 when it comes to anime including
-                      shows like Naruto, One piece, and Bleach. Throw Fairytail
-                      in there also. Now as those shows are going away we look
-                      to replace them and this show was supposed to be one of
-                      those shows hyped to the point it crashed streaming
-                      websites when it released. The thing is all this show has
-                      are the bad parts of the Big 3. The story also wants to be
-                      compared to them and since it is I'm going to compare them
-                      here.
+                      All about youth in different genres without ecchi
+                      whatsoever
                     </ReviewText>
-                    <ReviewText>
-                      The story is about a boy who can't use magic but through
-                      some stroke{' '}
-                      <FullReviewLink to='/'>read more...</FullReviewLink>
-                    </ReviewText>
-                  </Box>
+                  </ListDescriptionBox>
                 </Box>
               </Box>
-            </Box>
-          </ItemsBlock>
-          <ItemsBlock>
-            <TitleText>My Custom List</TitleText>
-            <Box row>
-              <Box col>
-                <OverlayBox>
-                  {imagePaths.map((path, index) => (
-                    <OverlayImage src={path} key={index} />
-                  ))}
-                </OverlayBox>
-              </Box>
-              <Box col>
-                <ListDescriptionBox>
-                  <ListTitle>Complete Healthy Anime Mix</ListTitle>
-                  <ReviewText>
-                    All about youth in different genres without ecchi whatsoever
-                  </ReviewText>
-                </ListDescriptionBox>
-              </Box>
-            </Box>
-          </ItemsBlock>
-        </PageContents>
-      </Layout>
+            </ItemsBlock>
+          </PageContents>
+        </Layout>
+      )}
     </>
   )
 }
 
 const mapStateToProps = (state) => {
   return {
+    isLoading: state.user.isLoading,
     user: state.user.data,
     accessToken: state.auth.data.accessToken,
   }
