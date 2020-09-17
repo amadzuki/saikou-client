@@ -165,7 +165,7 @@ const UserProfile = ({
               <UserInfo>
                 <TitleText>{user.alias}</TitleText>
                 <DateJoined>
-                  Joined {dayjs(user.dateJoined).format('MMMM D, YYYY')}
+                  Joined {dayjs(user.createdAt).format('MMMM D, YYYY')}
                 </DateJoined>
                 <UserBio>"{user.bio}"</UserBio>
               </UserInfo>
