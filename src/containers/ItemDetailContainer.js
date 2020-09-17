@@ -30,7 +30,6 @@ const ItemDetailContainer = ({
       ? userFavoriteAnime.map((item) => item.id).includes(data.id)
       : userFavoriteManga.map((item) => item.id).includes(data.id)
 
-  console.log(isFavorited)
   useEffect(() => {
     if (type === 'anime') {
       getAnimeDetails(id)

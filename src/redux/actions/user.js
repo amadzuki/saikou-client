@@ -44,7 +44,6 @@ const toggleFavorite = (_id, id, itemType, isFavorited) => async (
   } else {
     body.favoriteManga = updatedFavorites
   }
-  console.log(isFavorited, updatedFavorites, body)
   try {
     const responseUser = await requests.updateUserProfile(accessToken, body)
     const responseItem = await requests.updateItem(accessToken, itemType, id, {
