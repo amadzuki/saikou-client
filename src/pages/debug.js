@@ -94,7 +94,7 @@ const Debug = ({ isAuthenticated, accessToken }) => {
         <ul>
           <li>id: {anime.id}</li>
           <li>name: {anime.name}</li>
-          <li>coverSrc: {anime.coverSrc}</li>
+          <li>coverUrl: {anime.coverUrl}</li>
         </ul>
       </TextContainer>
     </>

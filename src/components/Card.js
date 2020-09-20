@@ -38,7 +38,7 @@ const Card = ({ item, hideName, type }) => {
     <>
       <CardStyled>
         <CardLink to={`/${type}/${item.id}/${item.slug}`}>
-          <CardCover src={item.coverSrc} alt={item.coverAlt} />
+          <CardCover src={item.coverUrl} alt={item.coverAlt} />
           {!hideName && <CardName>{item.name}</CardName>}
         </CardLink>
       </CardStyled>

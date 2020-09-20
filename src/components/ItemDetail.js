@@ -153,7 +153,7 @@ const ItemDetail = ({
     <Layout title={item.name + ' | Saikou'}>
       <PageContents>
         <ItemIntro>
-          <Card src={item.coverSrc} />
+          <Card src={item.coverUrl} />
           <ItemInfo>
             <Title>{item.name}</Title>
             <SubTitle>"{item.tagLine}"</SubTitle>
