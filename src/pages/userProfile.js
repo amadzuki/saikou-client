@@ -191,7 +191,7 @@ const UserProfile = ({
               <Box>
                 <Box row>
                   <Box col>
-                    <CardContainer id={19} type='anime' hideName />
+                    <CardContainer id={2} type='anime' hideName />
                   </Box>
                   <Box col={3 / 4}>
                     <Box row>
