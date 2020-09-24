@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { ThemeProvider } from '@xstyled/styled-components'
 
 const theme = {
@@ -22,4 +23,7 @@ const ThemeContainer = ({ children }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }
 
+ThemeContainer.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 export default ThemeContainer

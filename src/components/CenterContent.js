@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from '@xstyled/styled-components'
 
 const StyledDiv = styled.div`
@@ -12,6 +13,10 @@ const StyledDiv = styled.div`
 
 const CenterContent = ({ children }) => {
   return <StyledDiv>{children}</StyledDiv>
+}
+
+CenterContent.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default CenterContent

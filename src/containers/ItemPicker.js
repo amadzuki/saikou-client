@@ -29,8 +29,11 @@ const mapStateToProps = (state) => {
 }
 
 ItemPicker.propTypes = {
+  type: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   animeArray: PropTypes.array.isRequired,
   mangaArray: PropTypes.array.isRequired,
+  children: PropTypes.element.isRequired,
 }
 
 export default connect(mapStateToProps, null)(ItemPicker)

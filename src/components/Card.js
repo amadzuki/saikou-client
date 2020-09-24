@@ -47,9 +47,10 @@ const Card = ({ item, hideName, type }) => {
 }
 
 Card.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.number.isRequired,
+  type: PropTypes.string.isRequired,
   hideName: PropTypes.bool,
-  type: PropTypes.string,
+  item: PropTypes.object.isRequired,
 }
 
 export default Card

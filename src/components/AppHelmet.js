@@ -13,6 +13,7 @@ const AppHelmet = ({ title, description }) => {
 
 AppHelmet.propTypes = {
   title: PropTypes.string,
+  description: PropTypes.string,
 }
 
 export default AppHelmet

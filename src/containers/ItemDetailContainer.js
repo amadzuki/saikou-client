@@ -75,6 +75,8 @@ ItemDetailContainer.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired,
   toggleFavorite: PropTypes.func.isRequired,
   getAnimeDetails: PropTypes.func.isRequired,
+  getMangaDetails: PropTypes.func.isRequired,
+  type: PropTypes.string.isRequired,
 }
 
 export default connect(mapStateToProps, {

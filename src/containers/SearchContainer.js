@@ -87,6 +87,7 @@ const SearchContainer = ({
 
 SearchContainer.propTypes = {
   resetSearch: PropTypes.func.isRequired,
+  searchItems: PropTypes.func.isRequired,
   items: PropTypes.array.isRequired,
   isLoading: PropTypes.bool.isRequired,
   itemType: PropTypes.string.isRequired,

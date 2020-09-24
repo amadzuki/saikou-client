@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import styled, { Box } from '@xstyled/styled-components'
 import PropTypes from 'prop-types'
+import styled, { Box } from '@xstyled/styled-components'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import dayjs from 'dayjs'
@@ -266,6 +266,9 @@ const mapStateToProps = (state) => {
 UserProfile.propTypes = {
   deauthenticate: PropTypes.func,
   fetchLatestData: PropTypes.func,
+  accessToken: PropTypes.string,
+  user: PropTypes.object.isRequired,
+  isLoading: PropTypes.bool.isRequired,
 }
 
 export default connect(mapStateToProps, { deauthenticate, fetchLatestData })(

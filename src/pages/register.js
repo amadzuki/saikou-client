@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from '@xstyled/styled-components'
 import { useForm } from 'react-hook-form'
 import { top } from '@xstyled/system'
@@ -150,6 +151,10 @@ const Register = ({ registerAction }) => {
       <Footer></Footer>
     </>
   )
+}
+
+Register.propTypes = {
+  registerAction: PropTypes.func.isRequired,
 }
 
 export default connect(null, { registerAction })(Register)

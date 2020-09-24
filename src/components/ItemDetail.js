@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from '@xstyled/styled-components'
 import { connect } from 'react-redux'
 import ReactHtmlParser from 'react-html-parser'
@@ -227,6 +228,14 @@ const mapStateToProps = (state) => {
     userFavoriteManga: state.user.data.favoriteManga || [],
     isAuthenticated: state.auth.isAuthenticated,
   }
+}
+
+ItemDetail.propTypes = {
+  isFavorited: PropTypes.bool.isRequired,
+  isAuthenticated: PropTypes.bool.isRequired,
+  toggleFavorite: PropTypes.func.isRequired,
+  item: PropTypes.object.isRequired,
+  type: PropTypes.string.isRequired,
 }
 
 export default connect(mapStateToProps, { toggleFavorite })(ItemDetail)

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useParams } from 'react-router-dom'
 
 import Redirector from './Redirector'
@@ -13,4 +14,7 @@ const RouteAddSlug = ({ type }) => {
   )
 }
 
+RouteAddSlug.propTypes = {
+  type: PropTypes.string.isRequired,
+}
 export default RouteAddSlug
