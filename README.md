@@ -203,6 +203,18 @@ REACT_APP_SECRET=your-secret-code
 yarn dev
 ```
 
+### Lint
+
+```sh
+yarn lint
+```
+
+to fix basic issues:
+
+```sh
+yarn lint --fix
+```
+
 ### Test
 
 ```sh
