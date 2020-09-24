@@ -44,9 +44,14 @@ const Footer = () => {
       <LinkContainer>
         <SiteLink to='/about'>about</SiteLink>
         <SiteLink to='/about'>contact</SiteLink>
-        <SiteLink to='/about'>github</SiteLink>
+        <SiteLink
+          to={{ pathname: 'https://github.com/amadzuki/saikou-client' }}
+          target='_blank'
+        >
+          github
+        </SiteLink>
         <SiteLink to='/about'>facebook</SiteLink>
-        <SiteLink to='/about'>discord</SiteLink>
+        <SiteLink to='/about'>twitter</SiteLink>
       </LinkContainer>
       <WhiteLine width='820px'></WhiteLine>
       <FooterText>Copyright © 2020 Saikou</FooterText>
