@@ -2,10 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
-const AppHelmet = ({ title }) => {
+const AppHelmet = ({ title, description }) => {
   return (
     <Helmet>
       <title>{title}</title>
+      {description && <meta name='description' content={description} />}
     </Helmet>
   )
 }
