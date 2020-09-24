@@ -31,6 +31,7 @@
   "scripts": {
     "start": "PORT=8000 react-scripts start",
     "dev": "PORT=8000 REACT_APP_API_URL=http://localhost:3000 react-scripts start",
+    "lint": "eslint . --ext .js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
