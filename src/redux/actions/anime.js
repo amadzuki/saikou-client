@@ -12,7 +12,7 @@ import requests from '../../utils/requests'
 
 const getAllAnime = () => async (dispatch) => {
   dispatch({ type: GET_ALL_ANIME_START })
-  await delay(3000)
+  await delay(500)
 
   try {
     const allAnime = await requests.getAnime()
@@ -24,7 +24,7 @@ const getAllAnime = () => async (dispatch) => {
 
 const getAnimeDetails = (id) => async (dispatch) => {
   dispatch({ type: GET_ANIME_DETAIL_START })
-  await delay(1000)
+  await delay(500)
   try {
     const animeDetails = await requests.getAnimeById(+id)
     dispatch({ type: GET_ANIME_DETAIL_SUCCESS, payload: animeDetails })
