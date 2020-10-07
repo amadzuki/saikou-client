@@ -13,6 +13,8 @@ import items from '../data/items.json'
 
 import { deauthenticate, fetchLatestData } from '../redux/actions'
 
+import decodeToken from '../utils/jsonwebtoken'
+
 const PageContents = styled.div`
   display: flex;
   flex-direction: column;
@@ -130,17 +132,22 @@ const UserProfile = ({
   user,
   isLoading,
 }) => {
-  useEffect(() => {
-    fetchLatestData(accessToken)
-  }, [fetchLatestData, accessToken])
-
   const logout = () => {
     deauthenticate()
   }
+  if (!decodeToken(accessToken)) {
+    logout()
+  }
+
   const customList = [10, 12, 13, 14, 19]
   const imagePaths = customList.map(
     (id) => items.find((item) => item.id === id).coverSrc
   )
+
+  useEffect(() => {
+    fetchLatestData(accessToken)
+  }, [fetchLatestData, accessToken])
+
   return (
     <>
       {isLoading && <h1>now loading</h1>}

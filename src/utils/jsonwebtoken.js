@@ -6,6 +6,7 @@ const decodeToken = (token) => {
     if (decodedToken) return decodedToken
   } catch (error) {
     console.error(error)
+    return false
   }
 }
 
