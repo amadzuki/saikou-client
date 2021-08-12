@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Black Clover",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Black-Clover.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Black-Clover.jpg",
     "coverAlt": "Black Clover anime cover",
     "type": "anime",
     "slug": "black-clover",
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "name": "Code Geass: Hangyaku no Lelouch",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Code-Geass-Hangyaku-no-Lelouch.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Code-Geass-Hangyaku-no-Lelouch.jpg",
     "coverAlt": "Code Geass anime cover",
     "type": "anime",
     "slug": "code-geass-hangyaku-no-lelouch",
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "name": "Death Note",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Death-Note.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Death-Note.jpg",
     "coverAlt": "Death Note anime cover",
     "type": "anime",
     "slug": "death-note",
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "name": "Dr. STONE",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Dr-STONE.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Dr-STONE.jpg",
     "coverAlt": "Dr. STONE anime cover",
     "type": "anime",
     "slug": "dr-stone",
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "name": "Dragon Ball Super",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Dragon-Ball-Super.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Dragon-Ball-Super.jpg",
     "coverAlt": "Dragon Ball Super anime cover",
     "type": "anime",
     "slug": "dragon-ball-super",
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "name": "Gintama",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Gintama.png",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Gintama.png",
     "coverAlt": "Gintama anime cover",
     "type": "anime",
     "slug": "gintama",
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "name": "Fullmetal Alchemist: Brotherhood",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Hagane-no-Renkinjutsushi-Fullmetal-Alchemist.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Hagane-no-Renkinjutsushi-Fullmetal-Alchemist.jpg",
     "coverAlt": "Fullmetal Alchemist: Brotherhood anime cover",
     "type": "anime",
     "slug": "fullmetal-alchemist-brotherhood",
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "name": "Haikyuu!!",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Haikyuu!!.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Haikyuu!!.jpg",
     "coverAlt": "Haikyuu!! anime cover",
     "type": "anime",
     "slug": "haikyuu",
@@ -82,7 +82,7 @@
   {
     "id": 9,
     "name": "Hunter x Hunter 2011",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Hunter-x-Hunter-2011.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Hunter-x-Hunter-2011.jpg",
     "coverAlt": "Hunter x Hunter 2011 anime cover",
     "type": "anime",
     "slug": "hunter-x-hunter-2011",
@@ -92,7 +92,7 @@
   {
     "id": 10,
     "name": "K-ON!",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_K-ON!.png",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_K-ON!.png",
     "coverAlt": "K-ON! anime cover",
     "type": "anime",
     "slug": "k-on",
@@ -102,7 +102,7 @@
   {
     "id": 11,
     "name": "Kami nomi zo Shiru Sekai",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Kami-nomi-zo-Shiru-Sekai.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Kami-nomi-zo-Shiru-Sekai.jpg",
     "coverAlt": "Kami nomi zo Shiru Sekai",
     "type": "anime",
     "slug": "kami-nomi-zo-shiru-sekai",
@@ -112,7 +112,7 @@
   {
     "id": 12,
     "name": "Kimetsu no Yaiba",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Kimetsu-no-Yaiba.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Kimetsu-no-Yaiba.jpg",
     "coverAlt": "Kimetsu no Yaiba anime cover",
     "type": "anime",
     "slug": "kimetsu-no-yaiba",
@@ -122,7 +122,7 @@
   {
     "id": 13,
     "name": "Kimi no Na Wa",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Kimi-no-Na-wa.png",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Kimi-no-Na-wa.png",
     "coverAlt": "Kimi no Na Wa anime cover",
     "type": "anime",
     "slug": "kimi-no-na-wa",
@@ -132,7 +132,7 @@
   {
     "id": 14,
     "name": "Kuroko no Basket",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Kuroko-no-Basket.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Kuroko-no-Basket.jpg",
     "coverAlt": "Kuroko no Basket anime cover",
     "type": "anime",
     "slug": "kuroko-no-basket",
@@ -142,7 +142,7 @@
   {
     "id": 15,
     "name": "Nanatsu no Taizai",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Nanatsu-no-Taizai.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Nanatsu-no-Taizai.jpg",
     "coverAlt": "Nanatsu no Taizai anime cover",
     "type": "anime",
     "slug": "nanatsu-no-taizai",
@@ -152,7 +152,7 @@
   {
     "id": 16,
     "name": "No Game No Life",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_No-Game-No-Life.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_No-Game-No-Life.jpg",
     "coverAlt": "No Game No Life anime cover",
     "type": "anime",
     "slug": "no-game-no-life",
@@ -162,7 +162,7 @@
   {
     "id": 17,
     "name": "One Punch Man",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_One-Punch-Man.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_One-Punch-Man.jpg",
     "coverAlt": "One Punch Man anime cover",
     "type": "anime",
     "slug": "one-punch-man",
@@ -172,7 +172,7 @@
   {
     "id": 18,
     "name": "Re:Zero kara Hajimeru Isekai Seikatsu",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_ReZero-kara-Hajimeru-Isekai-Seikatsu.png",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_ReZero-kara-Hajimeru-Isekai-Seikatsu.png",
     "coverAlt": "Re:Zero kara Hajimeru Isekai Seikatsu anime cover",
     "type": "anime",
     "slug": "rezero-kara-hajimeru-isekai-seikatsu",
@@ -182,7 +182,7 @@
   {
     "id": 19,
     "name": "Saiki Kusuo no Ψ-nan",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Saiki-Kusuo-no-sainan.png",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Saiki-Kusuo-no-sainan.png",
     "coverAlt": "Saiki Kusuo no Ψ-nan anime cover",
     "type": "anime",
     "slug": "saiki-kusuo-no-psi-nan",
@@ -192,7 +192,7 @@
   {
     "id": 20,
     "name": "Shingeki no Kyojin",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Shingeki-no-Kyojin.png",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Shingeki-no-Kyojin.png",
     "coverAlt": "Shingeki no Kyojin anime cover",
     "type": "anime",
     "slug": "shingeki-no-kyojin",
@@ -202,7 +202,7 @@
   {
     "id": 21,
     "name": "Shokugeki no Souma",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Shokugeki-no-Souma.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Shokugeki-no-Souma.jpg",
     "coverAlt": "Shokugeki no Souma anime cover",
     "type": "anime",
     "slug": "shokugeki-no-souma",
@@ -212,7 +212,7 @@
   {
     "id": 22,
     "name": "Steins;Gate",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Steins;Gate.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Steins;Gate.jpg",
     "coverAlt": "Steins;Gate anime cover",
     "type": "anime",
     "slug": "steinsgate",
@@ -222,7 +222,7 @@
   {
     "id": 23,
     "name": "Sword Art Online",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Sword-Art-Online.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Sword-Art-Online.jpg",
     "coverAlt": "Sword Art Online anime cover",
     "type": "anime",
     "slug": "sword-art-online",
@@ -232,7 +232,7 @@
   {
     "id": 24,
     "name": "Tokyo Ghoul",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/anime_Tokyo-Ghoul.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/anime_Tokyo-Ghoul.jpg",
     "coverAlt": "Tokyo Ghoul anime cover",
     "type": "anime",
     "slug": "tokyo-ghoul",
@@ -242,7 +242,7 @@
   {
     "id": 25,
     "name": "20th Century Boys",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_20th-Century-Boys.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_20th-Century-Boys.jpg",
     "coverAlt": "20th Century Boys manga cover",
     "type": "manga",
     "slug": "20th-century-boys",
@@ -252,7 +252,7 @@
   {
     "id": 26,
     "name": "Beelzebub",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Beelzebub.png",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Beelzebub.png",
     "coverAlt": "Beelzebub manga cover",
     "type": "manga",
     "slug": "beelzebub",
@@ -262,7 +262,7 @@
   {
     "id": 27,
     "name": "Berserk",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Berserk.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Berserk.jpg",
     "coverAlt": "Berserk manga cover",
     "type": "manga",
     "slug": "berserk",
@@ -272,7 +272,7 @@
   {
     "id": 28,
     "name": "Black Clover",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Black-Clover.png",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Black-Clover.png",
     "coverAlt": "Black Clover manga cover",
     "type": "manga",
     "slug": "black-clover",
@@ -282,7 +282,7 @@
   {
     "id": 29,
     "name": "Bleach",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Bleach.png",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Bleach.png",
     "coverAlt": "Bleach manga cover",
     "type": "manga",
     "slug": "bleach",
@@ -292,7 +292,7 @@
   {
     "id": 30,
     "name": "Death Note",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Death-Note.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Death-Note.jpg",
     "coverAlt": "Death Note manga cover",
     "type": "manga",
     "slug": "death-note",
@@ -302,7 +302,7 @@
   {
     "id": 31,
     "name": "Doraemon",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Doraemon.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Doraemon.jpg",
     "coverAlt": "Doraemon manga cover",
     "type": "manga",
     "slug": "doraemon",
@@ -312,7 +312,7 @@
   {
     "id": 32,
     "name": "Dr. STONE",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Dr.-STONE.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Dr.-STONE.jpg",
     "coverAlt": "Dr. STONE manga cover",
     "type": "manga",
     "slug": "dr-stone",
@@ -322,7 +322,7 @@
   {
     "id": 33,
     "name": "Dragon Ball Super",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Dragon-Ball-Super.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Dragon-Ball-Super.jpg",
     "coverAlt": "Dragon Ball Super manga cover",
     "type": "manga",
     "slug": "dragon-ball-super",
@@ -332,7 +332,7 @@
   {
     "id": 34,
     "name": "Eyeshield 21",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Eyeshield-21.png",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Eyeshield-21.png",
     "coverAlt": "Eyeshield 21 manga cover",
     "type": "manga",
     "slug": "eyeshield-21",
@@ -342,7 +342,7 @@
   {
     "id": 35,
     "name": "Horimiya",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Horimiya.png",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Horimiya.png",
     "coverAlt": "Horimiya manga cover",
     "type": "manga",
     "slug": "horimiya",
@@ -352,7 +352,7 @@
   {
     "id": 36,
     "name": "Imawa no Kuni no Alice",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Imawa-no-Kuni-no-Alice.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Imawa-no-Kuni-no-Alice.jpg",
     "coverAlt": "Imawa no Kuni no Alice manga cover",
     "type": "manga",
     "slug": "imawa-no-kuni-no-alice",
@@ -362,7 +362,7 @@
   {
     "id": 37,
     "name": "Konjiki no Gash",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Konjiki-no-Gash.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Konjiki-no-Gash.jpg",
     "coverAlt": "Konjiki no Gash manga cover",
     "type": "manga",
     "slug": "konjiki-no-gash",
@@ -372,7 +372,7 @@
   {
     "id": 38,
     "name": "Machida-kun no Sekai",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Machidakun-no-Sekai.png",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Machidakun-no-Sekai.png",
     "coverAlt": "Machida-kun no Sekai manga cover",
     "type": "manga",
     "slug": "machida-kun-no-sekai",
@@ -382,7 +382,7 @@
   {
     "id": 39,
     "name": "Magi: The Labyrinth of Magic",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Magi-The-Labyrinth-of-Magic.png",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Magi-The-Labyrinth-of-Magic.png",
     "coverAlt": "Magi: The Labyrinth of Magic manga cover",
     "type": "manga",
     "slug": "magi-the-labyrinth-of-magic",
@@ -392,7 +392,7 @@
   {
     "id": 40,
     "name": "Nanatsu no Taizai",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Nanatsu-no-Taizai.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Nanatsu-no-Taizai.jpg",
     "coverAlt": "Nanatsu no Taizai manga cover",
     "type": "manga",
     "slug": "nanatsu-no-taizai",
@@ -402,7 +402,7 @@
   {
     "id": 41,
     "name": "Naruto",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Naruto.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Naruto.jpg",
     "coverAlt": "Naruto manga cover",
     "type": "manga",
     "slug": "naruto",
@@ -412,7 +412,7 @@
   {
     "id": 42,
     "name": "Onanie Master Kurosawa",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Onanie-Master-Kurosawa.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Onanie-Master-Kurosawa.jpg",
     "coverAlt": "Onanie Master Kurosawa manga cover",
     "type": "manga",
     "slug": "onanie-master-kurosawa",
@@ -422,7 +422,7 @@
   {
     "id": 43,
     "name": "One Piece",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_One-Piece.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_One-Piece.jpg",
     "coverAlt": "One Piece manga cover",
     "type": "manga",
     "slug": "one-piece",
@@ -432,7 +432,7 @@
   {
     "id": 44,
     "name": "One Punch-Man",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_One-Punch-Man.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_One-Punch-Man.jpg",
     "coverAlt": "One Punch-Man manga cover",
     "type": "manga",
     "slug": "one-punch-man",
@@ -442,7 +442,7 @@
   {
     "id": 45,
     "name": "Shin Angyo Onshi",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Shin-Angyo-Onshi.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Shin-Angyo-Onshi.jpg",
     "coverAlt": "Shin Angyo Onshi manga cover",
     "type": "manga",
     "slug": "shin-angyo-onshi",
@@ -452,7 +452,7 @@
   {
     "id": 46,
     "name": "Suashi no Meteorite",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Suashi-no-Meteorite.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Suashi-no-Meteorite.jpg",
     "coverAlt": "Suashi no Meteorite manga cover",
     "type": "manga",
     "slug": "suashi-no-meteorite",
@@ -462,7 +462,7 @@
   {
     "id": 47,
     "name": "Tensei shitara Slime Datta Ken",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Tensei-Shitara-Slime-Datta-Ken.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Tensei-Shitara-Slime-Datta-Ken.jpg",
     "coverAlt": "Tensei shitara Slime Datta Ken manga cover",
     "type": "manga",
     "slug": "tensei-shitara-slime-datta-ken",
@@ -472,7 +472,7 @@
   {
     "id": 48,
     "name": "Tokyo Ghoul",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Tokyo-Ghoul.jpg",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Tokyo-Ghoul.jpg",
     "coverAlt": "Tokyo Ghoul manga cover",
     "type": "manga",
     "slug": "tokyo-ghoul",
@@ -482,7 +482,7 @@
   {
     "id": 49,
     "name": "Vinland Saga",
-    "coverSrc": "https://saikou.api.ahmadmarzuki.com/covers/manga_Vinland-Saga.png",
+    "coverSrc": "https://saikou-server-production.up.railway.app/covers/manga_Vinland-Saga.png",
     "coverAlt": "Vinland Saga manga cover",
     "type": "manga",
     "slug": "vinland-saga",
